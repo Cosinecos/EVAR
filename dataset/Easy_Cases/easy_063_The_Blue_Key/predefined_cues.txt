@@ -1,0 +1,8 @@
+1. a scholarship decision envelope disappeared from a university mailroom during scholarship notification week.
+2. The object was confirmed present before the relevant disturbance.
+3. The disappearance occurred within a narrow time window because the package scanner rebooted during the afternoon sort.
+4. The physical trace was paper dust below the scholarship mail slot.
+5. The relevant tool or mechanism was a letter opener with glue on its tip.
+6. The item could be concealed in a hollow sorting-bin label holder.
+7. The hiding place required insider knowledge because only the mailroom supervisor knew the sorting-bin label holder slid open.
+8. The access pattern mattered because the mailroom supervisor controlled the scanner reboot and the scholarship slot.

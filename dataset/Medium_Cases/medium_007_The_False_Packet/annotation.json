@@ -1,0 +1,87 @@
+{
+  "case_id": "medium_007",
+  "split": "Medium",
+  "title": "The False Packet",
+  "domain": "train station",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Ezra Quill",
+  "culprit_role": "station clerk",
+  "suspects": [
+    {
+      "name": "Livia Ash",
+      "role": "ticket inspector"
+    },
+    {
+      "name": "Rhea Voss",
+      "role": "porter"
+    },
+    {
+      "name": "Ezra Quill",
+      "role": "station clerk"
+    },
+    {
+      "name": "Damon Ward",
+      "role": "porter"
+    }
+  ],
+  "verdict": "Ezra Quill was responsible for the disappearance of a conductor's incident ledger.",
+  "intent": [
+    "Ezra Quill wanted to erase evidence of falsified delay records.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the station clerk handled both the clock key and the ledger shelf after closing.",
+    "Remove a conductor's incident ledger from its checked location.",
+    "Hide the item in a newspaper bundle tied for the morning train.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a conductor's incident ledger disappeared from a small-town train station before an audit.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the platform clock was advanced by five minutes.",
+    "The physical trace was blue paper fibers on the parcel counter.",
+    "The relevant tool or mechanism was a ticket punch with torn blue paper stuck inside.",
+    "The item could be concealed in a newspaper bundle tied for the morning train.",
+    "The hiding place required insider knowledge because only the station clerk could alter the platform clock and reseal the parcel counter.",
+    "The access pattern mattered because the station clerk handled both the clock key and the ledger shelf after closing.",
+    "The motive was to erase evidence of falsified delay records.",
+    "Livia Ash's suspicious behavior happened before the final verification of the object.",
+    "Rhea Voss's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit."
+  ],
+  "distractor_cues": [
+    "a conductor angry about the audit",
+    "a porter carrying tied bundles",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 12,
+    "num_misleading_trails": 2,
+    "word_count": 1051,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the platform clock was advanced by five minutes",
+    "access_constraint": "the station clerk handled both the clock key and the ledger shelf after closing",
+    "physical_trace": "blue paper fibers on the parcel counter",
+    "tool_or_mechanism": "a ticket punch with torn blue paper stuck inside",
+    "hidden_container": "a newspaper bundle tied for the morning train",
+    "role_privilege": "only the station clerk could alter the platform clock and reseal the parcel counter",
+    "motive": "erase evidence of falsified delay records"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

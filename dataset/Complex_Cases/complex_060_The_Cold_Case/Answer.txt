@@ -1,0 +1,18 @@
+Culprit:
+Orion Hale
+
+Culprit Role:
+apprentice watchmaker
+
+Final Verdict:
+Orion Hale was responsible for the disappearance of a pocket watch movement.
+
+Motive:
+Orion Hale wanted to replace a damaged commissioned part before the client arrived.
+
+Action Schema:
+Orion Hale used the short disturbance indicated by the timing clue, exploited role-specific access, removed a pocket watch movement, hid it in a jar of brass gear blanks, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that three wall clocks were stopped at the same minute. The physical evidence points away from a casual visitor because investigators found tiny brass filings near the apprentice bench and a loupe with a cracked rim. The hiding method required inside knowledge because only the apprentice watchmaker knew the display latch clicked silently if lifted first. The access pattern is consistent with Orion Hale because the apprentice watchmaker reset the clocks after the owner stepped out. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Orion Hale is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

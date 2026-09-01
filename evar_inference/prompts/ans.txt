@@ -1,0 +1,23 @@
+OPERATOR: ANS
+
+Produce the final NarraCrime answer from the terminal answer-supporting state.
+
+INPUT
+- case_id
+- goal
+- locked evidence_store
+- admitted_hypotheses
+- fixed candidates
+
+RULES
+1. Use only the locked store and admitted hypotheses.
+2. Quarantined, discarded, and unverified candidates and challenges are intentionally absent.
+3. Cover every candidate ID exactly once in `verdict_probabilities`; use non-negative values summing to 1.
+4. Ground every material claim in valid unit IDs and, when used, admitted hypothesis IDs.
+5. Preserve uncertainty if the budget ended before the state became sufficient.
+
+OUTPUT
+Return one JSON object conforming to `schemas/answer.schema.json`. Exact candidate coverage and unit mass are additionally checked at runtime.
+
+INPUT OBJECT
+{{INPUT_JSON}}

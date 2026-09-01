@@ -1,0 +1,93 @@
+{
+  "case_id": "complex_003",
+  "split": "Complex",
+  "title": "The Early Frame",
+  "domain": "public library rare room",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Bennett Voss",
+  "culprit_role": "rare-room librarian",
+  "suspects": [
+    {
+      "name": "Clara Finch",
+      "role": "tour volunteer"
+    },
+    {
+      "name": "Bennett Voss",
+      "role": "rare-room librarian"
+    },
+    {
+      "name": "Elliot Cross",
+      "role": "history teacher"
+    },
+    {
+      "name": "Orion Morrow",
+      "role": "student aide"
+    },
+    {
+      "name": "Iris Dove",
+      "role": "book conservator"
+    }
+  ],
+  "verdict": "Bennett Voss was responsible for the disappearance of a first-edition map plate.",
+  "intent": [
+    "Bennett Voss wanted to sell the map plate to cover an undisclosed debt.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the rare-room librarian controlled the tour bell and handled the atlas last.",
+    "Remove a first-edition map plate from its checked location.",
+    "Hide the item in a conservation folder labeled as tissue scraps.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a first-edition map plate disappeared from a public library rare-book room during a school tour.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the tour bell rang two minutes early.",
+    "The physical trace was fresh paper lint on the atlas cradle.",
+    "The relevant tool or mechanism was a bone folder with paper dust along one side.",
+    "The item could be concealed in a conservation folder labeled as tissue scraps.",
+    "The hiding place required insider knowledge because only the rare-room librarian knew the atlas cradle had a loose back rail.",
+    "The access pattern mattered because the rare-room librarian controlled the tour bell and handled the atlas last.",
+    "The motive was to sell the map plate to cover an undisclosed debt.",
+    "Clara Finch's suspicious behavior happened before the final verification of the object.",
+    "Elliot Cross's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion."
+  ],
+  "distractor_cues": [
+    "a patron asking many questions about old maps",
+    "a student aide left alone near the desk",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 14,
+    "num_misleading_trails": 5,
+    "word_count": 1417,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the tour bell rang two minutes early",
+    "access_constraint": "the rare-room librarian controlled the tour bell and handled the atlas last",
+    "physical_trace": "fresh paper lint on the atlas cradle",
+    "tool_or_mechanism": "a bone folder with paper dust along one side",
+    "hidden_container": "a conservation folder labeled as tissue scraps",
+    "role_privilege": "only the rare-room librarian knew the atlas cradle had a loose back rail",
+    "motive": "sell the map plate to cover an undisclosed debt"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

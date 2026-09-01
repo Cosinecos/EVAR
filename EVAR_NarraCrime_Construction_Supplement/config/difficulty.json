@@ -1,0 +1,20 @@
+{
+  "Easy": {
+    "target_words": {"min": 800, "max": 950},
+    "suspects": {"min": 3, "max": 4},
+    "supporting_cues": {"min": 7, "max": 9},
+    "cross_event_dependencies": {"min": 1, "max": 2}
+  },
+  "Medium": {
+    "target_words": {"min": 950, "max": 1200},
+    "suspects": {"min": 4, "max": 5},
+    "supporting_cues": {"min": 10, "max": 13},
+    "cross_event_dependencies": {"min": 2, "max": 4}
+  },
+  "Complex": {
+    "target_words": {"min": 1200, "max": 1600},
+    "suspects": {"min": 5, "max": 7},
+    "supporting_cues": {"min": 14, "max": 18},
+    "cross_event_dependencies": {"min": 3, "max": 8}
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "case_id": "easy_071",
+  "split": "Easy",
+  "title": "The Vanishing Record",
+  "domain": "mountain lodge",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Ada Hayes",
+  "culprit_role": "ski instructor",
+  "suspects": [
+    {
+      "name": "Grant Rook",
+      "role": "housekeeper"
+    },
+    {
+      "name": "Ada Hayes",
+      "role": "ski instructor"
+    },
+    {
+      "name": "Cyrus Dove",
+      "role": "rental attendant"
+    }
+  ],
+  "verdict": "Ada Hayes was responsible for the disappearance of a guest-room master key.",
+  "intent": [
+    "Ada Hayes wanted to enter a guest room and remove an incriminating photograph.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the ski instructor crossed between the fireplace room and the mudroom to check equipment.",
+    "Remove a guest-room master key from its checked location.",
+    "Hide the item in a hollow ski pole standing in the mudroom rack.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a guest-room master key disappeared from a mountain lodge after a snowstorm.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the mudroom bell rang while everyone claimed to be indoors.",
+    "The physical trace was dry snow under only one chair near the mudroom.",
+    "The relevant tool or mechanism was a wax scraper with fresh brass scratches.",
+    "The item could be concealed in a hollow ski pole standing in the mudroom rack.",
+    "The hiding place required insider knowledge because only the ski instructor knew the pole cap unscrewed silently."
+  ],
+  "distractor_cues": [
+    "a housekeeper seen near the linen closet",
+    "a guide carrying a bulky parka",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 3,
+    "num_required_cues": 7,
+    "num_misleading_trails": 2,
+    "word_count": 854,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the mudroom bell rang while everyone claimed to be indoors",
+    "access_constraint": "the ski instructor crossed between the fireplace room and the mudroom to check equipment",
+    "physical_trace": "dry snow under only one chair near the mudroom",
+    "tool_or_mechanism": "a wax scraper with fresh brass scratches",
+    "hidden_container": "a hollow ski pole standing in the mudroom rack",
+    "role_privilege": "only the ski instructor knew the pole cap unscrewed silently",
+    "motive": "enter a guest room and remove an incriminating photograph"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

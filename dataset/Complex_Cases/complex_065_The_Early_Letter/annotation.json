@@ -1,0 +1,96 @@
+{
+  "case_id": "complex_065",
+  "split": "Complex",
+  "title": "The Early Letter",
+  "domain": "chess club",
+  "crime_type": "tamper",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Elliot Frost",
+  "culprit_role": "tournament director",
+  "suspects": [
+    {
+      "name": "Dorian Morrow",
+      "role": "equipment volunteer"
+    },
+    {
+      "name": "Elliot Frost",
+      "role": "tournament director"
+    },
+    {
+      "name": "Adele Hale",
+      "role": "junior coach"
+    },
+    {
+      "name": "Selene Fenn",
+      "role": "arbiter assistant"
+    },
+    {
+      "name": "Adele Vale",
+      "role": "equipment volunteer"
+    }
+  ],
+  "verdict": "Elliot Frost was responsible for the disappearance of a sealed envelope with final pairings.",
+  "intent": [
+    "Elliot Frost wanted to avoid pairing a favored player against the strongest opponent.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the tournament director moved the envelope during the scheduled silence.",
+    "Remove a sealed envelope with final pairings from its checked location.",
+    "Hide the item in a hollow demonstration board.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a sealed envelope with final pairings disappeared from a chess club championship room during the final draw.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the coffee machine hissed during a silent round.",
+    "The physical trace was warped glue on the envelope flap.",
+    "The relevant tool or mechanism was a steam wand from the refreshment table.",
+    "The item could be concealed in a hollow demonstration board.",
+    "The hiding place required insider knowledge because only the tournament director knew the demonstration board had a storage slot.",
+    "The access pattern mattered because the tournament director moved the envelope during the scheduled silence.",
+    "The motive was to avoid pairing a favored player against the strongest opponent.",
+    "Dorian Morrow's suspicious behavior happened before the final verification of the object.",
+    "Adele Hale's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Elliot Frost's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container."
+  ],
+  "distractor_cues": [
+    "a top seed pacing near the envelopes",
+    "a volunteer cleaning the boards",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 17,
+    "num_misleading_trails": 3,
+    "word_count": 1424,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the coffee machine hissed during a silent round",
+    "access_constraint": "the tournament director moved the envelope during the scheduled silence",
+    "physical_trace": "warped glue on the envelope flap",
+    "tool_or_mechanism": "a steam wand from the refreshment table",
+    "hidden_container": "a hollow demonstration board",
+    "role_privilege": "only the tournament director knew the demonstration board had a storage slot",
+    "motive": "avoid pairing a favored player against the strongest opponent"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "case_id": "easy_054",
+  "split": "Easy",
+  "title": "The Midnight Case",
+  "domain": "science fair",
+  "crime_type": "switch",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Ronan Hayes",
+  "culprit_role": "lab monitor",
+  "suspects": [
+    {
+      "name": "Ronan Hayes",
+      "role": "lab monitor"
+    },
+    {
+      "name": "Adrian Rowe",
+      "role": "equipment judge"
+    },
+    {
+      "name": "Grant Baird",
+      "role": "team mentor"
+    }
+  ],
+  "verdict": "Ronan Hayes was responsible for the disappearance of a student's solar-cell module.",
+  "intent": [
+    "Ronan Hayes wanted to prevent a rival team from winning the regional prize.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the lab monitor locked the storage room after the final project check.",
+    "Remove a student's solar-cell module from its checked location.",
+    "Hide the item in a rolled poster tube.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a student's solar-cell module disappeared from a science fair storage room before judging.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the room fan was unplugged to mask the solder smell.",
+    "The physical trace was resin drops beside the poster tubes.",
+    "The relevant tool or mechanism was a soldering iron with fresh resin.",
+    "The item could be concealed in a rolled poster tube.",
+    "The hiding place required insider knowledge because only the lab monitor knew the fan outlet was hidden behind the cabinet."
+  ],
+  "distractor_cues": [
+    "a rival student complaining loudly",
+    "a judge inspecting the poster tubes",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 3,
+    "num_required_cues": 7,
+    "num_misleading_trails": 2,
+    "word_count": 871,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the room fan was unplugged to mask the solder smell",
+    "access_constraint": "the lab monitor locked the storage room after the final project check",
+    "physical_trace": "resin drops beside the poster tubes",
+    "tool_or_mechanism": "a soldering iron with fresh resin",
+    "hidden_container": "a rolled poster tube",
+    "role_privilege": "only the lab monitor knew the fan outlet was hidden behind the cabinet",
+    "motive": "prevent a rival team from winning the regional prize"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

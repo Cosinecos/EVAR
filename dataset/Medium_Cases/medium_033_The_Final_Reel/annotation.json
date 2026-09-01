@@ -1,0 +1,89 @@
+{
+  "case_id": "medium_033",
+  "split": "Medium",
+  "title": "The Final Reel",
+  "domain": "music conservatory",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Oscar Bell",
+  "culprit_role": "accompanist",
+  "suspects": [
+    {
+      "name": "Oscar Bell",
+      "role": "accompanist"
+    },
+    {
+      "name": "Willa Voss",
+      "role": "page turner"
+    },
+    {
+      "name": "Rhea Hale",
+      "role": "theory tutor"
+    },
+    {
+      "name": "Ivy Cole",
+      "role": "instrument repairer"
+    },
+    {
+      "name": "Ada Wren",
+      "role": "theory tutor"
+    }
+  ],
+  "verdict": "Oscar Bell was responsible for the disappearance of a violinist's marked score.",
+  "intent": [
+    "Oscar Bell wanted to sabotage a rival's audition while appearing helpful.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the accompanist sat at the piano immediately after the score was last seen.",
+    "Remove a violinist's marked score from its checked location.",
+    "Hide the item in a mute case hidden inside the piano bench.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a violinist's marked score disappeared from a music conservatory practice hall before final auditions.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the rehearsal-room light was turned off remotely for half a minute.",
+    "The physical trace was red pencil dust on the piano bench latch.",
+    "The relevant tool or mechanism was a pencil sharpener full of unusual red shavings.",
+    "The item could be concealed in a mute case hidden inside the piano bench.",
+    "The hiding place required insider knowledge because only the accompanist used the remote switch that cut the rehearsal-room light.",
+    "The access pattern mattered because the accompanist sat at the piano immediately after the score was last seen.",
+    "The motive was to sabotage a rival's audition while appearing helpful.",
+    "Willa Voss's suspicious behavior happened before the final verification of the object."
+  ],
+  "distractor_cues": [
+    "a rival soloist complaining about the chosen tempo",
+    "a repairer carrying a large instrument case",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 10,
+    "num_misleading_trails": 2,
+    "word_count": 1067,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the rehearsal-room light was turned off remotely for half a minute",
+    "access_constraint": "the accompanist sat at the piano immediately after the score was last seen",
+    "physical_trace": "red pencil dust on the piano bench latch",
+    "tool_or_mechanism": "a pencil sharpener full of unusual red shavings",
+    "hidden_container": "a mute case hidden inside the piano bench",
+    "role_privilege": "only the accompanist used the remote switch that cut the rehearsal-room light",
+    "motive": "sabotage a rival's audition while appearing helpful"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

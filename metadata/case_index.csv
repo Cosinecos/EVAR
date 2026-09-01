@@ -1,0 +1,301 @@
+case_id,split,title,domain,crime_type,culprit,culprit_role,num_suspects,num_cues,num_misleading_trails,word_count,case_path
+easy_001,Easy,The Cold Orchid,train station,removal,Ivy Ward,station clerk,3,9,2,874,dataset/Easy_Cases/easy_001_The_Cold_Orchid
+easy_002,Easy,The Glass Badge,university observatory,removal,June Fenn,telescope operator,3,9,2,853,dataset/Easy_Cases/easy_002_The_Glass_Badge
+easy_003,Easy,The Brass Crate,clock repair shop,removal,Lucian Hart,apprentice watchmaker,4,7,1,874,dataset/Easy_Cases/easy_003_The_Brass_Crate
+easy_004,Easy,The Quiet Filter,city hall records office,removal,Adrian Page,records supervisor,3,9,2,856,dataset/Easy_Cases/easy_004_The_Quiet_Filter
+easy_005,Easy,The Silver Tube,planetarium,removal,Reed Fenn,projection operator,4,9,2,870,dataset/Easy_Cases/easy_005_The_Silver_Tube
+easy_006,Easy,The Borrowed Badge,botany greenhouse,removal,Mae Lark,greenhouse assistant,3,8,2,853,dataset/Easy_Cases/easy_006_The_Borrowed_Badge
+easy_007,Easy,The Frosted Orchid,mountain lodge,removal,Noah Pierce,ski instructor,4,7,2,859,dataset/Easy_Cases/easy_007_The_Frosted_Orchid
+easy_008,Easy,The Glass Score,chess club,tamper,June Gray,tournament director,3,8,2,875,dataset/Easy_Cases/easy_008_The_Glass_Score
+easy_009,Easy,The Cold Frame,newspaper archive,removal,Clara Finch,night editor,4,9,1,869,dataset/Easy_Cases/easy_009_The_Cold_Frame
+easy_010,Easy,The False Card,public library rare room,removal,Theo Pierce,rare-room librarian,3,9,1,858,dataset/Easy_Cases/easy_010_The_False_Card
+easy_011,Easy,The Blue Counter,campus newspaper office,removal,Ivy Reed,managing editor,3,7,2,854,dataset/Easy_Cases/easy_011_The_Blue_Counter
+easy_012,Easy,The Dusty Brooch,university archive,removal,Elise Kline,archive coordinator,3,9,1,870,dataset/Easy_Cases/easy_012_The_Dusty_Brooch
+easy_013,Easy,The Early Auction,lighthouse museum,removal,Amara Reed,museum caretaker,3,8,2,866,dataset/Easy_Cases/easy_013_The_Early_Auction
+easy_014,Easy,The Borrowed Reel,vineyard tasting room,removal,Anya Rowe,cellar manager,3,7,1,852,dataset/Easy_Cases/easy_014_The_Borrowed_Reel
+easy_015,Easy,The Hidden Diary,hotel laundry,removal,Noah Hollis,laundry supervisor,4,7,2,866,dataset/Easy_Cases/easy_015_The_Hidden_Diary
+easy_016,Easy,The Late Crate,law school moot court,tamper,Bennett Hollis,moot court coordinator,4,7,2,856,dataset/Easy_Cases/easy_016_The_Late_Crate
+easy_017,Easy,The Marked Vial,university radio station,removal,Nora Dove,audio producer,4,9,1,852,dataset/Easy_Cases/easy_017_The_Marked_Vial
+easy_018,Easy,The Missing Cabinet,farmers market office,removal,Theo Frost,market treasurer,4,8,2,867,dataset/Easy_Cases/easy_018_The_Missing_Cabinet
+easy_019,Easy,The Clockwork Crate,robotics laboratory,removal,Soren Ward,calibration lead,4,9,1,866,dataset/Easy_Cases/easy_019_The_Clockwork_Crate
+easy_020,Easy,The Frosted Bell,city aquarium,switch,Nico Hale,aquarist,3,9,2,857,dataset/Easy_Cases/easy_020_The_Frosted_Bell
+easy_021,Easy,The Final Envelope,ceramic studio,removal,Arlo Pike,senior potter,4,8,1,850,dataset/Easy_Cases/easy_021_The_Final_Envelope
+easy_022,Easy,The Silver Compass,science fair,switch,Rhea Reed,lab monitor,4,9,2,868,dataset/Easy_Cases/easy_022_The_Silver_Compass
+easy_023,Easy,The Vanishing Vial,marine research pier,switch,Mabel Locke,sample technician,4,8,1,859,dataset/Easy_Cases/easy_023_The_Vanishing_Vial
+easy_024,Easy,The Dusty Envelope,historical society attic,removal,Mabel Marsh,inventory chair,3,7,2,876,dataset/Easy_Cases/easy_024_The_Dusty_Envelope
+easy_025,Easy,The Narrow Score,private art gallery,switch,Helena Rook,lighting technician,3,8,1,879,dataset/Easy_Cases/easy_025_The_Narrow_Score
+easy_026,Easy,The Silver Map,bakery kitchen,removal,Carmen Ward,night baker,4,7,1,851,dataset/Easy_Cases/easy_026_The_Silver_Map
+easy_027,Easy,The Missing Case,music conservatory,removal,Mabel Rook,accompanist,4,9,2,859,dataset/Easy_Cases/easy_027_The_Missing_Case
+easy_028,Easy,The Paper Prototype,botanical seed bank,removal,Iris Frost,seed curator,4,9,1,850,dataset/Easy_Cases/easy_028_The_Paper_Prototype
+easy_029,Easy,The Silver Auction,hospital charity office,removal,Nora Bell,fundraising coordinator,3,9,1,851,dataset/Easy_Cases/easy_029_The_Silver_Auction
+easy_030,Easy,The Dusty Badge,fencing club,sabotage,Felix Briar,equipment captain,4,8,2,884,dataset/Easy_Cases/easy_030_The_Dusty_Badge
+easy_031,Easy,The Silent Filter,university mailroom,tamper,Eden Ash,mailroom supervisor,3,8,2,873,dataset/Easy_Cases/easy_031_The_Silent_Filter
+easy_032,Easy,The Vanishing Diary,community theater,removal,Nina Ash,costume manager,4,7,1,875,dataset/Easy_Cases/easy_032_The_Vanishing_Diary
+easy_033,Easy,The False Letter,train station,removal,Lucian Hollis,station clerk,4,9,2,869,dataset/Easy_Cases/easy_033_The_False_Letter
+easy_034,Easy,The Cold Switch,university observatory,removal,Isla Voss,telescope operator,3,8,1,857,dataset/Easy_Cases/easy_034_The_Cold_Switch
+easy_035,Easy,The Quiet Map,clock repair shop,removal,Oscar Hale,apprentice watchmaker,4,9,2,884,dataset/Easy_Cases/easy_035_The_Quiet_Map
+easy_036,Easy,The Glass Key,city hall records office,removal,Rhea Wren,records supervisor,4,7,2,850,dataset/Easy_Cases/easy_036_The_Glass_Key
+easy_037,Easy,The Midnight Formula,planetarium,removal,Miles Hollis,projection operator,3,9,1,854,dataset/Easy_Cases/easy_037_The_Midnight_Formula
+easy_038,Easy,The Late Switch,botany greenhouse,removal,Soren Rowe,greenhouse assistant,4,7,2,876,dataset/Easy_Cases/easy_038_The_Late_Switch
+easy_039,Easy,The Hollow Letter,mountain lodge,removal,Lucian Voss,ski instructor,3,7,2,860,dataset/Easy_Cases/easy_039_The_Hollow_Letter
+easy_040,Easy,The Cold Badge,chess club,tamper,Cassian Vale,tournament director,3,7,2,876,dataset/Easy_Cases/easy_040_The_Cold_Badge
+easy_041,Easy,The False Drawer,newspaper archive,removal,Marcus Vale,night editor,4,7,2,874,dataset/Easy_Cases/easy_041_The_False_Drawer
+easy_042,Easy,The Early Cabinet,public library rare room,removal,Mina Page,rare-room librarian,3,7,2,857,dataset/Easy_Cases/easy_042_The_Early_Cabinet
+easy_043,Easy,The Walled Vial,campus newspaper office,removal,Mateo Ames,managing editor,4,9,1,853,dataset/Easy_Cases/easy_043_The_Walled_Vial
+easy_044,Easy,The Silent Counter,university archive,removal,Zara Shaw,archive coordinator,3,7,1,873,dataset/Easy_Cases/easy_044_The_Silent_Counter
+easy_045,Easy,The Clockwork Ledger,lighthouse museum,removal,Priya Frost,museum caretaker,3,8,2,874,dataset/Easy_Cases/easy_045_The_Clockwork_Ledger
+easy_046,Easy,The Late Tube,vineyard tasting room,removal,Iris Quill,cellar manager,4,8,1,852,dataset/Easy_Cases/easy_046_The_Late_Tube
+easy_047,Easy,The Dusty Signal,hotel laundry,removal,Callum Frost,laundry supervisor,3,8,2,862,dataset/Easy_Cases/easy_047_The_Dusty_Signal
+easy_048,Easy,The Missing Map,law school moot court,tamper,Lucian Cole,moot court coordinator,3,8,2,880,dataset/Easy_Cases/easy_048_The_Missing_Map
+easy_049,Easy,The Crimson Prototype,university radio station,removal,Owen Gray,audio producer,4,9,2,852,dataset/Easy_Cases/easy_049_The_Crimson_Prototype
+easy_050,Easy,The Final Reel,farmers market office,removal,Lucian Bell,market treasurer,4,8,2,880,dataset/Easy_Cases/easy_050_The_Final_Reel
+easy_051,Easy,The Silver Map,robotics laboratory,removal,Freya Nash,calibration lead,3,7,2,863,dataset/Easy_Cases/easy_051_The_Silver_Map
+easy_052,Easy,The Hollow Diary,city aquarium,switch,Leo Hale,aquarist,4,7,1,852,dataset/Easy_Cases/easy_052_The_Hollow_Diary
+easy_053,Easy,The Second Brooch,ceramic studio,removal,Adele Pike,senior potter,4,9,1,875,dataset/Easy_Cases/easy_053_The_Second_Brooch
+easy_054,Easy,The Midnight Case,science fair,switch,Ronan Hayes,lab monitor,3,7,2,871,dataset/Easy_Cases/easy_054_The_Midnight_Case
+easy_055,Easy,The Secret Prototype,marine research pier,switch,Amara Hollis,sample technician,3,9,1,860,dataset/Easy_Cases/easy_055_The_Secret_Prototype
+easy_056,Easy,The Silent Brooch,historical society attic,removal,Mira Frost,inventory chair,3,8,2,867,dataset/Easy_Cases/easy_056_The_Silent_Brooch
+easy_057,Easy,The Hidden Badge,private art gallery,switch,Bianca Locke,lighting technician,4,9,2,875,dataset/Easy_Cases/easy_057_The_Hidden_Badge
+easy_058,Easy,The Midnight Orchid,bakery kitchen,removal,Helena Reed,night baker,3,9,2,855,dataset/Easy_Cases/easy_058_The_Midnight_Orchid
+easy_059,Easy,The Final Card,music conservatory,removal,Yara Pierce,accompanist,4,7,1,857,dataset/Easy_Cases/easy_059_The_Final_Card
+easy_060,Easy,The Dim Compass,botanical seed bank,removal,Ronan Sterling,seed curator,4,9,1,854,dataset/Easy_Cases/easy_060_The_Dim_Compass
+easy_061,Easy,The Midnight Ledger,hospital charity office,removal,Owen Blake,fundraising coordinator,3,8,2,852,dataset/Easy_Cases/easy_061_The_Midnight_Ledger
+easy_062,Easy,The Silent Switch,fencing club,sabotage,Marcus Pierce,equipment captain,3,9,1,852,dataset/Easy_Cases/easy_062_The_Silent_Switch
+easy_063,Easy,The Blue Key,university mailroom,tamper,Celine Ames,mailroom supervisor,4,8,2,869,dataset/Easy_Cases/easy_063_The_Blue_Key
+easy_064,Easy,The Secret Signal,community theater,removal,Orion Finch,costume manager,4,9,1,879,dataset/Easy_Cases/easy_064_The_Secret_Signal
+easy_065,Easy,The Early Record,train station,removal,Ada Finch,station clerk,3,9,2,879,dataset/Easy_Cases/easy_065_The_Early_Record
+easy_066,Easy,The False Envelope,university observatory,removal,Sofia Dove,telescope operator,4,8,2,853,dataset/Easy_Cases/easy_066_The_False_Envelope
+easy_067,Easy,The Glass Orchid,clock repair shop,removal,Elise Hart,apprentice watchmaker,4,9,2,873,dataset/Easy_Cases/easy_067_The_Glass_Orchid
+easy_068,Easy,The Cold Crate,city hall records office,removal,Hugo Ash,records supervisor,3,7,1,855,dataset/Easy_Cases/easy_068_The_Cold_Crate
+easy_069,Easy,The Narrow Score,planetarium,removal,Tessa Blake,projection operator,4,8,2,862,dataset/Easy_Cases/easy_069_The_Narrow_Score
+easy_070,Easy,The Missing Envelope,botany greenhouse,removal,Ezra Voss,greenhouse assistant,4,8,2,879,dataset/Easy_Cases/easy_070_The_Missing_Envelope
+easy_071,Easy,The Vanishing Record,mountain lodge,removal,Ada Hayes,ski instructor,3,7,2,854,dataset/Easy_Cases/easy_071_The_Vanishing_Record
+easy_072,Easy,The False Switch,chess club,tamper,Arlo Dove,tournament director,4,7,2,864,dataset/Easy_Cases/easy_072_The_False_Switch
+easy_073,Easy,The Early Filter,newspaper archive,removal,Livia Gray,night editor,3,9,1,866,dataset/Easy_Cases/easy_073_The_Early_Filter
+easy_074,Easy,The Clockwork Reel,public library rare room,removal,Mabel Pike,rare-room librarian,4,9,1,860,dataset/Easy_Cases/easy_074_The_Clockwork_Reel
+easy_075,Easy,The Brass Prototype,campus newspaper office,removal,Bennett Wren,managing editor,4,8,2,850,dataset/Easy_Cases/easy_075_The_Brass_Prototype
+easy_076,Easy,The Blue Vial,university archive,removal,Harper Hale,archive coordinator,3,8,1,872,dataset/Easy_Cases/easy_076_The_Blue_Vial
+easy_077,Easy,The Silver Bell,lighthouse museum,removal,Mabel Gray,museum caretaker,3,9,1,868,dataset/Easy_Cases/easy_077_The_Silver_Bell
+easy_078,Easy,The Missing Formula,vineyard tasting room,removal,Serena Frost,cellar manager,4,7,2,869,dataset/Easy_Cases/easy_078_The_Missing_Formula
+easy_079,Easy,The Silent Frame,hotel laundry,removal,Ruth Hart,laundry supervisor,3,8,2,869,dataset/Easy_Cases/easy_079_The_Silent_Frame
+easy_080,Easy,The Final Orchid,law school moot court,tamper,Mina Baird,moot court coordinator,4,9,2,857,dataset/Easy_Cases/easy_080_The_Final_Orchid
+easy_081,Easy,The Broken Compass,university radio station,removal,Maya Gray,audio producer,4,8,1,852,dataset/Easy_Cases/easy_081_The_Broken_Compass
+easy_082,Easy,The Second Tube,farmers market office,removal,Dante Locke,market treasurer,3,7,1,870,dataset/Easy_Cases/easy_082_The_Second_Tube
+easy_083,Easy,The Midnight Orchid,robotics laboratory,removal,Oscar Bell,calibration lead,3,8,1,858,dataset/Easy_Cases/easy_083_The_Midnight_Orchid
+easy_084,Easy,The Vanishing Signal,city aquarium,switch,Jonah Wren,aquarist,4,9,2,880,dataset/Easy_Cases/easy_084_The_Vanishing_Signal
+easy_085,Easy,The Locked Counter,ceramic studio,removal,Noah Frost,senior potter,3,7,1,853,dataset/Easy_Cases/easy_085_The_Locked_Counter
+easy_086,Easy,The Narrow Card,science fair,switch,Arlo Dove,lab monitor,3,9,1,869,dataset/Easy_Cases/easy_086_The_Narrow_Card
+easy_087,Easy,The Borrowed Compass,marine research pier,switch,Iris Ames,sample technician,3,7,1,853,dataset/Easy_Cases/easy_087_The_Borrowed_Compass
+easy_088,Easy,The Blue Counter,historical society attic,removal,Cassian Nash,inventory chair,3,9,1,861,dataset/Easy_Cases/easy_088_The_Blue_Counter
+easy_089,Easy,The Dusty Switch,private art gallery,switch,Oscar Rowe,lighting technician,3,8,1,874,dataset/Easy_Cases/easy_089_The_Dusty_Switch
+easy_090,Easy,The Narrow Letter,bakery kitchen,removal,Bianca Hart,night baker,4,7,1,854,dataset/Easy_Cases/easy_090_The_Narrow_Letter
+easy_091,Easy,The Second Cabinet,music conservatory,removal,Theo Blake,accompanist,4,9,2,859,dataset/Easy_Cases/easy_091_The_Second_Cabinet
+easy_092,Easy,The Frosted Case,botanical seed bank,removal,Tobias Ward,seed curator,4,8,1,852,dataset/Easy_Cases/easy_092_The_Frosted_Case
+easy_093,Easy,The Narrow Bell,hospital charity office,removal,Miles Finch,fundraising coordinator,4,7,1,855,dataset/Easy_Cases/easy_093_The_Narrow_Bell
+easy_094,Easy,The Blue Envelope,fencing club,sabotage,Nora Reed,equipment captain,3,8,2,851,dataset/Easy_Cases/easy_094_The_Blue_Envelope
+easy_095,Easy,The Walled Crate,university mailroom,tamper,Mabel Reed,mailroom supervisor,3,7,1,850,dataset/Easy_Cases/easy_095_The_Walled_Crate
+easy_096,Easy,The Borrowed Frame,community theater,removal,Callum Baird,costume manager,3,7,1,852,dataset/Easy_Cases/easy_096_The_Borrowed_Frame
+easy_097,Easy,The Clockwork Packet,train station,removal,Elise Greer,station clerk,3,7,2,877,dataset/Easy_Cases/easy_097_The_Clockwork_Packet
+easy_098,Easy,The Early Brooch,university observatory,removal,Callum Voss,telescope operator,3,8,1,854,dataset/Easy_Cases/easy_098_The_Early_Brooch
+easy_099,Easy,The Cold Letter,clock repair shop,removal,Theo Morrow,apprentice watchmaker,3,8,2,880,dataset/Easy_Cases/easy_099_The_Cold_Letter
+easy_100,Easy,The False Map,city hall records office,removal,Miles Reed,records supervisor,4,9,1,884,dataset/Easy_Cases/easy_100_The_False_Map
+medium_001,Medium,The Missing Cabinet,music conservatory,removal,Helena Hart,accompanist,5,13,2,1057,dataset/Medium_Cases/medium_001_The_Missing_Cabinet
+medium_002,Medium,The Paper Case,botanical seed bank,removal,Amara Baird,seed curator,5,10,2,1070,dataset/Medium_Cases/medium_002_The_Paper_Case
+medium_003,Medium,The Silver Bell,hospital charity office,removal,Elias Blake,fundraising coordinator,4,11,3,1080,dataset/Medium_Cases/medium_003_The_Silver_Bell
+medium_004,Medium,The Dusty Envelope,fencing club,sabotage,Callum Pierce,equipment captain,5,12,2,1074,dataset/Medium_Cases/medium_004_The_Dusty_Envelope
+medium_005,Medium,The Silent Crate,university mailroom,tamper,Cassian Rowe,mailroom supervisor,5,12,2,1078,dataset/Medium_Cases/medium_005_The_Silent_Crate
+medium_006,Medium,The Vanishing Frame,community theater,removal,Hugo Hale,costume manager,5,11,2,1062,dataset/Medium_Cases/medium_006_The_Vanishing_Frame
+medium_007,Medium,The False Packet,train station,removal,Ezra Quill,station clerk,4,12,2,1051,dataset/Medium_Cases/medium_007_The_False_Packet
+medium_008,Medium,The Cold Brooch,university observatory,removal,Callum Vale,telescope operator,4,13,3,1051,dataset/Medium_Cases/medium_008_The_Cold_Brooch
+medium_009,Medium,The Quiet Letter,clock repair shop,removal,Isla Cross,apprentice watchmaker,4,11,2,1053,dataset/Medium_Cases/medium_009_The_Quiet_Letter
+medium_010,Medium,The Glass Map,city hall records office,removal,Mara Blake,records supervisor,4,10,3,1064,dataset/Medium_Cases/medium_010_The_Glass_Map
+medium_011,Medium,The Midnight Badge,planetarium,removal,Yara Finch,projection operator,5,13,3,1052,dataset/Medium_Cases/medium_011_The_Midnight_Badge
+medium_012,Medium,The Late Brooch,botany greenhouse,removal,Theo Gray,greenhouse assistant,5,10,3,1077,dataset/Medium_Cases/medium_012_The_Late_Brooch
+medium_013,Medium,The Hollow Packet,mountain lodge,removal,Arlo Gray,ski instructor,4,11,3,1080,dataset/Medium_Cases/medium_013_The_Hollow_Packet
+medium_014,Medium,The Cold Envelope,chess club,tamper,Mina North,tournament director,4,13,2,1082,dataset/Medium_Cases/medium_014_The_Cold_Envelope
+medium_015,Medium,The False Key,newspaper archive,removal,Livia Pike,night editor,5,13,2,1053,dataset/Medium_Cases/medium_015_The_False_Key
+medium_016,Medium,The Early Tube,public library rare room,removal,Elias Hale,rare-room librarian,4,11,2,1056,dataset/Medium_Cases/medium_016_The_Early_Tube
+medium_017,Medium,The Walled Compass,campus newspaper office,removal,Bennett Locke,managing editor,5,13,2,1064,dataset/Medium_Cases/medium_017_The_Walled_Compass
+medium_018,Medium,The Silent Prototype,university archive,removal,Lena Kline,archive coordinator,4,12,3,1061,dataset/Medium_Cases/medium_018_The_Silent_Prototype
+medium_019,Medium,The Clockwork Diary,lighthouse museum,removal,Bianca Ames,museum caretaker,4,10,2,1080,dataset/Medium_Cases/medium_019_The_Clockwork_Diary
+medium_020,Medium,The Late Score,vineyard tasting room,removal,Jonah Ash,cellar manager,5,12,3,1056,dataset/Medium_Cases/medium_020_The_Late_Score
+medium_021,Medium,The Dusty Drawer,hotel laundry,removal,Harper Fenn,laundry supervisor,4,13,3,1060,dataset/Medium_Cases/medium_021_The_Dusty_Drawer
+medium_022,Medium,The Missing Letter,law school moot court,tamper,Caleb Morrow,moot court coordinator,4,12,3,1067,dataset/Medium_Cases/medium_022_The_Missing_Letter
+medium_023,Medium,The Crimson Case,university radio station,removal,Freya Vale,audio producer,5,11,2,1073,dataset/Medium_Cases/medium_023_The_Crimson_Case
+medium_024,Medium,The Final Formula,farmers market office,removal,Vera Gray,market treasurer,4,12,2,1057,dataset/Medium_Cases/medium_024_The_Final_Formula
+medium_025,Medium,The Silver Letter,robotics laboratory,removal,Eden Marsh,calibration lead,4,10,3,1050,dataset/Medium_Cases/medium_025_The_Silver_Letter
+medium_026,Medium,The Hollow Frame,city aquarium,switch,Hugo Pierce,aquarist,4,10,2,1070,dataset/Medium_Cases/medium_026_The_Hollow_Frame
+medium_027,Medium,The Second Vial,ceramic studio,removal,Mateo Shaw,senior potter,4,12,2,1068,dataset/Medium_Cases/medium_027_The_Second_Vial
+medium_028,Medium,The Midnight Cabinet,science fair,switch,Selene Page,lab monitor,5,12,3,1072,dataset/Medium_Cases/medium_028_The_Midnight_Cabinet
+medium_029,Medium,The Secret Case,marine research pier,switch,Adrian Stone,sample technician,5,10,3,1078,dataset/Medium_Cases/medium_029_The_Secret_Case
+medium_030,Medium,The Silent Vial,historical society attic,removal,Nora Nash,inventory chair,4,10,3,1071,dataset/Medium_Cases/medium_030_The_Silent_Vial
+medium_031,Medium,The Hidden Envelope,private art gallery,switch,Freya Baird,lighting technician,5,12,2,1057,dataset/Medium_Cases/medium_031_The_Hidden_Envelope
+medium_032,Medium,The Midnight Record,bakery kitchen,removal,Tessa Wren,night baker,5,10,3,1071,dataset/Medium_Cases/medium_032_The_Midnight_Record
+medium_033,Medium,The Final Reel,music conservatory,removal,Oscar Bell,accompanist,5,10,2,1067,dataset/Medium_Cases/medium_033_The_Final_Reel
+medium_034,Medium,The Dim Card,botanical seed bank,removal,Nora Hart,seed curator,4,13,3,1075,dataset/Medium_Cases/medium_034_The_Dim_Card
+medium_035,Medium,The Midnight Diary,hospital charity office,removal,Marcus Ash,fundraising coordinator,5,13,3,1055,dataset/Medium_Cases/medium_035_The_Midnight_Diary
+medium_036,Medium,The Silent Brooch,fencing club,sabotage,Grant Greer,equipment captain,5,10,2,1065,dataset/Medium_Cases/medium_036_The_Silent_Brooch
+medium_037,Medium,The Blue Map,university mailroom,tamper,Keira Baird,mailroom supervisor,4,10,2,1061,dataset/Medium_Cases/medium_037_The_Blue_Map
+medium_038,Medium,The Secret Drawer,community theater,removal,Serena Dove,costume manager,5,12,2,1068,dataset/Medium_Cases/medium_038_The_Secret_Drawer
+medium_039,Medium,The Early Auction,train station,removal,Mara Baird,station clerk,4,12,3,1054,dataset/Medium_Cases/medium_039_The_Early_Auction
+medium_040,Medium,The False Counter,university observatory,removal,Mae Kline,telescope operator,4,12,3,1074,dataset/Medium_Cases/medium_040_The_False_Counter
+medium_041,Medium,The Glass Record,clock repair shop,removal,Soren Ward,apprentice watchmaker,4,12,3,1055,dataset/Medium_Cases/medium_041_The_Glass_Record
+medium_042,Medium,The Cold Orchid,city hall records office,removal,Quinn Pike,records supervisor,5,11,2,1051,dataset/Medium_Cases/medium_042_The_Cold_Orchid
+medium_043,Medium,The Narrow Switch,planetarium,removal,Hugo Sterling,projection operator,5,10,3,1071,dataset/Medium_Cases/medium_043_The_Narrow_Switch
+medium_044,Medium,The Missing Counter,botany greenhouse,removal,Maya Vale,greenhouse assistant,4,11,2,1063,dataset/Medium_Cases/medium_044_The_Missing_Counter
+medium_045,Medium,The Vanishing Auction,mountain lodge,removal,Ivy Gray,ski instructor,4,10,3,1075,dataset/Medium_Cases/medium_045_The_Vanishing_Auction
+medium_046,Medium,The False Brooch,chess club,tamper,Cassian Bell,tournament director,5,10,2,1053,dataset/Medium_Cases/medium_046_The_False_Brooch
+medium_047,Medium,The Early Crate,newspaper archive,removal,Nina Page,night editor,5,11,2,1056,dataset/Medium_Cases/medium_047_The_Early_Crate
+medium_048,Medium,The Clockwork Formula,public library rare room,removal,Victor Locke,rare-room librarian,4,12,2,1080,dataset/Medium_Cases/medium_048_The_Clockwork_Formula
+medium_049,Medium,The Brass Case,campus newspaper office,removal,Cyrus Blake,managing editor,4,13,3,1082,dataset/Medium_Cases/medium_049_The_Brass_Case
+medium_050,Medium,The Blue Compass,university archive,removal,Noelle Cross,archive coordinator,4,12,2,1059,dataset/Medium_Cases/medium_050_The_Blue_Compass
+medium_051,Medium,The Silver Signal,lighthouse museum,removal,Iris Lane,museum caretaker,5,10,3,1077,dataset/Medium_Cases/medium_051_The_Silver_Signal
+medium_052,Medium,The Missing Badge,vineyard tasting room,removal,Yara Baird,cellar manager,5,11,3,1055,dataset/Medium_Cases/medium_052_The_Missing_Badge
+medium_053,Medium,The Silent Filter,hotel laundry,removal,Isla Vale,laundry supervisor,4,10,2,1053,dataset/Medium_Cases/medium_053_The_Silent_Filter
+medium_054,Medium,The Final Record,law school moot court,tamper,Rowan Ash,moot court coordinator,5,10,2,1072,dataset/Medium_Cases/medium_054_The_Final_Record
+medium_055,Medium,The Broken Card,university radio station,removal,Willa Fenn,audio producer,5,12,2,1071,dataset/Medium_Cases/medium_055_The_Broken_Card
+medium_056,Medium,The Second Score,farmers market office,removal,Nora Rowe,market treasurer,5,12,3,1058,dataset/Medium_Cases/medium_056_The_Second_Score
+medium_057,Medium,The Midnight Record,robotics laboratory,removal,Celine Sterling,calibration lead,4,11,3,1053,dataset/Medium_Cases/medium_057_The_Midnight_Record
+medium_058,Medium,The Vanishing Drawer,city aquarium,switch,Willa Lane,aquarist,5,11,3,1077,dataset/Medium_Cases/medium_058_The_Vanishing_Drawer
+medium_059,Medium,The Locked Prototype,ceramic studio,removal,Yara Rook,senior potter,4,13,3,1071,dataset/Medium_Cases/medium_059_The_Locked_Prototype
+medium_060,Medium,The Narrow Reel,science fair,switch,Iris Hart,lab monitor,4,13,2,1063,dataset/Medium_Cases/medium_060_The_Narrow_Reel
+medium_061,Medium,The Borrowed Card,marine research pier,switch,Ruth Ward,sample technician,4,10,2,1060,dataset/Medium_Cases/medium_061_The_Borrowed_Card
+medium_062,Medium,The Blue Prototype,historical society attic,removal,Carmen Kline,inventory chair,5,13,2,1051,dataset/Medium_Cases/medium_062_The_Blue_Prototype
+medium_063,Medium,The Dusty Brooch,private art gallery,switch,Helena Lark,lighting technician,4,13,2,1064,dataset/Medium_Cases/medium_063_The_Dusty_Brooch
+medium_064,Medium,The Narrow Packet,bakery kitchen,removal,Phoebe Gray,night baker,5,12,3,1078,dataset/Medium_Cases/medium_064_The_Narrow_Packet
+medium_065,Medium,The Second Tube,music conservatory,removal,Clara Hayes,accompanist,5,13,2,1058,dataset/Medium_Cases/medium_065_The_Second_Tube
+medium_066,Medium,The Frosted Cabinet,botanical seed bank,removal,Dahlia Ash,seed curator,5,10,3,1070,dataset/Medium_Cases/medium_066_The_Frosted_Cabinet
+medium_067,Medium,The Narrow Signal,hospital charity office,removal,Felix Sterling,fundraising coordinator,4,10,3,1066,dataset/Medium_Cases/medium_067_The_Narrow_Signal
+medium_068,Medium,The Blue Counter,fencing club,sabotage,Dahlia Wren,equipment captain,4,13,3,1078,dataset/Medium_Cases/medium_068_The_Blue_Counter
+medium_069,Medium,The Walled Orchid,university mailroom,tamper,Bianca Rowe,mailroom supervisor,5,12,3,1080,dataset/Medium_Cases/medium_069_The_Walled_Orchid
+medium_070,Medium,The Borrowed Filter,community theater,removal,Yara Stone,costume manager,4,12,2,1079,dataset/Medium_Cases/medium_070_The_Borrowed_Filter
+medium_071,Medium,The Clockwork Ledger,train station,removal,Simon Dove,station clerk,4,10,2,1076,dataset/Medium_Cases/medium_071_The_Clockwork_Ledger
+medium_072,Medium,The Early Vial,university observatory,removal,Lyra Pierce,telescope operator,4,11,3,1052,dataset/Medium_Cases/medium_072_The_Early_Vial
+medium_073,Medium,The Cold Packet,clock repair shop,removal,Phoebe Reed,apprentice watchmaker,5,10,3,1077,dataset/Medium_Cases/medium_073_The_Cold_Packet
+medium_074,Medium,The False Letter,city hall records office,removal,Priya Pike,records supervisor,4,12,2,1080,dataset/Medium_Cases/medium_074_The_False_Letter
+medium_075,Medium,The Hidden Envelope,planetarium,removal,Nina Baird,projection operator,5,10,2,1060,dataset/Medium_Cases/medium_075_The_Hidden_Envelope
+medium_076,Medium,The Final Vial,botany greenhouse,removal,Callum Pike,greenhouse assistant,5,10,3,1062,dataset/Medium_Cases/medium_076_The_Final_Vial
+medium_077,Medium,The Secret Ledger,mountain lodge,removal,Freya Sterling,ski instructor,4,10,3,1051,dataset/Medium_Cases/medium_077_The_Secret_Ledger
+medium_078,Medium,The Early Counter,chess club,tamper,Cassian Vale,tournament director,5,12,2,1066,dataset/Medium_Cases/medium_078_The_Early_Counter
+medium_079,Medium,The Clockwork Map,newspaper archive,removal,Freya Marsh,night editor,5,13,2,1052,dataset/Medium_Cases/medium_079_The_Clockwork_Map
+medium_080,Medium,The Silver Score,public library rare room,removal,Caleb Wren,rare-room librarian,5,11,3,1059,dataset/Medium_Cases/medium_080_The_Silver_Score
+medium_081,Medium,The Quiet Card,campus newspaper office,removal,Grant Hayes,managing editor,4,10,2,1061,dataset/Medium_Cases/medium_081_The_Quiet_Card
+medium_082,Medium,The Walled Case,university archive,removal,Ronan Ward,archive coordinator,5,13,3,1061,dataset/Medium_Cases/medium_082_The_Walled_Case
+medium_083,Medium,The Midnight Frame,lighthouse museum,removal,Eden Stone,museum caretaker,4,13,3,1057,dataset/Medium_Cases/medium_083_The_Midnight_Frame
+medium_084,Medium,The Final Switch,vineyard tasting room,removal,Theo Frost,cellar manager,5,12,3,1065,dataset/Medium_Cases/medium_084_The_Final_Switch
+medium_085,Medium,The Blue Key,hotel laundry,removal,Keira North,laundry supervisor,4,12,2,1065,dataset/Medium_Cases/medium_085_The_Blue_Key
+medium_086,Medium,The Second Packet,law school moot court,tamper,Hugo Hayes,moot court coordinator,5,13,2,1067,dataset/Medium_Cases/medium_086_The_Second_Packet
+medium_087,Medium,The Paper Cabinet,university radio station,removal,Reed Nash,audio producer,4,13,3,1062,dataset/Medium_Cases/medium_087_The_Paper_Cabinet
+medium_088,Medium,The Locked Badge,farmers market office,removal,Leo Wren,market treasurer,4,11,2,1052,dataset/Medium_Cases/medium_088_The_Locked_Badge
+medium_089,Medium,The Narrow Packet,robotics laboratory,removal,Rowan Hayes,calibration lead,5,12,3,1075,dataset/Medium_Cases/medium_089_The_Narrow_Packet
+medium_090,Medium,The Secret Filter,city aquarium,switch,Theo Cole,aquarist,5,10,2,1072,dataset/Medium_Cases/medium_090_The_Secret_Filter
+medium_091,Medium,The Marked Compass,ceramic studio,removal,Carmen Marsh,senior potter,4,13,3,1057,dataset/Medium_Cases/medium_091_The_Marked_Compass
+medium_092,Medium,The Hidden Tube,science fair,switch,Amara Locke,lab monitor,5,12,2,1056,dataset/Medium_Cases/medium_092_The_Hidden_Tube
+medium_093,Medium,The Late Cabinet,marine research pier,switch,Silas Bell,sample technician,4,13,2,1079,dataset/Medium_Cases/medium_093_The_Late_Cabinet
+medium_094,Medium,The Walled Compass,historical society attic,removal,Dorian Kline,inventory chair,5,13,3,1057,dataset/Medium_Cases/medium_094_The_Walled_Compass
+medium_095,Medium,The Silent Counter,private art gallery,switch,Helena Fenn,lighting technician,5,13,3,1054,dataset/Medium_Cases/medium_095_The_Silent_Counter
+medium_096,Medium,The Hidden Auction,bakery kitchen,removal,Noah Ward,night baker,4,13,2,1063,dataset/Medium_Cases/medium_096_The_Hidden_Auction
+medium_097,Medium,The Locked Formula,music conservatory,removal,Owen Page,accompanist,5,13,3,1074,dataset/Medium_Cases/medium_097_The_Locked_Formula
+medium_098,Medium,The Hollow Reel,botanical seed bank,removal,Reed Vale,seed curator,5,12,2,1066,dataset/Medium_Cases/medium_098_The_Hollow_Reel
+medium_099,Medium,The Hidden Frame,hospital charity office,removal,Bianca Kline,fundraising coordinator,5,11,3,1079,dataset/Medium_Cases/medium_099_The_Hidden_Frame
+medium_100,Medium,The Walled Vial,fencing club,sabotage,Dante Frost,equipment captain,4,10,2,1072,dataset/Medium_Cases/medium_100_The_Walled_Vial
+complex_001,Complex,The Cold Map,chess club,tamper,Eden Quill,tournament director,7,14,5,1412,dataset/Complex_Cases/complex_001_The_Cold_Map
+complex_002,Complex,The False Envelope,newspaper archive,removal,Nina Lark,night editor,6,15,4,1417,dataset/Complex_Cases/complex_002_The_False_Envelope
+complex_003,Complex,The Early Frame,public library rare room,removal,Bennett Voss,rare-room librarian,5,14,5,1417,dataset/Complex_Cases/complex_003_The_Early_Frame
+complex_004,Complex,The Walled Auction,campus newspaper office,removal,Silas Vale,managing editor,5,15,3,1402,dataset/Complex_Cases/complex_004_The_Walled_Auction
+complex_005,Complex,The Silent Packet,university archive,removal,Jasper Fenn,archive coordinator,5,14,3,1420,dataset/Complex_Cases/complex_005_The_Silent_Packet
+complex_006,Complex,The Clockwork Tube,lighthouse museum,removal,Carmen Hollis,museum caretaker,6,18,4,1426,dataset/Complex_Cases/complex_006_The_Clockwork_Tube
+complex_007,Complex,The Late Filter,vineyard tasting room,removal,Sofia Finch,cellar manager,6,16,4,1403,dataset/Complex_Cases/complex_007_The_Late_Filter
+complex_008,Complex,The Dusty Badge,hotel laundry,removal,Jasper Quill,laundry supervisor,7,15,5,1415,dataset/Complex_Cases/complex_008_The_Dusty_Badge
+complex_009,Complex,The Missing Prototype,law school moot court,tamper,Maya Hayes,moot court coordinator,5,18,3,1400,dataset/Complex_Cases/complex_009_The_Missing_Prototype
+complex_010,Complex,The Crimson Ledger,university radio station,removal,Nora Frost,audio producer,5,16,5,1416,dataset/Complex_Cases/complex_010_The_Crimson_Ledger
+complex_011,Complex,The Final Drawer,farmers market office,removal,Damon Fenn,market treasurer,6,15,3,1403,dataset/Complex_Cases/complex_011_The_Final_Drawer
+complex_012,Complex,The Silver Prototype,robotics laboratory,removal,Nina Morrow,calibration lead,5,17,4,1413,dataset/Complex_Cases/complex_012_The_Silver_Prototype
+complex_013,Complex,The Hollow Score,city aquarium,switch,Mina Hayes,aquarist,5,14,3,1411,dataset/Complex_Cases/complex_013_The_Hollow_Score
+complex_014,Complex,The Second Record,ceramic studio,removal,Simon Locke,senior potter,6,16,5,1421,dataset/Complex_Cases/complex_014_The_Second_Record
+complex_015,Complex,The Midnight Diary,science fair,switch,Silas Shaw,lab monitor,7,15,5,1420,dataset/Complex_Cases/complex_015_The_Midnight_Diary
+complex_016,Complex,The Secret Ledger,marine research pier,switch,Mabel Page,sample technician,6,16,4,1406,dataset/Complex_Cases/complex_016_The_Secret_Ledger
+complex_017,Complex,The Silent Record,historical society attic,removal,Dahlia Fenn,inventory chair,5,18,4,1404,dataset/Complex_Cases/complex_017_The_Silent_Record
+complex_018,Complex,The Hidden Map,private art gallery,switch,Silas Ames,lighting technician,6,15,5,1411,dataset/Complex_Cases/complex_018_The_Hidden_Map
+complex_019,Complex,The Midnight Compass,bakery kitchen,removal,Damon Lane,night baker,6,14,4,1431,dataset/Complex_Cases/complex_019_The_Midnight_Compass
+complex_020,Complex,The Final Signal,music conservatory,removal,Mae Fenn,accompanist,5,15,5,1427,dataset/Complex_Cases/complex_020_The_Final_Signal
+complex_021,Complex,The Dim Bell,botanical seed bank,removal,Mina Blake,seed curator,7,17,3,1426,dataset/Complex_Cases/complex_021_The_Dim_Bell
+complex_022,Complex,The Midnight Tube,hospital charity office,removal,Soren Lane,fundraising coordinator,7,15,5,1426,dataset/Complex_Cases/complex_022_The_Midnight_Tube
+complex_023,Complex,The Silent Orchid,fencing club,sabotage,Elise Locke,equipment captain,5,18,4,1408,dataset/Complex_Cases/complex_023_The_Silent_Orchid
+complex_024,Complex,The Blue Counter,university mailroom,tamper,Bennett Nash,mailroom supervisor,5,14,4,1426,dataset/Complex_Cases/complex_024_The_Blue_Counter
+complex_025,Complex,The Secret Badge,community theater,removal,Isla Page,costume manager,6,15,3,1427,dataset/Complex_Cases/complex_025_The_Secret_Badge
+complex_026,Complex,The Early Card,train station,removal,Mara Briar,station clerk,7,14,4,1428,dataset/Complex_Cases/complex_026_The_Early_Card
+complex_027,Complex,The False Letter,university observatory,removal,Lena Stone,telescope operator,6,17,4,1408,dataset/Complex_Cases/complex_027_The_False_Letter
+complex_028,Complex,The Glass Compass,clock repair shop,removal,Rowan Lark,apprentice watchmaker,7,18,5,1400,dataset/Complex_Cases/complex_028_The_Glass_Compass
+complex_029,Complex,The Cold Vial,city hall records office,removal,Amara Quill,records supervisor,6,16,3,1409,dataset/Complex_Cases/complex_029_The_Cold_Vial
+complex_030,Complex,The Narrow Crate,planetarium,removal,Bennett Gray,projection operator,5,14,4,1427,dataset/Complex_Cases/complex_030_The_Narrow_Crate
+complex_031,Complex,The Missing Letter,botany greenhouse,removal,June Nash,greenhouse assistant,6,16,3,1420,dataset/Complex_Cases/complex_031_The_Missing_Letter
+complex_032,Complex,The Vanishing Card,mountain lodge,removal,Cyrus North,ski instructor,6,17,4,1410,dataset/Complex_Cases/complex_032_The_Vanishing_Card
+complex_033,Complex,The False Orchid,chess club,tamper,Caleb Wren,tournament director,7,17,3,1427,dataset/Complex_Cases/complex_033_The_False_Orchid
+complex_034,Complex,The Early Brooch,newspaper archive,removal,Bennett Morrow,night editor,5,15,4,1404,dataset/Complex_Cases/complex_034_The_Early_Brooch
+complex_035,Complex,The Clockwork Drawer,public library rare room,removal,Phoebe Hart,rare-room librarian,6,16,5,1406,dataset/Complex_Cases/complex_035_The_Clockwork_Drawer
+complex_036,Complex,The Brass Ledger,campus newspaper office,removal,June Marsh,managing editor,5,18,4,1406,dataset/Complex_Cases/complex_036_The_Brass_Ledger
+complex_037,Complex,The Blue Auction,university archive,removal,Grant Locke,archive coordinator,7,18,4,1402,dataset/Complex_Cases/complex_037_The_Blue_Auction
+complex_038,Complex,The Silver Formula,lighthouse museum,removal,Victor North,museum caretaker,6,16,4,1400,dataset/Complex_Cases/complex_038_The_Silver_Formula
+complex_039,Complex,The Missing Key,vineyard tasting room,removal,Owen Pierce,cellar manager,7,16,3,1409,dataset/Complex_Cases/complex_039_The_Missing_Key
+complex_040,Complex,The Silent Switch,hotel laundry,removal,Rowan Lane,laundry supervisor,7,18,3,1413,dataset/Complex_Cases/complex_040_The_Silent_Switch
+complex_041,Complex,The Final Compass,law school moot court,tamper,Adele Ward,moot court coordinator,6,16,4,1408,dataset/Complex_Cases/complex_041_The_Final_Compass
+complex_042,Complex,The Broken Bell,university radio station,removal,Adele Marsh,audio producer,6,17,4,1400,dataset/Complex_Cases/complex_042_The_Broken_Bell
+complex_043,Complex,The Second Filter,farmers market office,removal,Caleb Hayes,market treasurer,5,15,5,1400,dataset/Complex_Cases/complex_043_The_Second_Filter
+complex_044,Complex,The Midnight Compass,robotics laboratory,removal,Malik Cross,calibration lead,5,18,4,1420,dataset/Complex_Cases/complex_044_The_Midnight_Compass
+complex_045,Complex,The Vanishing Badge,city aquarium,switch,Kieran North,aquarist,5,17,3,1414,dataset/Complex_Cases/complex_045_The_Vanishing_Badge
+complex_046,Complex,The Locked Packet,ceramic studio,removal,Yara Rowe,senior potter,7,17,4,1414,dataset/Complex_Cases/complex_046_The_Locked_Packet
+complex_047,Complex,The Narrow Signal,science fair,switch,Freya Fenn,lab monitor,5,14,5,1427,dataset/Complex_Cases/complex_047_The_Narrow_Signal
+complex_048,Complex,The Borrowed Bell,marine research pier,switch,Mara North,sample technician,7,17,3,1408,dataset/Complex_Cases/complex_048_The_Borrowed_Bell
+complex_049,Complex,The Blue Packet,historical society attic,removal,Elise Ash,inventory chair,6,16,5,1427,dataset/Complex_Cases/complex_049_The_Blue_Packet
+complex_050,Complex,The Dusty Orchid,private art gallery,switch,Keira Ash,lighting technician,5,18,4,1411,dataset/Complex_Cases/complex_050_The_Dusty_Orchid
+complex_051,Complex,The Narrow Case,bakery kitchen,removal,June Sterling,night baker,6,14,3,1410,dataset/Complex_Cases/complex_051_The_Narrow_Case
+complex_052,Complex,The Second Frame,music conservatory,removal,Jonah Sterling,accompanist,7,14,5,1421,dataset/Complex_Cases/complex_052_The_Second_Frame
+complex_053,Complex,The Frosted Diary,botanical seed bank,removal,Rowan North,seed curator,5,14,4,1426,dataset/Complex_Cases/complex_053_The_Frosted_Diary
+complex_054,Complex,The Narrow Formula,hospital charity office,removal,Elliot Reed,fundraising coordinator,7,14,3,1411,dataset/Complex_Cases/complex_054_The_Narrow_Formula
+complex_055,Complex,The Blue Letter,fencing club,sabotage,Elise Page,equipment captain,6,14,4,1400,dataset/Complex_Cases/complex_055_The_Blue_Letter
+complex_056,Complex,The Walled Vial,university mailroom,tamper,Celine Reed,mailroom supervisor,5,16,4,1422,dataset/Complex_Cases/complex_056_The_Walled_Vial
+complex_057,Complex,The Borrowed Switch,community theater,removal,Zara Pierce,costume manager,6,15,5,1414,dataset/Complex_Cases/complex_057_The_Borrowed_Switch
+complex_058,Complex,The Clockwork Cabinet,train station,removal,Vera Baird,station clerk,5,17,3,1400,dataset/Complex_Cases/complex_058_The_Clockwork_Cabinet
+complex_059,Complex,The Early Record,university observatory,removal,Iris Nash,telescope operator,5,17,3,1411,dataset/Complex_Cases/complex_059_The_Early_Record
+complex_060,Complex,The Cold Case,clock repair shop,removal,Orion Hale,apprentice watchmaker,5,14,5,1426,dataset/Complex_Cases/complex_060_The_Cold_Case
+complex_061,Complex,The False Prototype,city hall records office,removal,Theo Kline,records supervisor,7,14,3,1411,dataset/Complex_Cases/complex_061_The_False_Prototype
+complex_062,Complex,The Hidden Map,planetarium,removal,Adrian Lane,projection operator,7,14,5,1417,dataset/Complex_Cases/complex_062_The_Hidden_Map
+complex_063,Complex,The Final Record,botany greenhouse,removal,Dorian Pierce,greenhouse assistant,6,18,5,1411,dataset/Complex_Cases/complex_063_The_Final_Record
+complex_064,Complex,The Secret Cabinet,mountain lodge,removal,Mae Ames,ski instructor,5,18,5,1421,dataset/Complex_Cases/complex_064_The_Secret_Cabinet
+complex_065,Complex,The Early Letter,chess club,tamper,Elliot Frost,tournament director,5,17,3,1424,dataset/Complex_Cases/complex_065_The_Early_Letter
+complex_066,Complex,The Clockwork Counter,newspaper archive,removal,Ezra Morrow,night editor,6,15,3,1402,dataset/Complex_Cases/complex_066_The_Clockwork_Counter
+complex_067,Complex,The Silver Filter,public library rare room,removal,Gavin Rowe,rare-room librarian,5,17,4,1412,dataset/Complex_Cases/complex_067_The_Silver_Filter
+complex_068,Complex,The Quiet Bell,campus newspaper office,removal,Nico Bell,managing editor,5,16,5,1404,dataset/Complex_Cases/complex_068_The_Quiet_Bell
+complex_069,Complex,The Walled Ledger,university archive,removal,June Shaw,archive coordinator,6,17,5,1400,dataset/Complex_Cases/complex_069_The_Walled_Ledger
+complex_070,Complex,The Midnight Score,lighthouse museum,removal,Theo Wren,museum caretaker,6,15,3,1411,dataset/Complex_Cases/complex_070_The_Midnight_Score
+complex_071,Complex,The Final Crate,vineyard tasting room,removal,Reed Cross,cellar manager,5,17,4,1405,dataset/Complex_Cases/complex_071_The_Final_Crate
+complex_072,Complex,The Blue Envelope,hotel laundry,removal,Tobias Dove,laundry supervisor,5,18,5,1415,dataset/Complex_Cases/complex_072_The_Blue_Envelope
+complex_073,Complex,The Second Case,law school moot court,tamper,June Rook,moot court coordinator,7,15,5,1417,dataset/Complex_Cases/complex_073_The_Second_Case
+complex_074,Complex,The Paper Diary,university radio station,removal,Mabel Rook,audio producer,7,17,3,1403,dataset/Complex_Cases/complex_074_The_Paper_Diary
+complex_075,Complex,The Locked Key,farmers market office,removal,Nico Page,market treasurer,6,18,5,1420,dataset/Complex_Cases/complex_075_The_Locked_Key
+complex_076,Complex,The Narrow Case,robotics laboratory,removal,Reed Cole,calibration lead,7,14,3,1417,dataset/Complex_Cases/complex_076_The_Narrow_Case
+complex_077,Complex,The Secret Switch,city aquarium,switch,Nora Ash,aquarist,7,15,5,1427,dataset/Complex_Cases/complex_077_The_Secret_Switch
+complex_078,Complex,The Marked Auction,ceramic studio,removal,Elena Rowe,senior potter,7,15,3,1413,dataset/Complex_Cases/complex_078_The_Marked_Auction
+complex_079,Complex,The Hidden Frame,science fair,switch,Selene Wren,lab monitor,5,17,3,1416,dataset/Complex_Cases/complex_079_The_Hidden_Frame
+complex_080,Complex,The Late Diary,marine research pier,switch,Yara Lane,sample technician,6,16,5,1425,dataset/Complex_Cases/complex_080_The_Late_Diary
+complex_081,Complex,The Walled Auction,historical society attic,removal,June Quill,inventory chair,5,16,3,1406,dataset/Complex_Cases/complex_081_The_Walled_Auction
+complex_082,Complex,The Silent Letter,private art gallery,switch,Noah Cole,lighting technician,6,18,4,1404,dataset/Complex_Cases/complex_082_The_Silent_Letter
+complex_083,Complex,The Hidden Card,bakery kitchen,removal,Elena Hollis,night baker,7,16,4,1414,dataset/Complex_Cases/complex_083_The_Hidden_Card
+complex_084,Complex,The Locked Drawer,music conservatory,removal,Dorian Pike,accompanist,7,18,4,1407,dataset/Complex_Cases/complex_084_The_Locked_Drawer
+complex_085,Complex,The Hollow Signal,botanical seed bank,removal,Willa Nash,seed curator,6,17,5,1414,dataset/Complex_Cases/complex_085_The_Hollow_Signal
+complex_086,Complex,The Hidden Score,hospital charity office,removal,Arlo Cross,fundraising coordinator,7,18,5,1403,dataset/Complex_Cases/complex_086_The_Hidden_Score
+complex_087,Complex,The Walled Record,fencing club,sabotage,Emmett Greer,equipment captain,7,14,3,1426,dataset/Complex_Cases/complex_087_The_Walled_Record
+complex_088,Complex,The Brass Prototype,university mailroom,tamper,Simon Briar,mailroom supervisor,6,17,5,1411,dataset/Complex_Cases/complex_088_The_Brass_Prototype
+complex_089,Complex,The Late Envelope,community theater,removal,Soren Bell,costume manager,6,14,3,1400,dataset/Complex_Cases/complex_089_The_Late_Envelope
+complex_090,Complex,The Silver Reel,train station,removal,Reed Rowe,station clerk,5,18,3,1421,dataset/Complex_Cases/complex_090_The_Silver_Reel
+complex_091,Complex,The Clockwork Packet,university observatory,removal,Soren Sterling,telescope operator,5,14,5,1415,dataset/Complex_Cases/complex_091_The_Clockwork_Packet
+complex_092,Complex,The False Card,clock repair shop,removal,Iris Greer,apprentice watchmaker,7,14,4,1406,dataset/Complex_Cases/complex_092_The_False_Card
+complex_093,Complex,The Early Compass,city hall records office,removal,Noah Quill,records supervisor,5,18,4,1417,dataset/Complex_Cases/complex_093_The_Early_Compass
+complex_094,Complex,The Dusty Orchid,planetarium,removal,Kieran Kline,projection operator,6,17,5,1404,dataset/Complex_Cases/complex_094_The_Dusty_Orchid
+complex_095,Complex,The Second Packet,botany greenhouse,removal,Noah Stone,greenhouse assistant,7,14,5,1401,dataset/Complex_Cases/complex_095_The_Second_Packet
+complex_096,Complex,The Borrowed Reel,mountain lodge,removal,Yara Page,ski instructor,6,16,4,1407,dataset/Complex_Cases/complex_096_The_Borrowed_Reel
+complex_097,Complex,The Clockwork Record,chess club,tamper,Nora Ames,tournament director,5,15,4,1427,dataset/Complex_Cases/complex_097_The_Clockwork_Record
+complex_098,Complex,The Silver Vial,newspaper archive,removal,Ada Fenn,night editor,7,17,4,1412,dataset/Complex_Cases/complex_098_The_Silver_Vial
+complex_099,Complex,The Midnight Key,public library rare room,removal,Elliot Pierce,rare-room librarian,7,15,5,1419,dataset/Complex_Cases/complex_099_The_Midnight_Key
+complex_100,Complex,The Glass Diary,campus newspaper office,removal,Quinn Pierce,managing editor,7,15,3,1428,dataset/Complex_Cases/complex_100_The_Glass_Diary

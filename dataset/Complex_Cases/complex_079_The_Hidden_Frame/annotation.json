@@ -1,0 +1,96 @@
+{
+  "case_id": "complex_079",
+  "split": "Complex",
+  "title": "The Hidden Frame",
+  "domain": "science fair",
+  "crime_type": "switch",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Selene Wren",
+  "culprit_role": "lab monitor",
+  "suspects": [
+    {
+      "name": "Selene Wren",
+      "role": "lab monitor"
+    },
+    {
+      "name": "Maya Rowe",
+      "role": "team mentor"
+    },
+    {
+      "name": "Tobias Cross",
+      "role": "parent volunteer"
+    },
+    {
+      "name": "Leo Rowe",
+      "role": "parent volunteer"
+    },
+    {
+      "name": "Lena Ward",
+      "role": "rival student"
+    }
+  ],
+  "verdict": "Selene Wren was responsible for the disappearance of a student's solar-cell module.",
+  "intent": [
+    "Selene Wren wanted to prevent a rival team from winning the regional prize.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the lab monitor locked the storage room after the final project check.",
+    "Remove a student's solar-cell module from its checked location.",
+    "Hide the item in a rolled poster tube.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a student's solar-cell module disappeared from a science fair storage room before judging.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the room fan was unplugged to mask the solder smell.",
+    "The physical trace was resin drops beside the poster tubes.",
+    "The relevant tool or mechanism was a soldering iron with fresh resin.",
+    "The item could be concealed in a rolled poster tube.",
+    "The hiding place required insider knowledge because only the lab monitor knew the fan outlet was hidden behind the cabinet.",
+    "The access pattern mattered because the lab monitor locked the storage room after the final project check.",
+    "The motive was to prevent a rival team from winning the regional prize.",
+    "Maya Rowe's suspicious behavior happened before the final verification of the object.",
+    "Tobias Cross's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Selene Wren's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container."
+  ],
+  "distractor_cues": [
+    "a rival student complaining loudly",
+    "a judge inspecting the poster tubes",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 17,
+    "num_misleading_trails": 3,
+    "word_count": 1416,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the room fan was unplugged to mask the solder smell",
+    "access_constraint": "the lab monitor locked the storage room after the final project check",
+    "physical_trace": "resin drops beside the poster tubes",
+    "tool_or_mechanism": "a soldering iron with fresh resin",
+    "hidden_container": "a rolled poster tube",
+    "role_privilege": "only the lab monitor knew the fan outlet was hidden behind the cabinet",
+    "motive": "prevent a rival team from winning the regional prize"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

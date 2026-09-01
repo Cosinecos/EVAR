@@ -1,0 +1,97 @@
+{
+  "case_id": "complex_064",
+  "split": "Complex",
+  "title": "The Secret Cabinet",
+  "domain": "mountain lodge",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Mae Ames",
+  "culprit_role": "ski instructor",
+  "suspects": [
+    {
+      "name": "Mina Pierce",
+      "role": "guest lecturer"
+    },
+    {
+      "name": "Mae Ames",
+      "role": "ski instructor"
+    },
+    {
+      "name": "Mabel Cross",
+      "role": "rental attendant"
+    },
+    {
+      "name": "Freya Ward",
+      "role": "guest lecturer"
+    },
+    {
+      "name": "Malik Hale",
+      "role": "rental attendant"
+    }
+  ],
+  "verdict": "Mae Ames was responsible for the disappearance of a guest-room master key.",
+  "intent": [
+    "Mae Ames wanted to enter a guest room and remove an incriminating photograph.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the ski instructor crossed between the fireplace room and the mudroom to check equipment.",
+    "Remove a guest-room master key from its checked location.",
+    "Hide the item in a hollow ski pole standing in the mudroom rack.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a guest-room master key disappeared from a mountain lodge after a snowstorm.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the mudroom bell rang while everyone claimed to be indoors.",
+    "The physical trace was dry snow under only one chair near the mudroom.",
+    "The relevant tool or mechanism was a wax scraper with fresh brass scratches.",
+    "The item could be concealed in a hollow ski pole standing in the mudroom rack.",
+    "The hiding place required insider knowledge because only the ski instructor knew the pole cap unscrewed silently.",
+    "The access pattern mattered because the ski instructor crossed between the fireplace room and the mudroom to check equipment.",
+    "The motive was to enter a guest room and remove an incriminating photograph.",
+    "Mina Pierce's suspicious behavior happened before the final verification of the object.",
+    "Mabel Cross's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Mae Ames's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container.",
+    "The final reasoning requires combining timing, access, trace, container knowledge, and motive."
+  ],
+  "distractor_cues": [
+    "a housekeeper seen near the linen closet",
+    "a guide carrying a bulky parka",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 18,
+    "num_misleading_trails": 5,
+    "word_count": 1421,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the mudroom bell rang while everyone claimed to be indoors",
+    "access_constraint": "the ski instructor crossed between the fireplace room and the mudroom to check equipment",
+    "physical_trace": "dry snow under only one chair near the mudroom",
+    "tool_or_mechanism": "a wax scraper with fresh brass scratches",
+    "hidden_container": "a hollow ski pole standing in the mudroom rack",
+    "role_privilege": "only the ski instructor knew the pole cap unscrewed silently",
+    "motive": "enter a guest room and remove an incriminating photograph"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

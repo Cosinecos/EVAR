@@ -1,0 +1,29 @@
+SYSTEM
+You convert a validated fictional case blueprint into a coherent long-form narrative. Preserve the blueprint exactly. Return only valid JSON.
+
+USER
+Using the supplied case blueprint, write the final narrative.
+
+Requirements:
+
+1. Preserve every event, temporal relation, suspect, action, and evidence cue.
+2. Do not add any fact that is absent from the blueprint.
+3. Do not explicitly reveal the gold verdict, gold intent, or gold action schema.
+4. Distribute supporting evidence across multiple events and paragraphs.
+5. Keep distractors plausible but not decisive.
+6. Avoid meta-commentary such as “this is evidence” or “the answer is.”
+7. Keep all people, places, and events fictional.
+8. Meet the requested target word range.
+9. Return an evidence-to-sentence mapping for every supporting cue.
+
+Return an object containing the original structured fields plus:
+
+{
+  "narrative": "...",
+  "evidence_to_sentence_mapping": {
+    "CUE_ID": [1, 7]
+  }
+}
+
+Sentence identifiers are one-indexed positions after segmenting the narrative by sentence. Return JSON only.
+

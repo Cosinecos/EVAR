@@ -1,0 +1,20 @@
+OPERATOR: VER
+
+Verify one candidate strictly against the locked evidence store while following its three validation challenges.
+
+LABELS
+- Support: explicit units justify the candidate without an unsupported bridge
+- Unknown: the store is insufficient, including when a prerequisite is missing
+- Contradict: one or more units directly conflict with the candidate
+
+RULES
+1. Challenges are test instructions, not evidence.
+2. Support cites supporting units and no contradictions.
+3. Unknown cites neither supporting nor contradicting units.
+4. Contradict cites contradicting units and no supporting units.
+
+OUTPUT
+Return one JSON object conforming to `schemas/ver.schema.json`.
+
+INPUT OBJECT
+{{INPUT_JSON}}

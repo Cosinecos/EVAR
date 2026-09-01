@@ -1,0 +1,98 @@
+{
+  "case_id": "complex_025",
+  "split": "Complex",
+  "title": "The Secret Badge",
+  "domain": "community theater",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Isla Page",
+  "culprit_role": "costume manager",
+  "suspects": [
+    {
+      "name": "Isla Gray",
+      "role": "ticket treasurer"
+    },
+    {
+      "name": "Isla Page",
+      "role": "costume manager"
+    },
+    {
+      "name": "Elena Hollis",
+      "role": "understudy"
+    },
+    {
+      "name": "Noah Rook",
+      "role": "makeup artist"
+    },
+    {
+      "name": "Mara Cross",
+      "role": "stagehand"
+    },
+    {
+      "name": "Reed Morrow",
+      "role": "director"
+    }
+  ],
+  "verdict": "Isla Page was responsible for the disappearance of a jeweled stage brooch.",
+  "intent": [
+    "Isla Page wanted to cover gambling losses without selling the brooch immediately.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the costume manager took the costume aside for a last-minute repair.",
+    "Remove a jeweled stage brooch from its checked location.",
+    "Hide the item in a widened costume hem sewn earlier that afternoon.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a jeweled stage brooch disappeared from the old community theater between rehearsals.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the prop-room sign-out sheet skipped one line during the break.",
+    "The physical trace was gold thread caught on a dark rehearsal jacket.",
+    "The relevant tool or mechanism was a seam ripper left under the makeup table.",
+    "The item could be concealed in a widened costume hem sewn earlier that afternoon.",
+    "The hiding place required insider knowledge because only the costume manager knew the hem had been widened enough to hide the brooch.",
+    "The access pattern mattered because the costume manager took the costume aside for a last-minute repair.",
+    "The motive was to cover gambling losses without selling the brooch immediately.",
+    "Isla Gray's suspicious behavior happened before the final verification of the object.",
+    "Elena Hollis's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Isla Page's role connects specialized access with the hiding method."
+  ],
+  "distractor_cues": [
+    "jealousy between the lead actor and understudy",
+    "a stagehand carrying a locked toolbox",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 6,
+    "num_required_cues": 15,
+    "num_misleading_trails": 3,
+    "word_count": 1427,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the prop-room sign-out sheet skipped one line during the break",
+    "access_constraint": "the costume manager took the costume aside for a last-minute repair",
+    "physical_trace": "gold thread caught on a dark rehearsal jacket",
+    "tool_or_mechanism": "a seam ripper left under the makeup table",
+    "hidden_container": "a widened costume hem sewn earlier that afternoon",
+    "role_privilege": "only the costume manager knew the hem had been widened enough to hide the brooch",
+    "motive": "cover gambling losses without selling the brooch immediately"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

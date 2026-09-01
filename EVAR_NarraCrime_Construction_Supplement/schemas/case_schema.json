@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/narracrime/case.schema.json",
+  "title": "NarraCrime case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id", "difficulty", "illustrative_only", "goal", "narrative",
+    "suspects", "event_timeline", "gold_verdict", "gold_intent",
+    "gold_action_schema", "supporting_evidence", "distractor_cues",
+    "cross_event_dependencies", "evidence_to_sentence_mapping"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "difficulty": {"enum": ["Easy", "Medium", "Complex"]},
+    "illustrative_only": {"type": "boolean"},
+    "goal": {"type": "string", "minLength": 1},
+    "narrative": {"type": "string", "minLength": 1},
+    "suspects": {
+      "type": "array", "minItems": 3, "maxItems": 5, "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "event_timeline": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["event_id", "order", "description"],
+        "properties": {
+          "event_id": {"type": "string", "minLength": 1},
+          "order": {"type": "integer", "minimum": 1},
+          "description": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "gold_verdict": {
+      "type": "object", "additionalProperties": false,
+      "required": ["suspect", "proposition"],
+      "properties": {
+        "suspect": {"type": "string", "minLength": 1},
+        "proposition": {"type": "string", "minLength": 1}
+      }
+    },
+    "gold_intent": {"$ref": "#/$defs/propositions"},
+    "gold_action_schema": {"$ref": "#/$defs/propositions"},
+    "supporting_evidence": {
+      "type": "array", "minItems": 7, "maxItems": 16,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["cue_id", "proposition", "event_ids"],
+        "properties": {
+          "cue_id": {"type": "string", "minLength": 1},
+          "proposition": {"type": "string", "minLength": 1},
+          "event_ids": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "distractor_cues": {"$ref": "#/$defs/propositions"},
+    "cross_event_dependencies": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["dependency_id", "source_cue_ids", "conclusion"],
+        "properties": {
+          "dependency_id": {"type": "string", "minLength": 1},
+          "source_cue_ids": {
+            "type": "array", "minItems": 2, "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "conclusion": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "evidence_to_sentence_mapping": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array", "minItems": 1, "uniqueItems": true,
+        "items": {"type": "integer", "minimum": 1}
+      }
+    }
+  },
+  "$defs": {
+    "propositions": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    }
+  }
+}
+

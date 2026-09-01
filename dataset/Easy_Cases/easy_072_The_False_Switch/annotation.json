@@ -1,0 +1,82 @@
+{
+  "case_id": "easy_072",
+  "split": "Easy",
+  "title": "The False Switch",
+  "domain": "chess club",
+  "crime_type": "tamper",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Arlo Dove",
+  "culprit_role": "tournament director",
+  "suspects": [
+    {
+      "name": "Celine Hale",
+      "role": "club treasurer"
+    },
+    {
+      "name": "Arlo Dove",
+      "role": "tournament director"
+    },
+    {
+      "name": "Julian Voss",
+      "role": "spectator"
+    },
+    {
+      "name": "Eden Hollis",
+      "role": "top seed"
+    }
+  ],
+  "verdict": "Arlo Dove was responsible for the disappearance of a sealed envelope with final pairings.",
+  "intent": [
+    "Arlo Dove wanted to avoid pairing a favored player against the strongest opponent.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the tournament director moved the envelope during the scheduled silence.",
+    "Remove a sealed envelope with final pairings from its checked location.",
+    "Hide the item in a hollow demonstration board.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a sealed envelope with final pairings disappeared from a chess club championship room during the final draw.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the coffee machine hissed during a silent round.",
+    "The physical trace was warped glue on the envelope flap.",
+    "The relevant tool or mechanism was a steam wand from the refreshment table.",
+    "The item could be concealed in a hollow demonstration board.",
+    "The hiding place required insider knowledge because only the tournament director knew the demonstration board had a storage slot."
+  ],
+  "distractor_cues": [
+    "a top seed pacing near the envelopes",
+    "a volunteer cleaning the boards",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 7,
+    "num_misleading_trails": 2,
+    "word_count": 864,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the coffee machine hissed during a silent round",
+    "access_constraint": "the tournament director moved the envelope during the scheduled silence",
+    "physical_trace": "warped glue on the envelope flap",
+    "tool_or_mechanism": "a steam wand from the refreshment table",
+    "hidden_container": "a hollow demonstration board",
+    "role_privilege": "only the tournament director knew the demonstration board had a storage slot",
+    "motive": "avoid pairing a favored player against the strongest opponent"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

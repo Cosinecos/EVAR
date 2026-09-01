@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">EVAR project banner</title>
+  <desc id="desc">Evidence-validated hypothesis admission for budget-aware narrative reasoning.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.58" stop-color="#102942"/>
+      <stop offset="1" stop-color="#0d4550"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#74f1d1"/>
+      <stop offset="1" stop-color="#85b8ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity=".3"/>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#d9fff5" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="28" fill="url(#grid)"/>
+  <circle cx="1080" cy="42" r="220" fill="#62e6cb" opacity=".06"/>
+  <circle cx="155" cy="410" r="210" fill="#6d9fff" opacity=".07"/>
+
+  <g transform="translate(70 62)">
+    <rect x="0" y="0" width="100" height="32" rx="16" fill="#74f1d1" fill-opacity=".12" stroke="#74f1d1" stroke-opacity=".55"/>
+    <text x="50" y="21" text-anchor="middle" fill="#9dffe4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">EMNLP 2026</text>
+    <text x="0" y="100" fill="#f7fbff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="78" font-weight="800" letter-spacing="-3">EVAR</text>
+    <rect x="0" y="122" width="420" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="0" y="172" fill="#dbe9f4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25" font-weight="600">Evidence before admission.</text>
+    <text x="0" y="210" fill="#9fb8ca" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Budget-aware reasoning for long-form narratives</text>
+    <g transform="translate(0 246)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650">
+      <rect width="136" height="38" rx="19" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".16"/>
+      <circle cx="20" cy="19" r="5" fill="#74f1d1"/>
+      <text x="34" y="24" fill="#dcecf5">Locked store</text>
+      <rect x="148" width="150" height="38" rx="19" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".16"/>
+      <circle cx="168" cy="19" r="5" fill="#85b8ff"/>
+      <text x="182" y="24" fill="#dcecf5">Verifier gate</text>
+      <rect x="310" width="162" height="38" rx="19" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".16"/>
+      <circle cx="330" cy="19" r="5" fill="#ffd98c"/>
+      <text x="344" y="24" fill="#dcecf5">Adaptive budget</text>
+    </g>
+  </g>
+
+  <g transform="translate(640 67)" filter="url(#shadow)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect width="490" height="286" rx="24" fill="#f7fbfc" fill-opacity=".98"/>
+    <text x="30" y="42" fill="#183249" font-size="13" font-weight="800" letter-spacing="1.4">HYPOTHESIS ADMISSION</text>
+    <line x1="30" y1="58" x2="460" y2="58" stroke="#dce8ed"/>
+
+    <g transform="translate(30 82)">
+      <rect width="128" height="154" rx="17" fill="#e9fbf6" stroke="#a7e4d4"/>
+      <circle cx="64" cy="43" r="20" fill="#1eaa83"/>
+      <path d="M54 43l7 7 14-16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="64" y="90" text-anchor="middle" fill="#14745a" font-size="18" font-weight="800">ADMIT</text>
+      <text x="64" y="116" text-anchor="middle" fill="#5d7c73" font-size="12">Supported</text>
+      <text x="64" y="134" text-anchor="middle" fill="#5d7c73" font-size="12">by locked evidence</text>
+    </g>
+    <g transform="translate(181 82)">
+      <rect width="128" height="154" rx="17" fill="#fff7e7" stroke="#efd79e"/>
+      <circle cx="64" cy="43" r="20" fill="#d99826"/>
+      <path d="M64 31v16M64 54v2" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <text x="64" y="90" text-anchor="middle" fill="#9b6516" font-size="17" font-weight="800">QUARANTINE</text>
+      <text x="64" y="116" text-anchor="middle" fill="#877657" font-size="12">Unverifiable</text>
+      <text x="64" y="134" text-anchor="middle" fill="#877657" font-size="12">kept out of state</text>
+    </g>
+    <g transform="translate(332 82)">
+      <rect width="128" height="154" rx="17" fill="#fff0ef" stroke="#f0b7b2"/>
+      <circle cx="64" cy="43" r="20" fill="#db665c"/>
+      <path d="M56 35l16 16M72 35L56 51" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <text x="64" y="90" text-anchor="middle" fill="#a3413b" font-size="18" font-weight="800">DISCARD</text>
+      <text x="64" y="116" text-anchor="middle" fill="#8b6662" font-size="12">Contradicted</text>
+      <text x="64" y="134" text-anchor="middle" fill="#8b6662" font-size="12">by source units</text>
+    </g>
+  </g>
+</svg>

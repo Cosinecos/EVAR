@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "sufficient",
+    "score",
+    "remaining_gap_ids",
+    "reason"
+  ],
+  "properties": {
+    "sufficient": {
+      "type": "boolean"
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "remaining_gap_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^G[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "sufficient": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "remaining_gap_ids": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

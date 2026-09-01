@@ -1,0 +1,18 @@
+Culprit:
+Oscar Bell
+
+Culprit Role:
+accompanist
+
+Final Verdict:
+Oscar Bell was responsible for the disappearance of a violinist's marked score.
+
+Motive:
+Oscar Bell wanted to sabotage a rival's audition while appearing helpful.
+
+Action Schema:
+Oscar Bell used the short disturbance indicated by the timing clue, exploited role-specific access, removed a violinist's marked score, hid it in a mute case hidden inside the piano bench, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the rehearsal-room light was turned off remotely for half a minute. The physical evidence points away from a casual visitor because investigators found red pencil dust on the piano bench latch and a pencil sharpener full of unusual red shavings. The hiding method required inside knowledge because only the accompanist used the remote switch that cut the rehearsal-room light. The access pattern is consistent with Oscar Bell because the accompanist sat at the piano immediately after the score was last seen. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Oscar Bell is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

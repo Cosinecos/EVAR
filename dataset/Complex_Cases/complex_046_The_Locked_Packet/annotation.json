@@ -1,0 +1,104 @@
+{
+  "case_id": "complex_046",
+  "split": "Complex",
+  "title": "The Locked Packet",
+  "domain": "ceramic studio",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Yara Rowe",
+  "culprit_role": "senior potter",
+  "suspects": [
+    {
+      "name": "Alden Voss",
+      "role": "studio owner"
+    },
+    {
+      "name": "Ruth Morrow",
+      "role": "visiting artist"
+    },
+    {
+      "name": "Yara Rowe",
+      "role": "senior potter"
+    },
+    {
+      "name": "Damon Hart",
+      "role": "gallery assistant"
+    },
+    {
+      "name": "Rowan Bell",
+      "role": "visiting artist"
+    },
+    {
+      "name": "Simon Kline",
+      "role": "gallery assistant"
+    },
+    {
+      "name": "Bennett Sterling",
+      "role": "apprentice"
+    }
+  ],
+  "verdict": "Yara Rowe was responsible for the disappearance of a glaze formula card.",
+  "intent": [
+    "Yara Rowe wanted to copy a signature glaze before the exhibition.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the senior potter entered the kiln room during the pause to check firing samples.",
+    "Remove a glaze formula card from its checked location.",
+    "Hide the item in a clay reclaim bucket beneath the wedging table.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a glaze formula card disappeared from a ceramic studio before an exhibition.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the kiln temperature log showed a manual pause.",
+    "The physical trace was blue glaze on the emergency latch.",
+    "The relevant tool or mechanism was a kiln glove with blue glaze dust.",
+    "The item could be concealed in a clay reclaim bucket beneath the wedging table.",
+    "The hiding place required insider knowledge because only the senior potter knew the emergency latch stuck open if pressed from below.",
+    "The access pattern mattered because the senior potter entered the kiln room during the pause to check firing samples.",
+    "The motive was to copy a signature glaze before the exhibition.",
+    "Alden Voss's suspicious behavior happened before the final verification of the object.",
+    "Ruth Morrow's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Yara Rowe's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container."
+  ],
+  "distractor_cues": [
+    "a visiting artist asking about the glaze",
+    "an apprentice dropping a tray near the kiln",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 7,
+    "num_required_cues": 17,
+    "num_misleading_trails": 4,
+    "word_count": 1414,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the kiln temperature log showed a manual pause",
+    "access_constraint": "the senior potter entered the kiln room during the pause to check firing samples",
+    "physical_trace": "blue glaze on the emergency latch",
+    "tool_or_mechanism": "a kiln glove with blue glaze dust",
+    "hidden_container": "a clay reclaim bucket beneath the wedging table",
+    "role_privilege": "only the senior potter knew the emergency latch stuck open if pressed from below",
+    "motive": "copy a signature glaze before the exhibition"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

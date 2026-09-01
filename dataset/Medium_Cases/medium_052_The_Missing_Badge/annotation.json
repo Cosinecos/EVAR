@@ -1,0 +1,90 @@
+{
+  "case_id": "medium_052",
+  "split": "Medium",
+  "title": "The Missing Badge",
+  "domain": "vineyard tasting room",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Yara Baird",
+  "culprit_role": "cellar manager",
+  "suspects": [
+    {
+      "name": "Yara Baird",
+      "role": "cellar manager"
+    },
+    {
+      "name": "Victor Shaw",
+      "role": "tasting host"
+    },
+    {
+      "name": "Mabel Blake",
+      "role": "tasting host"
+    },
+    {
+      "name": "Callum Baird",
+      "role": "delivery driver"
+    },
+    {
+      "name": "Owen Dove",
+      "role": "winemaker"
+    }
+  ],
+  "verdict": "Yara Baird was responsible for the disappearance of a cellar inventory ledger.",
+  "intent": [
+    "Yara Baird wanted to hide missing reserve bottles before the investors arrived.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the cellar manager went below to reset the alarm after the last cabinet check.",
+    "Remove a cellar inventory ledger from its checked location.",
+    "Hide the item in an empty magnum bottle case.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a cellar inventory ledger disappeared from a vineyard tasting room before an investor visit.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the cellar humidity alarm was reset twice.",
+    "The physical trace was purple wax flakes near the locked cabinet.",
+    "The relevant tool or mechanism was a corkscrew with ledger paper caught in the hinge.",
+    "The item could be concealed in an empty magnum bottle case.",
+    "The hiding place required insider knowledge because only the cellar manager knew the cabinet hinge stuck unless lifted from below.",
+    "The access pattern mattered because the cellar manager went below to reset the alarm after the last cabinet check.",
+    "The motive was to hide missing reserve bottles before the investors arrived.",
+    "Victor Shaw's suspicious behavior happened before the final verification of the object.",
+    "Mabel Blake's apparent opportunity did not explain the specific hidden container."
+  ],
+  "distractor_cues": [
+    "a delivery driver with access to bottle cases",
+    "a host upset about a promotion",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 11,
+    "num_misleading_trails": 3,
+    "word_count": 1055,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the cellar humidity alarm was reset twice",
+    "access_constraint": "the cellar manager went below to reset the alarm after the last cabinet check",
+    "physical_trace": "purple wax flakes near the locked cabinet",
+    "tool_or_mechanism": "a corkscrew with ledger paper caught in the hinge",
+    "hidden_container": "an empty magnum bottle case",
+    "role_privilege": "only the cellar manager knew the cabinet hinge stuck unless lifted from below",
+    "motive": "hide missing reserve bottles before the investors arrived"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

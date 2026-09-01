@@ -1,0 +1,91 @@
+{
+  "case_id": "medium_064",
+  "split": "Medium",
+  "title": "The Narrow Packet",
+  "domain": "bakery kitchen",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Phoebe Gray",
+  "culprit_role": "night baker",
+  "suspects": [
+    {
+      "name": "Quinn Wren",
+      "role": "shop cashier"
+    },
+    {
+      "name": "Ivy Rook",
+      "role": "equipment repairer"
+    },
+    {
+      "name": "Mateo Stone",
+      "role": "equipment repairer"
+    },
+    {
+      "name": "Phoebe Gray",
+      "role": "night baker"
+    },
+    {
+      "name": "Clara Pike",
+      "role": "contest judge"
+    }
+  ],
+  "verdict": "Phoebe Gray was responsible for the disappearance of a notebook of sourdough formulas.",
+  "intent": [
+    "Phoebe Gray wanted to steal a winning recipe for a rival shop.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the night baker had been alone near the office after the final recipe check.",
+    "Remove a notebook of sourdough formulas from its checked location.",
+    "Hide the item in a flour bin with a false bottom.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a notebook of sourdough formulas disappeared from a bakery kitchen before a regional baking contest.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the mixer timer was set to mask the office door chime.",
+    "The physical trace was rye flour on the office doorknob.",
+    "The relevant tool or mechanism was a dough scraper dusted with rye flour.",
+    "The item could be concealed in a flour bin with a false bottom.",
+    "The hiding place required insider knowledge because only the night baker used the rye-flour bin that morning and knew about its loose false bottom.",
+    "The access pattern mattered because the night baker had been alone near the office after the final recipe check.",
+    "The motive was to steal a winning recipe for a rival shop.",
+    "Quinn Wren's suspicious behavior happened before the final verification of the object.",
+    "Ivy Rook's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit."
+  ],
+  "distractor_cues": [
+    "a quarrel about contest prize money",
+    "a delivery driver arriving late with large crates",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 12,
+    "num_misleading_trails": 3,
+    "word_count": 1078,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the mixer timer was set to mask the office door chime",
+    "access_constraint": "the night baker had been alone near the office after the final recipe check",
+    "physical_trace": "rye flour on the office doorknob",
+    "tool_or_mechanism": "a dough scraper dusted with rye flour",
+    "hidden_container": "a flour bin with a false bottom",
+    "role_privilege": "only the night baker used the rye-flour bin that morning and knew about its loose false bottom",
+    "motive": "steal a winning recipe for a rival shop"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

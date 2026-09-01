@@ -1,0 +1,84 @@
+{
+  "case_id": "easy_019",
+  "split": "Easy",
+  "title": "The Clockwork Crate",
+  "domain": "robotics laboratory",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Soren Ward",
+  "culprit_role": "calibration lead",
+  "suspects": [
+    {
+      "name": "Adele Lane",
+      "role": "graduate engineer"
+    },
+    {
+      "name": "Maya Hayes",
+      "role": "robotics professor"
+    },
+    {
+      "name": "Dahlia Lark",
+      "role": "hardware intern"
+    },
+    {
+      "name": "Soren Ward",
+      "role": "calibration lead"
+    }
+  ],
+  "verdict": "Soren Ward was responsible for the disappearance of a prototype navigation chip.",
+  "intent": [
+    "Soren Ward wanted to hide a failed private project by stealing a working chip.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the calibration lead had permission to run the reboot after others left.",
+    "Remove a prototype navigation chip from its checked location.",
+    "Hide the item in a battery calibration drawer with a removable foam tray.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a prototype navigation chip disappeared from a campus robotics laboratory after a navigation demo.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the access panel opened during a scheduled firmware reboot.",
+    "The physical trace was two missing screws arranged beside the wrong tray.",
+    "The relevant tool or mechanism was a torque screwdriver with a chipped blue handle.",
+    "The item could be concealed in a battery calibration drawer with a removable foam tray.",
+    "The hiding place required insider knowledge because only the calibration lead knew the reboot cycle temporarily disabled the door camera.",
+    "The access pattern mattered because the calibration lead had permission to run the reboot after others left.",
+    "The motive was to hide a failed private project by stealing a working chip."
+  ],
+  "distractor_cues": [
+    "an argument over the demo failure",
+    "a visitor asking too many questions about the chip",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 9,
+    "num_misleading_trails": 1,
+    "word_count": 866,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the access panel opened during a scheduled firmware reboot",
+    "access_constraint": "the calibration lead had permission to run the reboot after others left",
+    "physical_trace": "two missing screws arranged beside the wrong tray",
+    "tool_or_mechanism": "a torque screwdriver with a chipped blue handle",
+    "hidden_container": "a battery calibration drawer with a removable foam tray",
+    "role_privilege": "only the calibration lead knew the reboot cycle temporarily disabled the door camera",
+    "motive": "hide a failed private project by stealing a working chip"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

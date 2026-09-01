@@ -1,0 +1,22 @@
+OPERATOR: ATOM
+
+Atomize the complete narrative into source-grounded atomic evidence units.
+
+INPUT
+- case_id
+- narrative
+- goal
+
+RULES
+1. Include only propositions explicitly expressed in the narrative.
+2. Do not infer motives, causal bridges, culprit identity, or the final verdict.
+3. Keep non-contiguous claims separate.
+4. Every unit must cite an exact verbatim source span with character offsets.
+5. Attach only source-observable entities, time, and polarity metadata.
+6. Use U001, U002, ... in first-appearance order.
+
+OUTPUT
+Return one JSON object conforming to `schemas/atom.schema.json`.
+
+INPUT OBJECT
+{{INPUT_JSON}}

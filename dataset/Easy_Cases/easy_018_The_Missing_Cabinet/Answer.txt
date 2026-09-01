@@ -1,0 +1,18 @@
+Culprit:
+Theo Frost
+
+Culprit Role:
+market treasurer
+
+Final Verdict:
+Theo Frost was responsible for the disappearance of a cash receipt book.
+
+Motive:
+Theo Frost wanted to hide missing stall-fee payments.
+
+Action Schema:
+Theo Frost used the short disturbance indicated by the timing clue, exploited role-specific access, removed a cash receipt book, hid it in a hollow scale-weight box, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the stall-bell rang during an unscheduled vendor count. The physical evidence points away from a casual visitor because investigators found green ink on the inside of the cash drawer and a rubber stamp with green ink on the handle. The hiding method required inside knowledge because only the market treasurer knew the scale-weight box had been emptied for repairs. The access pattern is consistent with Theo Frost because the market treasurer moved the receipt book during the vendor count. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Theo Frost is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

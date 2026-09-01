@@ -1,0 +1,93 @@
+{
+  "case_id": "complex_091",
+  "split": "Complex",
+  "title": "The Clockwork Packet",
+  "domain": "university observatory",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Soren Sterling",
+  "culprit_role": "telescope operator",
+  "suspects": [
+    {
+      "name": "Cyrus Locke",
+      "role": "data archivist"
+    },
+    {
+      "name": "Soren Sterling",
+      "role": "telescope operator"
+    },
+    {
+      "name": "Damon Rowe",
+      "role": "data archivist"
+    },
+    {
+      "name": "Gavin Sterling",
+      "role": "night janitor"
+    },
+    {
+      "name": "Leo Cole",
+      "role": "graduate observer"
+    }
+  ],
+  "verdict": "Soren Sterling was responsible for the disappearance of a drive containing telescope images.",
+  "intent": [
+    "Soren Sterling wanted to claim credit for a discovery before the image team reviewed the data.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the telescope operator remained at the console during the pause.",
+    "Remove a drive containing telescope images from its checked location.",
+    "Hide the item in a star-chart tube on the lower console shelf.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a drive containing telescope images disappeared from a university observatory during a meteor watch.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the dome rotation paused at an impossible angle.",
+    "The physical trace was black foam from the tube cap on the console.",
+    "The relevant tool or mechanism was a red flashlight with a loose battery cap.",
+    "The item could be concealed in a star-chart tube on the lower console shelf.",
+    "The hiding place required insider knowledge because only the telescope operator knew the dome pause code.",
+    "The access pattern mattered because the telescope operator remained at the console during the pause.",
+    "The motive was to claim credit for a discovery before the image team reviewed the data.",
+    "Cyrus Locke's suspicious behavior happened before the final verification of the object.",
+    "Damon Rowe's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion."
+  ],
+  "distractor_cues": [
+    "a journalist trying to photograph the console",
+    "a graduate observer frustrated about authorship",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 14,
+    "num_misleading_trails": 5,
+    "word_count": 1415,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the dome rotation paused at an impossible angle",
+    "access_constraint": "the telescope operator remained at the console during the pause",
+    "physical_trace": "black foam from the tube cap on the console",
+    "tool_or_mechanism": "a red flashlight with a loose battery cap",
+    "hidden_container": "a star-chart tube on the lower console shelf",
+    "role_privilege": "only the telescope operator knew the dome pause code",
+    "motive": "claim credit for a discovery before the image team reviewed the data"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

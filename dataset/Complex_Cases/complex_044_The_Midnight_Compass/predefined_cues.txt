@@ -1,0 +1,18 @@
+1. a prototype navigation chip disappeared from a campus robotics laboratory after a navigation demo.
+2. The object was confirmed present before the relevant disturbance.
+3. The disappearance occurred within a narrow time window because the access panel opened during a scheduled firmware reboot.
+4. The physical trace was two missing screws arranged beside the wrong tray.
+5. The relevant tool or mechanism was a torque screwdriver with a chipped blue handle.
+6. The item could be concealed in a battery calibration drawer with a removable foam tray.
+7. The hiding place required insider knowledge because only the calibration lead knew the reboot cycle temporarily disabled the door camera.
+8. The access pattern mattered because the calibration lead had permission to run the reboot after others left.
+9. The motive was to hide a failed private project by stealing a working chip.
+10. Ivy Vale's suspicious behavior happened before the final verification of the object.
+11. Hugo Gray's apparent opportunity did not explain the specific hidden container.
+12. The item was not carried openly through the main exit.
+13. The responsible person needed delayed discovery rather than immediate escape.
+14. The physical trace and the timing clue point to a controlled action rather than random confusion.
+15. Malik Cross's role connects specialized access with the hiding method.
+16. The visible early suspect fails at least one timing or mechanism constraint.
+17. A bulky or nervous behavior cue is a distractor unless it explains the container.
+18. The final reasoning requires combining timing, access, trace, container knowledge, and motive.

@@ -1,0 +1,93 @@
+{
+  "case_id": "complex_005",
+  "split": "Complex",
+  "title": "The Silent Packet",
+  "domain": "university archive",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Jasper Fenn",
+  "culprit_role": "archive coordinator",
+  "suspects": [
+    {
+      "name": "Silas Hayes",
+      "role": "student volunteer"
+    },
+    {
+      "name": "Jasper Fenn",
+      "role": "archive coordinator"
+    },
+    {
+      "name": "Layla Vale",
+      "role": "visiting professor"
+    },
+    {
+      "name": "Kieran Hollis",
+      "role": "visiting professor"
+    },
+    {
+      "name": "Emmett Bell",
+      "role": "security assistant"
+    }
+  ],
+  "verdict": "Jasper Fenn was responsible for the disappearance of a sealed donor letter.",
+  "intent": [
+    "Jasper Fenn wanted to hide a forged citation record before the donor family compared the documents.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the archive coordinator carried the only key that opened the back side of the display case.",
+    "Remove a sealed donor letter from its checked location.",
+    "Hide the item in a hollow catalog box stored behind the reference desk.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a sealed donor letter disappeared from the north wing of a university archive during a donor exhibition.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the reading-room clock stopped for exactly twelve minutes during the donor speech.",
+    "The physical trace was a clean rectangular dust outline on the third shelf.",
+    "The relevant tool or mechanism was a white cotton glove with blue ink on the thumb.",
+    "The item could be concealed in a hollow catalog box stored behind the reference desk.",
+    "The hiding place required insider knowledge because only the archive coordinator knew that several catalog boxes had hollow conservation inserts.",
+    "The access pattern mattered because the archive coordinator carried the only key that opened the back side of the display case.",
+    "The motive was to hide a forged citation record before the donor family compared the documents.",
+    "Silas Hayes's suspicious behavior happened before the final verification of the object.",
+    "Layla Vale's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion."
+  ],
+  "distractor_cues": [
+    "an argument about academic credit",
+    "a volunteer carrying a stack of folders",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 14,
+    "num_misleading_trails": 3,
+    "word_count": 1420,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the reading-room clock stopped for exactly twelve minutes during the donor speech",
+    "access_constraint": "the archive coordinator carried the only key that opened the back side of the display case",
+    "physical_trace": "a clean rectangular dust outline on the third shelf",
+    "tool_or_mechanism": "a white cotton glove with blue ink on the thumb",
+    "hidden_container": "a hollow catalog box stored behind the reference desk",
+    "role_privilege": "only the archive coordinator knew that several catalog boxes had hollow conservation inserts",
+    "motive": "hide a forged citation record before the donor family compared the documents"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

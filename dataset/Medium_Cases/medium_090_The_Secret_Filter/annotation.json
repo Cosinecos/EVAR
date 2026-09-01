@@ -1,0 +1,89 @@
+{
+  "case_id": "medium_090",
+  "split": "Medium",
+  "title": "The Secret Filter",
+  "domain": "city aquarium",
+  "crime_type": "switch",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Theo Cole",
+  "culprit_role": "aquarist",
+  "suspects": [
+    {
+      "name": "Arlo Ames",
+      "role": "night guard"
+    },
+    {
+      "name": "Theo Cole",
+      "role": "aquarist"
+    },
+    {
+      "name": "Arlo Pike",
+      "role": "gift-shop supervisor"
+    },
+    {
+      "name": "Iris North",
+      "role": "donor liaison"
+    },
+    {
+      "name": "Lyra Hart",
+      "role": "tank cleaner"
+    }
+  ],
+  "verdict": "Theo Cole was responsible for the disappearance of a pearl donated for a conservation display.",
+  "intent": [
+    "Theo Cole wanted to fund a private relocation by selling the real pearl.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the aquarist stayed late to adjust the reef tank after the final display check.",
+    "Remove a pearl donated for a conservation display from its checked location.",
+    "Hide the item in a filter cartridge behind the reef tank.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a pearl donated for a conservation display disappeared from a city aquarium after closing.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the filtration alarm was muted for four minutes.",
+    "The physical trace was saltwater droplets on the staff stairwell.",
+    "The relevant tool or mechanism was a tank scraper with adhesive residue.",
+    "The item could be concealed in a filter cartridge behind the reef tank.",
+    "The hiding place required insider knowledge because only the aquarist knew how to mute the filtration alarm locally.",
+    "The access pattern mattered because the aquarist stayed late to adjust the reef tank after the final display check.",
+    "The motive was to fund a private relocation by selling the real pearl.",
+    "Arlo Ames's suspicious behavior happened before the final verification of the object."
+  ],
+  "distractor_cues": [
+    "a donor liaison arguing about display credit",
+    "a cleaner carrying wet towels",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 10,
+    "num_misleading_trails": 2,
+    "word_count": 1072,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the filtration alarm was muted for four minutes",
+    "access_constraint": "the aquarist stayed late to adjust the reef tank after the final display check",
+    "physical_trace": "saltwater droplets on the staff stairwell",
+    "tool_or_mechanism": "a tank scraper with adhesive residue",
+    "hidden_container": "a filter cartridge behind the reef tank",
+    "role_privilege": "only the aquarist knew how to mute the filtration alarm locally",
+    "motive": "fund a private relocation by selling the real pearl"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

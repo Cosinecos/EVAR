@@ -1,0 +1,18 @@
+Culprit:
+Bennett Locke
+
+Culprit Role:
+managing editor
+
+Final Verdict:
+Bennett Locke was responsible for the disappearance of an anonymous source note.
+
+Motive:
+Bennett Locke wanted to prevent publication of a correction that would damage a favored candidate.
+
+Action Schema:
+Bennett Locke used the short disturbance indicated by the timing clue, exploited role-specific access, removed an anonymous source note, hid it in a hollow ruler tube beside the layout desk, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the office printer jammed during the candidate-call rush. The physical evidence points away from a casual visitor because investigators found thin paper strips under the layout desk and a layout knife with paper fibers on the blade. The hiding method required inside knowledge because only the managing editor knew the drawer could be opened by lifting the back rail. The access pattern is consistent with Bennett Locke because the managing editor handled the drawer key after the printer jam. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Bennett Locke is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

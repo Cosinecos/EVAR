@@ -1,0 +1,18 @@
+Culprit:
+Phoebe Gray
+
+Culprit Role:
+night baker
+
+Final Verdict:
+Phoebe Gray was responsible for the disappearance of a notebook of sourdough formulas.
+
+Motive:
+Phoebe Gray wanted to steal a winning recipe for a rival shop.
+
+Action Schema:
+Phoebe Gray used the short disturbance indicated by the timing clue, exploited role-specific access, removed a notebook of sourdough formulas, hid it in a flour bin with a false bottom, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the mixer timer was set to mask the office door chime. The physical evidence points away from a casual visitor because investigators found rye flour on the office doorknob and a dough scraper dusted with rye flour. The hiding method required inside knowledge because only the night baker used the rye-flour bin that morning and knew about its loose false bottom. The access pattern is consistent with Phoebe Gray because the night baker had been alone near the office after the final recipe check. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Phoebe Gray is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

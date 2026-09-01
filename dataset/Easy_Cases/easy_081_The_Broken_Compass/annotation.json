@@ -1,0 +1,83 @@
+{
+  "case_id": "easy_081",
+  "split": "Easy",
+  "title": "The Broken Compass",
+  "domain": "university radio station",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Maya Gray",
+  "culprit_role": "audio producer",
+  "suspects": [
+    {
+      "name": "Maya Gray",
+      "role": "audio producer"
+    },
+    {
+      "name": "Adele Pike",
+      "role": "debate guest"
+    },
+    {
+      "name": "Bennett North",
+      "role": "debate guest"
+    },
+    {
+      "name": "Harper Rowe",
+      "role": "sound engineer"
+    }
+  ],
+  "verdict": "Maya Gray was responsible for the disappearance of a memory card containing interview audio.",
+  "intent": [
+    "Maya Gray wanted to remove audio proving that a quote had been edited unfairly.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the audio producer controlled the test tone and handled the recorder.",
+    "Remove a memory card containing interview audio from its checked location.",
+    "Hide the item in a foam slot inside a microphone case.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a memory card containing interview audio disappeared from a university radio station before a live debate.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the studio went silent during a scheduled thirty-second test tone.",
+    "The physical trace was black label backing beneath the recorder shelf.",
+    "The relevant tool or mechanism was a label cutter with black adhesive stuck to it.",
+    "The item could be concealed in a foam slot inside a microphone case.",
+    "The hiding place required insider knowledge because only the audio producer knew the microphone case had an unused foam slot.",
+    "The access pattern mattered because the audio producer controlled the test tone and handled the recorder."
+  ],
+  "distractor_cues": [
+    "a debate guest angry about the interview",
+    "a volunteer packing microphone stands",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 8,
+    "num_misleading_trails": 1,
+    "word_count": 852,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the studio went silent during a scheduled thirty-second test tone",
+    "access_constraint": "the audio producer controlled the test tone and handled the recorder",
+    "physical_trace": "black label backing beneath the recorder shelf",
+    "tool_or_mechanism": "a label cutter with black adhesive stuck to it",
+    "hidden_container": "a foam slot inside a microphone case",
+    "role_privilege": "only the audio producer knew the microphone case had an unused foam slot",
+    "motive": "remove audio proving that a quote had been edited unfairly"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

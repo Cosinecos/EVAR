@@ -1,0 +1,84 @@
+{
+  "case_id": "easy_035",
+  "split": "Easy",
+  "title": "The Quiet Map",
+  "domain": "clock repair shop",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Oscar Hale",
+  "culprit_role": "apprentice watchmaker",
+  "suspects": [
+    {
+      "name": "Oscar Hale",
+      "role": "apprentice watchmaker"
+    },
+    {
+      "name": "Jonah Gray",
+      "role": "repair clerk"
+    },
+    {
+      "name": "Cassian Greer",
+      "role": "repair clerk"
+    },
+    {
+      "name": "Freya Frost",
+      "role": "client"
+    }
+  ],
+  "verdict": "Oscar Hale was responsible for the disappearance of a pocket watch movement.",
+  "intent": [
+    "Oscar Hale wanted to replace a damaged commissioned part before the client arrived.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the apprentice watchmaker reset the clocks after the owner stepped out.",
+    "Remove a pocket watch movement from its checked location.",
+    "Hide the item in a jar of brass gear blanks.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a pocket watch movement disappeared from an antique clock repair shop before a client pickup.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because three wall clocks were stopped at the same minute.",
+    "The physical trace was tiny brass filings near the apprentice bench.",
+    "The relevant tool or mechanism was a loupe with a cracked rim.",
+    "The item could be concealed in a jar of brass gear blanks.",
+    "The hiding place required insider knowledge because only the apprentice watchmaker knew the display latch clicked silently if lifted first.",
+    "The access pattern mattered because the apprentice watchmaker reset the clocks after the owner stepped out.",
+    "The motive was to replace a damaged commissioned part before the client arrived."
+  ],
+  "distractor_cues": [
+    "a collector asking to examine rare parts",
+    "a supplier carrying parts jars",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 9,
+    "num_misleading_trails": 2,
+    "word_count": 884,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "three wall clocks were stopped at the same minute",
+    "access_constraint": "the apprentice watchmaker reset the clocks after the owner stepped out",
+    "physical_trace": "tiny brass filings near the apprentice bench",
+    "tool_or_mechanism": "a loupe with a cracked rim",
+    "hidden_container": "a jar of brass gear blanks",
+    "role_privilege": "only the apprentice watchmaker knew the display latch clicked silently if lifted first",
+    "motive": "replace a damaged commissioned part before the client arrived"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

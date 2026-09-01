@@ -1,0 +1,18 @@
+Culprit:
+Rowan Lane
+
+Culprit Role:
+laundry supervisor
+
+Final Verdict:
+Rowan Lane was responsible for the disappearance of a keynote speaker's USB badge.
+
+Motive:
+Rowan Lane wanted to access confidential slides before the keynote.
+
+Action Schema:
+Rowan Lane used the short disturbance indicated by the timing clue, exploited role-specific access, removed a keynote speaker's USB badge, hid it in a sealed laundry ticket envelope, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the elevator stopped on the service floor without a guest call. The physical evidence points away from a casual visitor because investigators found hotel starch on the registration desk and a lint roller with badge adhesive. The hiding method required inside knowledge because only the laundry supervisor knew the service elevator override. The access pattern is consistent with Rowan Lane because the laundry supervisor handled the jacket after the badge was last confirmed. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Rowan Lane is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

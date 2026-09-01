@@ -1,0 +1,18 @@
+Culprit:
+Isla Page
+
+Culprit Role:
+costume manager
+
+Final Verdict:
+Isla Page was responsible for the disappearance of a jeweled stage brooch.
+
+Motive:
+Isla Page wanted to cover gambling losses without selling the brooch immediately.
+
+Action Schema:
+Isla Page used the short disturbance indicated by the timing clue, exploited role-specific access, removed a jeweled stage brooch, hid it in a widened costume hem sewn earlier that afternoon, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the prop-room sign-out sheet skipped one line during the break. The physical evidence points away from a casual visitor because investigators found gold thread caught on a dark rehearsal jacket and a seam ripper left under the makeup table. The hiding method required inside knowledge because only the costume manager knew the hem had been widened enough to hide the brooch. The access pattern is consistent with Isla Page because the costume manager took the costume aside for a last-minute repair. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Isla Page is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

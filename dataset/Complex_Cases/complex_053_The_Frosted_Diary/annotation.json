@@ -1,0 +1,93 @@
+{
+  "case_id": "complex_053",
+  "split": "Complex",
+  "title": "The Frosted Diary",
+  "domain": "botanical seed bank",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Rowan North",
+  "culprit_role": "seed curator",
+  "suspects": [
+    {
+      "name": "Nico Fenn",
+      "role": "delivery courier"
+    },
+    {
+      "name": "Willa Ward",
+      "role": "freezer technician"
+    },
+    {
+      "name": "Rowan North",
+      "role": "seed curator"
+    },
+    {
+      "name": "Tessa Hart",
+      "role": "facility cleaner"
+    },
+    {
+      "name": "Adele Hart",
+      "role": "plant geneticist"
+    }
+  ],
+  "verdict": "Rowan North was responsible for the disappearance of a vial of heritage tomato seeds.",
+  "intent": [
+    "Rowan North wanted to sell the seeds before patent review restricted distribution.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the seed curator signed off on the cold-room entry after the count.",
+    "Remove a vial of heritage tomato seeds from its checked location.",
+    "Hide the item in a mislabeled sample sleeve in the return tray.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a vial of heritage tomato seeds disappeared from a botanical seed bank during a patent inspection.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the cold-room door stayed open for thirty-one seconds.",
+    "The physical trace was frost crystals on the wrong shelf label.",
+    "The relevant tool or mechanism was a freezer glove with torn lining.",
+    "The item could be concealed in a mislabeled sample sleeve in the return tray.",
+    "The hiding place required insider knowledge because only the seed curator knew the label printer was misaligned that week.",
+    "The access pattern mattered because the seed curator signed off on the cold-room entry after the count.",
+    "The motive was to sell the seeds before patent review restricted distribution.",
+    "Nico Fenn's suspicious behavior happened before the final verification of the object.",
+    "Willa Ward's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion."
+  ],
+  "distractor_cues": [
+    "a courier impatient to leave",
+    "a scientist angry about the patent review",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 14,
+    "num_misleading_trails": 4,
+    "word_count": 1426,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the cold-room door stayed open for thirty-one seconds",
+    "access_constraint": "the seed curator signed off on the cold-room entry after the count",
+    "physical_trace": "frost crystals on the wrong shelf label",
+    "tool_or_mechanism": "a freezer glove with torn lining",
+    "hidden_container": "a mislabeled sample sleeve in the return tray",
+    "role_privilege": "only the seed curator knew the label printer was misaligned that week",
+    "motive": "sell the seeds before patent review restricted distribution"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

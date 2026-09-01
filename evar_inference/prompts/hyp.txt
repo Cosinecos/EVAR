@@ -1,0 +1,24 @@
+OPERATOR: HYP
+
+Directly generate atomic, falsifiable candidate hypotheses for the supplied unresolved gap.
+
+INPUT
+- case_id
+- goal
+- gap
+- locked evidence_store
+- validation_challenge_history
+- admitted_hypotheses
+- candidates
+
+RULES
+1. Candidates are proposals only; do not self-admit or label them.
+2. Do not use quarantined or discarded hypotheses as evidence.
+3. Challenge history is only for duplicate avoidance.
+4. Return the smallest useful non-duplicate candidate set.
+
+OUTPUT
+Return one JSON object conforming to `schemas/hyp.schema.json`.
+
+INPUT OBJECT
+{{INPUT_JSON}}

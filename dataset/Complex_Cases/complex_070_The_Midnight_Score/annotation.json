@@ -1,0 +1,98 @@
+{
+  "case_id": "complex_070",
+  "split": "Complex",
+  "title": "The Midnight Score",
+  "domain": "lighthouse museum",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Theo Wren",
+  "culprit_role": "museum caretaker",
+  "suspects": [
+    {
+      "name": "Owen Hart",
+      "role": "retired sailor"
+    },
+    {
+      "name": "Theo Wren",
+      "role": "museum caretaker"
+    },
+    {
+      "name": "Mara Frost",
+      "role": "local historian"
+    },
+    {
+      "name": "Amara Hayes",
+      "role": "school chaperone"
+    },
+    {
+      "name": "Nina Gray",
+      "role": "gift-shop clerk"
+    },
+    {
+      "name": "Reed Greer",
+      "role": "gift-shop clerk"
+    }
+  ],
+  "verdict": "Theo Wren was responsible for the disappearance of a brass compass.",
+  "intent": [
+    "Theo Wren wanted to replace a family heirloom that had secretly been sold years earlier.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the caretaker was alone near the lantern staircase during the early bell.",
+    "Remove a brass compass from its checked location.",
+    "Hide the item in a cracked lantern base near the stairwell.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a brass compass disappeared from a seaside lighthouse museum during a fog-signal demonstration.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the fog bell rang once before schedule.",
+    "The physical trace was fine green corrosion dust near the lantern.",
+    "The relevant tool or mechanism was a magnetized key ring.",
+    "The item could be concealed in a cracked lantern base near the stairwell.",
+    "The hiding place required insider knowledge because only the museum caretaker knew the lantern base was removable.",
+    "The access pattern mattered because the caretaker was alone near the lantern staircase during the early bell.",
+    "The motive was to replace a family heirloom that had secretly been sold years earlier.",
+    "Owen Hart's suspicious behavior happened before the final verification of the object.",
+    "Mara Frost's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Theo Wren's role connects specialized access with the hiding method."
+  ],
+  "distractor_cues": [
+    "a retired sailor complaining about the display",
+    "a historian handling old maps",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 6,
+    "num_required_cues": 15,
+    "num_misleading_trails": 3,
+    "word_count": 1411,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the fog bell rang once before schedule",
+    "access_constraint": "the caretaker was alone near the lantern staircase during the early bell",
+    "physical_trace": "fine green corrosion dust near the lantern",
+    "tool_or_mechanism": "a magnetized key ring",
+    "hidden_container": "a cracked lantern base near the stairwell",
+    "role_privilege": "only the museum caretaker knew the lantern base was removable",
+    "motive": "replace a family heirloom that had secretly been sold years earlier"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

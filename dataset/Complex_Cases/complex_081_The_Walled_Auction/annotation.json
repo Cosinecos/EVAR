@@ -1,0 +1,95 @@
+{
+  "case_id": "complex_081",
+  "split": "Complex",
+  "title": "The Walled Auction",
+  "domain": "historical society attic",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "June Quill",
+  "culprit_role": "inventory chair",
+  "suspects": [
+    {
+      "name": "Yara Briar",
+      "role": "genealogist"
+    },
+    {
+      "name": "Theo Pierce",
+      "role": "volunteer docent"
+    },
+    {
+      "name": "June Quill",
+      "role": "inventory chair"
+    },
+    {
+      "name": "Soren Marsh",
+      "role": "local collector"
+    },
+    {
+      "name": "Carmen Ames",
+      "role": "museum intern"
+    }
+  ],
+  "verdict": "June Quill was responsible for the disappearance of a Civil War diary.",
+  "intent": [
+    "June Quill wanted to hide a diary passage that contradicted a family legend.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the inventory chair reassigned volunteers during the flicker.",
+    "Remove a Civil War diary from its checked location.",
+    "Hide the item in a false-bottom document chest.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a Civil War diary disappeared from a historical society attic during an inventory day.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the attic lights flickered when the inventory team changed rooms.",
+    "The physical trace was brown paper dust near the false-bottom chest.",
+    "The relevant tool or mechanism was a brass crate opener with old paper dust.",
+    "The item could be concealed in a false-bottom document chest.",
+    "The hiding place required insider knowledge because only the inventory chair knew the document chest had a false bottom.",
+    "The access pattern mattered because the inventory chair reassigned volunteers during the flicker.",
+    "The motive was to hide a diary passage that contradicted a family legend.",
+    "Yara Briar's suspicious behavior happened before the final verification of the object.",
+    "Theo Pierce's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "June Quill's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint."
+  ],
+  "distractor_cues": [
+    "a collector asking to buy artifacts",
+    "an intern carrying crates",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 16,
+    "num_misleading_trails": 3,
+    "word_count": 1406,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the attic lights flickered when the inventory team changed rooms",
+    "access_constraint": "the inventory chair reassigned volunteers during the flicker",
+    "physical_trace": "brown paper dust near the false-bottom chest",
+    "tool_or_mechanism": "a brass crate opener with old paper dust",
+    "hidden_container": "a false-bottom document chest",
+    "role_privilege": "only the inventory chair knew the document chest had a false bottom",
+    "motive": "hide a diary passage that contradicted a family legend"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

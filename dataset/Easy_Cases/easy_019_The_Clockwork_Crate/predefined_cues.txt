@@ -1,0 +1,9 @@
+1. a prototype navigation chip disappeared from a campus robotics laboratory after a navigation demo.
+2. The object was confirmed present before the relevant disturbance.
+3. The disappearance occurred within a narrow time window because the access panel opened during a scheduled firmware reboot.
+4. The physical trace was two missing screws arranged beside the wrong tray.
+5. The relevant tool or mechanism was a torque screwdriver with a chipped blue handle.
+6. The item could be concealed in a battery calibration drawer with a removable foam tray.
+7. The hiding place required insider knowledge because only the calibration lead knew the reboot cycle temporarily disabled the door camera.
+8. The access pattern mattered because the calibration lead had permission to run the reboot after others left.
+9. The motive was to hide a failed private project by stealing a working chip.

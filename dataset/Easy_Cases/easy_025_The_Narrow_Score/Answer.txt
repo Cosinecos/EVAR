@@ -1,0 +1,18 @@
+Culprit:
+Helena Rook
+
+Culprit Role:
+lighting technician
+
+Final Verdict:
+Helena Rook was responsible for the disappearance of a miniature landscape painting.
+
+Motive:
+Helena Rook wanted to pay off a private debt by selling the original through a collector.
+
+Action Schema:
+Helena Rook used the short disturbance indicated by the timing clue, exploited role-specific access, removed a miniature landscape painting, hid it in a black lighting equipment case with a foam-lined false base, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the blackout lasted exactly ninety seconds. The physical evidence points away from a casual visitor because investigators found wet varnish on the replica frame and stage dust near the equipment case and a blackout switch logged under a maintenance code. The hiding method required inside knowledge because only the lighting technician controlled the blackout panel from inside the room. The access pattern is consistent with Helena Rook because the lighting technician entered the room for a scheduled dimmer test after the final inspection. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Helena Rook is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

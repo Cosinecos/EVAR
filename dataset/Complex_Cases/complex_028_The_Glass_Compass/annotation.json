@@ -1,0 +1,105 @@
+{
+  "case_id": "complex_028",
+  "split": "Complex",
+  "title": "The Glass Compass",
+  "domain": "clock repair shop",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Rowan Lark",
+  "culprit_role": "apprentice watchmaker",
+  "suspects": [
+    {
+      "name": "Bennett Bell",
+      "role": "client"
+    },
+    {
+      "name": "Bennett Sterling",
+      "role": "parts supplier"
+    },
+    {
+      "name": "Rowan Quill",
+      "role": "clock collector"
+    },
+    {
+      "name": "Hugo Cole",
+      "role": "repair clerk"
+    },
+    {
+      "name": "Rowan Lark",
+      "role": "apprentice watchmaker"
+    },
+    {
+      "name": "Jasper Bell",
+      "role": "delivery assistant"
+    },
+    {
+      "name": "Tobias Ames",
+      "role": "shop owner"
+    }
+  ],
+  "verdict": "Rowan Lark was responsible for the disappearance of a pocket watch movement.",
+  "intent": [
+    "Rowan Lark wanted to replace a damaged commissioned part before the client arrived.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the apprentice watchmaker reset the clocks after the owner stepped out.",
+    "Remove a pocket watch movement from its checked location.",
+    "Hide the item in a jar of brass gear blanks.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a pocket watch movement disappeared from an antique clock repair shop before a client pickup.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because three wall clocks were stopped at the same minute.",
+    "The physical trace was tiny brass filings near the apprentice bench.",
+    "The relevant tool or mechanism was a loupe with a cracked rim.",
+    "The item could be concealed in a jar of brass gear blanks.",
+    "The hiding place required insider knowledge because only the apprentice watchmaker knew the display latch clicked silently if lifted first.",
+    "The access pattern mattered because the apprentice watchmaker reset the clocks after the owner stepped out.",
+    "The motive was to replace a damaged commissioned part before the client arrived.",
+    "Bennett Bell's suspicious behavior happened before the final verification of the object.",
+    "Bennett Sterling's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Rowan Lark's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container.",
+    "The final reasoning requires combining timing, access, trace, container knowledge, and motive."
+  ],
+  "distractor_cues": [
+    "a collector asking to examine rare parts",
+    "a supplier carrying parts jars",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 7,
+    "num_required_cues": 18,
+    "num_misleading_trails": 5,
+    "word_count": 1400,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "three wall clocks were stopped at the same minute",
+    "access_constraint": "the apprentice watchmaker reset the clocks after the owner stepped out",
+    "physical_trace": "tiny brass filings near the apprentice bench",
+    "tool_or_mechanism": "a loupe with a cracked rim",
+    "hidden_container": "a jar of brass gear blanks",
+    "role_privilege": "only the apprentice watchmaker knew the display latch clicked silently if lifted first",
+    "motive": "replace a damaged commissioned part before the client arrived"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

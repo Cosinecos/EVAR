@@ -1,0 +1,8 @@
+\subsection{NarraCrime Dataset}
+\label{sec:narracrime}
+
+NarraCrime is a diagnostic detective-puzzle benchmark for non-interactive narrative reasoning. Each instance provides a self-contained mystery narrative as input, and the model is required to infer the responsible person and justify the conclusion using evidence from the narrative. Unlike general question answering datasets, NarraCrime emphasizes scattered evidence, misleading early hypotheses, and evidence-grounded final conclusions.
+
+NarraCrime-300 contains 300 original mystery narratives across three difficulty levels: Easy, Medium, and Complex, with 100 cases per split. The split design controls the number of suspects, the number of required evidence cues, the number of misleading trails, and the degree of implicit-premise reasoning. Easy cases contain relatively direct evidence; Medium cases require integrating timing, access, physical traces, hidden-container clues, and motive across multiple paragraphs; Complex cases include more suspects, multiple misleading trails, and stronger implicit-premise reasoning.
+
+Each case includes four files: the input narrative, a gold answer, predefined supporting evidence cues, and a structured annotation file. The structured annotation specifies the gold culprit, final verdict, intent propositions, action-schema propositions, evidence cues, distractor cues, difficulty factors, and the construction blueprint used to verify the evidence chain. These annotations support both final-answer evaluation and evidence-grounding evaluation.

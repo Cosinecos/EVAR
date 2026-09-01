@@ -1,0 +1,85 @@
+{
+  "case_id": "medium_010",
+  "split": "Medium",
+  "title": "The Glass Map",
+  "domain": "city hall records office",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Mara Blake",
+  "culprit_role": "records supervisor",
+  "suspects": [
+    {
+      "name": "Callum Page",
+      "role": "zoning lawyer"
+    },
+    {
+      "name": "Gavin Pike",
+      "role": "citizen petitioner"
+    },
+    {
+      "name": "Mara Blake",
+      "role": "records supervisor"
+    },
+    {
+      "name": "Cassian Nash",
+      "role": "building inspector"
+    }
+  ],
+  "verdict": "Mara Blake was responsible for the disappearance of a stamped zoning appeal form.",
+  "intent": [
+    "Mara Blake wanted to delay an appeal that would expose a zoning error.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the records supervisor moved the file during the microphone interruption.",
+    "Remove a stamped zoning appeal form from its checked location.",
+    "Hide the item in a hollow stamp-pad tray.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a stamped zoning appeal form disappeared from a city hall records office during a zoning hearing.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the public-address microphone squealed during a file transfer.",
+    "The physical trace was red ink smears on the inside of the file drawer.",
+    "The relevant tool or mechanism was a date stamp with red ink on its lower edge.",
+    "The item could be concealed in a hollow stamp-pad tray.",
+    "The hiding place required insider knowledge because only the records supervisor knew the old stamp-pad tray had a removable base.",
+    "The access pattern mattered because the records supervisor moved the file during the microphone interruption.",
+    "The motive was to delay an appeal that would expose a zoning error.",
+    "Callum Page's suspicious behavior happened before the final verification of the object."
+  ],
+  "distractor_cues": [
+    "a lawyer demanding access to the file",
+    "a petitioner waving copied documents",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 10,
+    "num_misleading_trails": 3,
+    "word_count": 1064,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the public-address microphone squealed during a file transfer",
+    "access_constraint": "the records supervisor moved the file during the microphone interruption",
+    "physical_trace": "red ink smears on the inside of the file drawer",
+    "tool_or_mechanism": "a date stamp with red ink on its lower edge",
+    "hidden_container": "a hollow stamp-pad tray",
+    "role_privilege": "only the records supervisor knew the old stamp-pad tray had a removable base",
+    "motive": "delay an appeal that would expose a zoning error"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

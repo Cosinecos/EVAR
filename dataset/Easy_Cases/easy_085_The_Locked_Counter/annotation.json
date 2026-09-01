@@ -1,0 +1,78 @@
+{
+  "case_id": "easy_085",
+  "split": "Easy",
+  "title": "The Locked Counter",
+  "domain": "ceramic studio",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Noah Frost",
+  "culprit_role": "senior potter",
+  "suspects": [
+    {
+      "name": "Noah Frost",
+      "role": "senior potter"
+    },
+    {
+      "name": "Silas Shaw",
+      "role": "visiting artist"
+    },
+    {
+      "name": "Keira Lark",
+      "role": "kiln technician"
+    }
+  ],
+  "verdict": "Noah Frost was responsible for the disappearance of a glaze formula card.",
+  "intent": [
+    "Noah Frost wanted to copy a signature glaze before the exhibition.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the senior potter entered the kiln room during the pause to check firing samples.",
+    "Remove a glaze formula card from its checked location.",
+    "Hide the item in a clay reclaim bucket beneath the wedging table.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a glaze formula card disappeared from a ceramic studio before an exhibition.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the kiln temperature log showed a manual pause.",
+    "The physical trace was blue glaze on the emergency latch.",
+    "The relevant tool or mechanism was a kiln glove with blue glaze dust.",
+    "The item could be concealed in a clay reclaim bucket beneath the wedging table.",
+    "The hiding place required insider knowledge because only the senior potter knew the emergency latch stuck open if pressed from below."
+  ],
+  "distractor_cues": [
+    "a visiting artist asking about the glaze",
+    "an apprentice dropping a tray near the kiln",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 3,
+    "num_required_cues": 7,
+    "num_misleading_trails": 1,
+    "word_count": 853,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the kiln temperature log showed a manual pause",
+    "access_constraint": "the senior potter entered the kiln room during the pause to check firing samples",
+    "physical_trace": "blue glaze on the emergency latch",
+    "tool_or_mechanism": "a kiln glove with blue glaze dust",
+    "hidden_container": "a clay reclaim bucket beneath the wedging table",
+    "role_privilege": "only the senior potter knew the emergency latch stuck open if pressed from below",
+    "motive": "copy a signature glaze before the exhibition"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

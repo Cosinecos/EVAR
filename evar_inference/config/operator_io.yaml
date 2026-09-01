@@ -1,0 +1,24 @@
+backbone: DeepSeek-V3.2
+operators: [ATOM, TAG, GAP, HYP, CHAL, VER, SUF, ANS]
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_output_tokens: 512
+structured_output:
+  format: json
+  max_format_retries: 2
+  additional_properties: false
+  fail_closed: true
+identifiers:
+  source_span: "S%03d"
+  evidence_unit: "U%03d"
+  gap: "G%03d"
+  hypothesis: "H%03d"
+  candidate: "C%03d"
+stopping:
+  no_blocking_gap: true
+  sufficiency_threshold: 0.82
+  budget_exhausted: true
+answer_boundary:
+  include: [evidence_store, admitted_hypotheses]
+  exclude: [validation_challenges, quarantined_hypotheses, discarded_hypotheses]

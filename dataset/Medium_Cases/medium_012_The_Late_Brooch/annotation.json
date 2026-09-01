@@ -1,0 +1,89 @@
+{
+  "case_id": "medium_012",
+  "split": "Medium",
+  "title": "The Late Brooch",
+  "domain": "botany greenhouse",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Theo Gray",
+  "culprit_role": "greenhouse assistant",
+  "suspects": [
+    {
+      "name": "Keira Pierce",
+      "role": "graduate visitor"
+    },
+    {
+      "name": "Nico Shaw",
+      "role": "graduate visitor"
+    },
+    {
+      "name": "Theo Gray",
+      "role": "greenhouse assistant"
+    },
+    {
+      "name": "Zara North",
+      "role": "soil technician"
+    },
+    {
+      "name": "Mae Vale",
+      "role": "student photographer"
+    }
+  ],
+  "verdict": "Theo Gray was responsible for the disappearance of a rare orchid cutting.",
+  "intent": [
+    "Theo Gray wanted to sell the cutting to a private collector.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the greenhouse assistant reset the sprinkler timer after the final plant count.",
+    "Remove a rare orchid cutting from its checked location.",
+    "Hide the item in a rolled watering hose kept under the east bench.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a rare orchid cutting disappeared from the glass greenhouse behind the botany department.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the irrigation log was altered by one minute.",
+    "The physical trace was muddy crescent prints under the east bench.",
+    "The relevant tool or mechanism was a brass nozzle with fresh soil trapped inside.",
+    "The item could be concealed in a rolled watering hose kept under the east bench.",
+    "The hiding place required insider knowledge because only the greenhouse assistant knew that the east bench latch did not close properly.",
+    "The access pattern mattered because the greenhouse assistant reset the sprinkler timer after the final plant count.",
+    "The motive was to sell the cutting to a private collector.",
+    "Keira Pierce's suspicious behavior happened before the final verification of the object."
+  ],
+  "distractor_cues": [
+    "a dispute over authorship on a plant-breeding paper",
+    "a visitor photographing the orchid table",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 10,
+    "num_misleading_trails": 3,
+    "word_count": 1077,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the irrigation log was altered by one minute",
+    "access_constraint": "the greenhouse assistant reset the sprinkler timer after the final plant count",
+    "physical_trace": "muddy crescent prints under the east bench",
+    "tool_or_mechanism": "a brass nozzle with fresh soil trapped inside",
+    "hidden_container": "a rolled watering hose kept under the east bench",
+    "role_privilege": "only the greenhouse assistant knew that the east bench latch did not close properly",
+    "motive": "sell the cutting to a private collector"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

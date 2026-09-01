@@ -1,0 +1,94 @@
+{
+  "case_id": "complex_043",
+  "split": "Complex",
+  "title": "The Second Filter",
+  "domain": "farmers market office",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Caleb Hayes",
+  "culprit_role": "market treasurer",
+  "suspects": [
+    {
+      "name": "Ezra Nash",
+      "role": "security volunteer"
+    },
+    {
+      "name": "Vera Rook",
+      "role": "produce vendor"
+    },
+    {
+      "name": "Callum Kline",
+      "role": "produce vendor"
+    },
+    {
+      "name": "Caleb Hayes",
+      "role": "market treasurer"
+    },
+    {
+      "name": "Lyra Frost",
+      "role": "market director"
+    }
+  ],
+  "verdict": "Caleb Hayes was responsible for the disappearance of a cash receipt book.",
+  "intent": [
+    "Caleb Hayes wanted to hide missing stall-fee payments.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the market treasurer moved the receipt book during the vendor count.",
+    "Remove a cash receipt book from its checked location.",
+    "Hide the item in a hollow scale-weight box.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a cash receipt book disappeared from a farmers market office during vendor registration.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the stall-bell rang during an unscheduled vendor count.",
+    "The physical trace was green ink on the inside of the cash drawer.",
+    "The relevant tool or mechanism was a rubber stamp with green ink on the handle.",
+    "The item could be concealed in a hollow scale-weight box.",
+    "The hiding place required insider knowledge because only the market treasurer knew the scale-weight box had been emptied for repairs.",
+    "The access pattern mattered because the market treasurer moved the receipt book during the vendor count.",
+    "The motive was to hide missing stall-fee payments.",
+    "Ezra Nash's suspicious behavior happened before the final verification of the object.",
+    "Vera Rook's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Caleb Hayes's role connects specialized access with the hiding method."
+  ],
+  "distractor_cues": [
+    "a vendor angry about being assigned a poor stall",
+    "a food-truck owner carrying cash bags",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 15,
+    "num_misleading_trails": 5,
+    "word_count": 1400,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the stall-bell rang during an unscheduled vendor count",
+    "access_constraint": "the market treasurer moved the receipt book during the vendor count",
+    "physical_trace": "green ink on the inside of the cash drawer",
+    "tool_or_mechanism": "a rubber stamp with green ink on the handle",
+    "hidden_container": "a hollow scale-weight box",
+    "role_privilege": "only the market treasurer knew the scale-weight box had been emptied for repairs",
+    "motive": "hide missing stall-fee payments"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

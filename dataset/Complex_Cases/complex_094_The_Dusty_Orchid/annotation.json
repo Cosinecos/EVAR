@@ -1,0 +1,100 @@
+{
+  "case_id": "complex_094",
+  "split": "Complex",
+  "title": "The Dusty Orchid",
+  "domain": "planetarium",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Kieran Kline",
+  "culprit_role": "projection operator",
+  "suspects": [
+    {
+      "name": "Grant Reed",
+      "role": "ticket manager"
+    },
+    {
+      "name": "Elias Fenn",
+      "role": "dome technician"
+    },
+    {
+      "name": "Mina Wren",
+      "role": "dome technician"
+    },
+    {
+      "name": "Kieran Kline",
+      "role": "projection operator"
+    },
+    {
+      "name": "Lena Finch",
+      "role": "guest lecturer"
+    },
+    {
+      "name": "Livia Lane",
+      "role": "dome technician"
+    }
+  ],
+  "verdict": "Kieran Kline was responsible for the disappearance of a show-control access card.",
+  "intent": [
+    "Kieran Kline wanted to alter show logs that revealed unauthorized after-hours access.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the projection operator controlled the early dimming sequence.",
+    "Remove a show-control access card from its checked location.",
+    "Hide the item in a hollow star-projector filter case.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a show-control access card disappeared from a planetarium control booth before a public show.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the dome lights dimmed six minutes before schedule.",
+    "The physical trace was plastic dust beside the filter drawer.",
+    "The relevant tool or mechanism was a lens cloth with plastic dust.",
+    "The item could be concealed in a hollow star-projector filter case.",
+    "The hiding place required insider knowledge because only the projection operator knew the filter case had a hollow separator.",
+    "The access pattern mattered because the projection operator controlled the early dimming sequence.",
+    "The motive was to alter show logs that revealed unauthorized after-hours access.",
+    "Grant Reed's suspicious behavior happened before the final verification of the object.",
+    "Elias Fenn's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Kieran Kline's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container."
+  ],
+  "distractor_cues": [
+    "a lecturer arguing about the program order",
+    "an usher collecting tickets near the booth",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 6,
+    "num_required_cues": 17,
+    "num_misleading_trails": 5,
+    "word_count": 1404,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the dome lights dimmed six minutes before schedule",
+    "access_constraint": "the projection operator controlled the early dimming sequence",
+    "physical_trace": "plastic dust beside the filter drawer",
+    "tool_or_mechanism": "a lens cloth with plastic dust",
+    "hidden_container": "a hollow star-projector filter case",
+    "role_privilege": "only the projection operator knew the filter case had a hollow separator",
+    "motive": "alter show logs that revealed unauthorized after-hours access"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

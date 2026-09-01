@@ -1,0 +1,97 @@
+{
+  "case_id": "complex_050",
+  "split": "Complex",
+  "title": "The Dusty Orchid",
+  "domain": "private art gallery",
+  "crime_type": "switch",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Keira Ash",
+  "culprit_role": "lighting technician",
+  "suspects": [
+    {
+      "name": "Miles Locke",
+      "role": "gallery curator"
+    },
+    {
+      "name": "Keira Ash",
+      "role": "lighting technician"
+    },
+    {
+      "name": "Serena Dove",
+      "role": "gallery curator"
+    },
+    {
+      "name": "Tobias Greer",
+      "role": "security guard"
+    },
+    {
+      "name": "Emmett Reed",
+      "role": "catering manager"
+    }
+  ],
+  "verdict": "Keira Ash was responsible for the disappearance of a miniature landscape painting.",
+  "intent": [
+    "Keira Ash wanted to pay off a private debt by selling the original through a collector.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the lighting technician entered the room for a scheduled dimmer test after the final inspection.",
+    "Remove a miniature landscape painting from its checked location.",
+    "Hide the item in a black lighting equipment case with a foam-lined false base.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a miniature landscape painting disappeared from a private art gallery before a charity auction.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the blackout lasted exactly ninety seconds.",
+    "The physical trace was wet varnish on the replica frame and stage dust near the equipment case.",
+    "The relevant tool or mechanism was a blackout switch logged under a maintenance code.",
+    "The item could be concealed in a black lighting equipment case with a foam-lined false base.",
+    "The hiding place required insider knowledge because only the lighting technician controlled the blackout panel from inside the room.",
+    "The access pattern mattered because the lighting technician entered the room for a scheduled dimmer test after the final inspection.",
+    "The motive was to pay off a private debt by selling the original through a collector.",
+    "Miles Locke's suspicious behavior happened before the final verification of the object.",
+    "Serena Dove's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Keira Ash's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container.",
+    "The final reasoning requires combining timing, access, trace, container knowledge, and motive."
+  ],
+  "distractor_cues": [
+    "a loud dispute between the donor and curator",
+    "a photographer carrying a large equipment bag",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 18,
+    "num_misleading_trails": 4,
+    "word_count": 1411,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the blackout lasted exactly ninety seconds",
+    "access_constraint": "the lighting technician entered the room for a scheduled dimmer test after the final inspection",
+    "physical_trace": "wet varnish on the replica frame and stage dust near the equipment case",
+    "tool_or_mechanism": "a blackout switch logged under a maintenance code",
+    "hidden_container": "a black lighting equipment case with a foam-lined false base",
+    "role_privilege": "only the lighting technician controlled the blackout panel from inside the room",
+    "motive": "pay off a private debt by selling the original through a collector"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

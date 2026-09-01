@@ -1,0 +1,89 @@
+{
+  "case_id": "medium_036",
+  "split": "Medium",
+  "title": "The Silent Brooch",
+  "domain": "fencing club",
+  "crime_type": "sabotage",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Grant Greer",
+  "culprit_role": "equipment captain",
+  "suspects": [
+    {
+      "name": "Mateo Gray",
+      "role": "locker-room attendant"
+    },
+    {
+      "name": "Grant Greer",
+      "role": "equipment captain"
+    },
+    {
+      "name": "Nina Reed",
+      "role": "team manager"
+    },
+    {
+      "name": "Adrian Ward",
+      "role": "coach"
+    },
+    {
+      "name": "Clara Hollis",
+      "role": "club treasurer"
+    }
+  ],
+  "verdict": "Grant Greer was responsible for the disappearance of a competitor's scoring wire.",
+  "intent": [
+    "Grant Greer wanted to cause a rival to fail equipment check without appearing involved.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the equipment captain performed the calibration after the final gear inspection.",
+    "Remove a competitor's scoring wire from its checked location.",
+    "Hide the item in a hollow reel used for spare body cords.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a competitor's scoring wire disappeared from a fencing club locker room before a regional match.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the scoring box was unplugged during a calibration check.",
+    "The physical trace was tiny copper strands near the spare-cord shelf.",
+    "The relevant tool or mechanism was a wire cutter with a nicked blade.",
+    "The item could be concealed in a hollow reel used for spare body cords.",
+    "The hiding place required insider knowledge because only the equipment captain knew which reel had a hollow core.",
+    "The access pattern mattered because the equipment captain performed the calibration after the final gear inspection.",
+    "The motive was to cause a rival to fail equipment check without appearing involved.",
+    "Mateo Gray's suspicious behavior happened before the final verification of the object."
+  ],
+  "distractor_cues": [
+    "a rival fencer arguing about seeding",
+    "an attendant collecting laundry bags",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 10,
+    "num_misleading_trails": 2,
+    "word_count": 1065,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the scoring box was unplugged during a calibration check",
+    "access_constraint": "the equipment captain performed the calibration after the final gear inspection",
+    "physical_trace": "tiny copper strands near the spare-cord shelf",
+    "tool_or_mechanism": "a wire cutter with a nicked blade",
+    "hidden_container": "a hollow reel used for spare body cords",
+    "role_privilege": "only the equipment captain knew which reel had a hollow core",
+    "motive": "cause a rival to fail equipment check without appearing involved"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

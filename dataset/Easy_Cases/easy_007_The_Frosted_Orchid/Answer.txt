@@ -1,0 +1,18 @@
+Culprit:
+Noah Pierce
+
+Culprit Role:
+ski instructor
+
+Final Verdict:
+Noah Pierce was responsible for the disappearance of a guest-room master key.
+
+Motive:
+Noah Pierce wanted to enter a guest room and remove an incriminating photograph.
+
+Action Schema:
+Noah Pierce used the short disturbance indicated by the timing clue, exploited role-specific access, removed a guest-room master key, hid it in a hollow ski pole standing in the mudroom rack, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the mudroom bell rang while everyone claimed to be indoors. The physical evidence points away from a casual visitor because investigators found dry snow under only one chair near the mudroom and a wax scraper with fresh brass scratches. The hiding method required inside knowledge because only the ski instructor knew the pole cap unscrewed silently. The access pattern is consistent with Noah Pierce because the ski instructor crossed between the fireplace room and the mudroom to check equipment. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Noah Pierce is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

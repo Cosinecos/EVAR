@@ -1,0 +1,82 @@
+{
+  "case_id": "easy_015",
+  "split": "Easy",
+  "title": "The Hidden Diary",
+  "domain": "hotel laundry",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Noah Hollis",
+  "culprit_role": "laundry supervisor",
+  "suspects": [
+    {
+      "name": "Dorian Cole",
+      "role": "security guard"
+    },
+    {
+      "name": "Clara Rowe",
+      "role": "bellhop"
+    },
+    {
+      "name": "Noah Hollis",
+      "role": "laundry supervisor"
+    },
+    {
+      "name": "Gavin Shaw",
+      "role": "AV technician"
+    }
+  ],
+  "verdict": "Noah Hollis was responsible for the disappearance of a keynote speaker's USB badge.",
+  "intent": [
+    "Noah Hollis wanted to access confidential slides before the keynote.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the laundry supervisor handled the jacket after the badge was last confirmed.",
+    "Remove a keynote speaker's USB badge from its checked location.",
+    "Hide the item in a sealed laundry ticket envelope.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a keynote speaker's USB badge disappeared from a hotel laundry room during a technology conference.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the elevator stopped on the service floor without a guest call.",
+    "The physical trace was hotel starch on the registration desk.",
+    "The relevant tool or mechanism was a lint roller with badge adhesive.",
+    "The item could be concealed in a sealed laundry ticket envelope.",
+    "The hiding place required insider knowledge because only the laundry supervisor knew the service elevator override."
+  ],
+  "distractor_cues": [
+    "an AV technician requesting early access",
+    "a bellhop carrying several garment bags",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 7,
+    "num_misleading_trails": 2,
+    "word_count": 866,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the elevator stopped on the service floor without a guest call",
+    "access_constraint": "the laundry supervisor handled the jacket after the badge was last confirmed",
+    "physical_trace": "hotel starch on the registration desk",
+    "tool_or_mechanism": "a lint roller with badge adhesive",
+    "hidden_container": "a sealed laundry ticket envelope",
+    "role_privilege": "only the laundry supervisor knew the service elevator override",
+    "motive": "access confidential slides before the keynote"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

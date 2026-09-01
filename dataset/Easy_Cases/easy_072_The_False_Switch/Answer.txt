@@ -1,0 +1,18 @@
+Culprit:
+Arlo Dove
+
+Culprit Role:
+tournament director
+
+Final Verdict:
+Arlo Dove was responsible for the disappearance of a sealed envelope with final pairings.
+
+Motive:
+Arlo Dove wanted to avoid pairing a favored player against the strongest opponent.
+
+Action Schema:
+Arlo Dove used the short disturbance indicated by the timing clue, exploited role-specific access, removed a sealed envelope with final pairings, hid it in a hollow demonstration board, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the coffee machine hissed during a silent round. The physical evidence points away from a casual visitor because investigators found warped glue on the envelope flap and a steam wand from the refreshment table. The hiding method required inside knowledge because only the tournament director knew the demonstration board had a storage slot. The access pattern is consistent with Arlo Dove because the tournament director moved the envelope during the scheduled silence. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Arlo Dove is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

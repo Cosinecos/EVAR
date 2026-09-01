@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="EVAR — evidence-validated hypothesis admission for budget-aware narrative reasoning." />
+  <title>EVAR · Evidence before admission</title>
+  <style>
+    :root {
+      --ink: #10273a;
+      --muted: #617588;
+      --paper: #f4f7f5;
+      --surface: rgba(255,255,255,.82);
+      --line: rgba(16,39,58,.11);
+      --navy: #071522;
+      --teal: #18a984;
+      --teal-pale: #dff8f0;
+      --blue: #4e8ee8;
+      --amber: #d99a28;
+      --coral: #d86158;
+      --shadow: 0 24px 70px rgba(20,47,63,.12);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 9%, rgba(55,199,163,.13), transparent 25rem),
+        radial-gradient(circle at 91% 21%, rgba(90,145,229,.13), transparent 26rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .shell { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      position: relative;
+      z-index: 5;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; color: white; font-weight: 800; letter-spacing: -.02em; }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, #66efd0, #6ca8f5);
+      color: #05211b; font-size: 15px;
+      box-shadow: 0 10px 30px rgba(86,222,194,.25);
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; color: #b9cad8; font-size: 14px; font-weight: 650; }
+    .nav-links a:hover { color: white; }
+    .nav-cta { padding: 9px 15px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: white !important; }
+    .hero-wrap { background: var(--navy); color: white; overflow: hidden; position: relative; }
+    .hero-wrap::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.034) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.034) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent 92%);
+    }
+    .hero-wrap::after {
+      content: ""; position: absolute; width: 520px; height: 520px; border-radius: 50%; right: -160px; top: -250px;
+      background: #31d4aa; filter: blur(10px); opacity: .08;
+    }
+    .hero { min-height: 680px; display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 74px; position: relative; z-index: 1; padding: 76px 0 112px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #8ff5da; text-transform: uppercase; letter-spacing: .17em; font-size: 12px; font-weight: 800; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: currentColor; }
+    h1 { font-size: clamp(62px, 9vw, 108px); line-height: .88; letter-spacing: -.075em; margin: 25px 0 30px; }
+    .hero-sub { color: #c7d6e1; font-size: clamp(20px, 2.2vw, 29px); max-width: 590px; letter-spacing: -.025em; line-height: 1.35; }
+    .hero-sub strong { color: white; }
+    .hero-copy { max-width: 590px; color: #8fa8ba; font-size: 16px; margin-top: 20px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; border-radius: 999px; padding: 13px 20px; font-size: 14px; font-weight: 760; border: 1px solid transparent; transition: transform .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: #72efd1; color: #05251e; }
+    .btn-secondary { color: white; border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.05); }
+    .hero-card { padding: 27px; border: 1px solid rgba(255,255,255,.13); border-radius: 30px; background: rgba(255,255,255,.055); backdrop-filter: blur(16px); box-shadow: 0 30px 90px rgba(0,0,0,.27); }
+    .card-head { display: flex; justify-content: space-between; align-items: center; color: #bcd0de; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; margin-bottom: 19px; }
+    .status { display: flex; align-items: center; gap: 7px; color: #85ebcf; }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 5px rgba(133,235,207,.09); }
+    .admission { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; }
+    .decision { border-radius: 18px; padding: 23px 13px 17px; text-align: center; min-height: 154px; }
+    .decision .icon { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 13px; color: white; font-size: 18px; font-weight: 900; }
+    .decision b { display: block; font-size: 14px; margin-bottom: 6px; }
+    .decision span { display: block; color: #6b7d88; font-size: 11px; line-height: 1.45; }
+    .admit { background: #e6faf4; color: #14795e; } .admit .icon { background: var(--teal); }
+    .quarantine { background: #fff7e7; color: #996415; } .quarantine .icon { background: var(--amber); }
+    .discard { background: #fff0ef; color: #a3443d; } .discard .icon { background: var(--coral); }
+    .boundary { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border: 1px dashed rgba(139,242,214,.35); border-radius: 14px; color: #9fb7c7; font-size: 12px; }
+    .boundary b { color: #91f2d7; }
+
+    .stats { margin-top: -54px; position: relative; z-index: 3; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--surface); border: 1px solid rgba(255,255,255,.65); border-radius: var(--radius); box-shadow: var(--shadow); backdrop-filter: blur(18px); overflow: hidden; }
+    .stat { padding: 28px 30px; border-right: 1px solid var(--line); }
+    .stat:last-child { border-right: 0; }
+    .stat b { font-size: 27px; letter-spacing: -.04em; display: block; }
+    .stat span { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .09em; font-weight: 750; }
+    section { padding: 116px 0; }
+    .section-kicker { color: var(--teal); font-weight: 800; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; }
+    h2 { font-size: clamp(38px, 5vw, 61px); line-height: 1.05; letter-spacing: -.055em; margin: 13px 0 20px; max-width: 780px; }
+    .section-lead { color: var(--muted); font-size: 18px; max-width: 720px; }
+    .pipeline { margin-top: 54px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .stage { position: relative; padding: 24px 22px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.68); min-height: 178px; }
+    .stage::after { content: "→"; position: absolute; right: -13px; top: 72px; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: #d9eee8; color: #30826e; font-weight: 900; z-index: 2; }
+    .stage:last-child::after { display: none; }
+    .stage-num { color: #93a5b0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+    .stage h3 { font-size: 17px; margin: 25px 0 8px; letter-spacing: -.02em; }
+    .stage p { color: var(--muted); font-size: 13px; margin: 0; }
+    .stage.accent { background: var(--ink); color: white; border-color: var(--ink); }
+    .stage.accent p { color: #9fb4c2; }
+    .stage.accent .stage-num { color: #78e8cc; }
+    .principles { margin-top: 16px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; }
+    .principle-large, .principle-stack > div { border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 15px 50px rgba(20,47,63,.055); }
+    .principle-large { padding: 42px; min-height: 330px; background: linear-gradient(150deg, #e7faf5, white 60%); }
+    .principle-large .lock { width: 55px; height: 55px; border-radius: 18px; display: grid; place-items: center; background: var(--teal); color: white; font-size: 24px; }
+    .principle-large h3 { font-size: 31px; letter-spacing: -.04em; margin: 43px 0 12px; }
+    .principle-large p, .principle-stack p { color: var(--muted); margin: 0; }
+    .principle-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+    .principle-stack > div { padding: 29px; }
+    .principle-stack b { display: block; font-size: 18px; margin-bottom: 8px; }
+    .mini-tag { display: inline-flex; padding: 5px 9px; border-radius: 8px; background: #edf3f5; color: #4f6572; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; margin-bottom: 21px; }
+    .dark-section { background: #091824; color: white; }
+    .dark-section .section-lead { color: #95aaba; }
+    .code-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: center; }
+    .terminal { border: 1px solid rgba(255,255,255,.12); border-radius: 22px; background: #050d14; box-shadow: 0 34px 80px rgba(0,0,0,.28); overflow: hidden; }
+    .terminal-bar { height: 43px; display: flex; align-items: center; gap: 7px; padding: 0 16px; border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.025); }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: #e86e65; } .dot:nth-child(2) { background: #e5b650; } .dot:nth-child(3) { background: #4ac18d; }
+    pre { margin: 0; padding: 27px; overflow: auto; color: #c7d8e4; font: 13px/1.8 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    pre .cmd { color: #7ee8cd; } pre .comment { color: #597081; }
+    .dataset-grid { margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .split { background: white; border: 1px solid var(--line); border-radius: 22px; padding: 28px; }
+    .split-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 23px; }
+    .split h3 { margin: 0; font-size: 22px; letter-spacing: -.03em; }
+    .split-top b { color: var(--teal); font-size: 13px; }
+    .split dl { display: grid; grid-template-columns: 1fr auto; gap: 10px 20px; margin: 0; font-size: 13px; }
+    .split dt { color: var(--muted); } .split dd { margin: 0; font-weight: 730; }
+    .bar { height: 7px; background: #edf2f1; border-radius: 8px; margin-top: 24px; overflow: hidden; }
+    .bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #4dd8b5, #5c93ea); }
+    .footer { padding: 58px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .footer-links { display: flex; gap: 22px; font-weight: 650; color: var(--ink); }
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 46px; padding-top: 55px; }
+      .hero-card { max-width: 620px; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .pipeline { grid-template-columns: 1fr 1fr; }
+      .stage:nth-child(2)::after { display: none; }
+      .principles, .code-grid { grid-template-columns: 1fr; }
+      .dataset-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 26px, 1160px); }
+      .hero { min-height: 0; padding-bottom: 90px; }
+      h1 { font-size: 68px; }
+      .admission { grid-template-columns: 1fr; }
+      .decision { min-height: 0; }
+      .stats, .pipeline { grid-template-columns: 1fr; }
+      .stat { border-right: 0; border-bottom: 1px solid var(--line); }
+      .stage::after { display: none; }
+      section { padding: 82px 0; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="hero-wrap">
+    <div class="shell">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top"><span class="brand-mark">EV</span><span>EVAR</span></a>
+        <div class="nav-links">
+          <a href="#method">Method</a>
+          <a href="#code">Code</a>
+          <a href="#dataset">Dataset</a>
+          <a class="nav-cta" href="https://github.com/Cosinecos/EVAR">View on GitHub ↗</a>
+        </div>
+      </nav>
+      <main class="hero" id="top">
+        <div>
+          <div class="eyebrow">EMNLP 2026 Main</div>
+          <h1>EVAR</h1>
+          <div class="hero-sub"><strong>Evidence-Validated Hypothesis Admission</strong> for budget-aware narrative reasoning.</div>
+          <p class="hero-copy">A final-paper implementation that prevents plausible but unsupported hypotheses from contaminating later reasoning.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/Cosinecos/EVAR">Explore the code <span>→</span></a>
+            <a class="btn btn-secondary" href="https://arxiv.org/abs/2608.29835">Read the paper</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Hypothesis admission outcomes">
+          <div class="card-head"><span>Hypothesis admission</span><span class="status">Verifier online</span></div>
+          <div class="admission">
+            <div class="decision admit"><div class="icon">✓</div><b>ADMIT</b><span>Supported by locked evidence</span></div>
+            <div class="decision quarantine"><div class="icon">!</div><b>QUARANTINE</b><span>Unverifiable; kept out of state</span></div>
+            <div class="decision discard"><div class="icon">×</div><b>DISCARD</b><span>Contradicted by source units</span></div>
+          </div>
+          <div class="boundary"><span>Final synthesis boundary</span><b>𝓑 + 𝓗⁺ only</b></div>
+        </div>
+      </main>
+    </div>
+  </header>
+
+  <div class="shell stats" aria-label="Project highlights">
+    <div class="stat"><b>300</b><span>NarraCrime cases</span></div>
+    <div class="stat"><b>8</b><span>Validated operators</span></div>
+    <div class="stat"><b>6</b><span>Final metrics</span></div>
+    <div class="stat"><b>0</b><span>Gold fields in inference</span></div>
+  </div>
+
+  <section id="method">
+    <div class="shell">
+      <div class="section-kicker">The method</div>
+      <h2>Reason freely. Update state carefully.</h2>
+      <p class="section-lead">EVAR separates proposing a candidate from trusting it. The locked narrative store remains the sole evidential authority across every refinement round.</p>
+      <div class="pipeline">
+        <article class="stage"><div class="stage-num">01 · STORE</div><h3>Atomize & lock</h3><p>Extract atomic claims, exact source spans, observable metadata, and local consistency tags.</p></article>
+        <article class="stage"><div class="stage-num">02 · ROUTE</div><h3>Measure difficulty</h3><p>Combine unresolved gaps, uncertainty count, and severity into an instance-specific budget.</p></article>
+        <article class="stage accent"><div class="stage-num">03 · VERIFY</div><h3>Challenge candidates</h3><p>Test direct support, counterevidence, and indispensable prerequisites against the store.</p></article>
+        <article class="stage"><div class="stage-num">04 · SYNTHESIZE</div><h3>Answer from trusted state</h3><p>Use only the store and admitted hypotheses; stop when sufficient or budget-exhausted.</p></article>
+      </div>
+      <div class="principles">
+        <div class="principle-large"><div class="lock">▣</div><h3>One-way evidential flow</h3><p>Generation creates candidates. Challenges say how to test them. Only the verifier can move a candidate into the answer-supporting state.</p></div>
+        <div class="principle-stack">
+          <div><span class="mini-tag">Z₀ REUSED AT t=0</span><b>No duplicate initial gap call</b><p>The implementation follows the corrected final Algorithm 1 control flow.</p></div>
+          <div><span class="mini-tag">FAIL CLOSED</span><b>Structured outputs, checked</b><p>Every operator response is contract-validated, source IDs are cross-checked, and malformed distributions are rejected.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section" id="code">
+    <div class="shell code-grid">
+      <div>
+        <div class="section-kicker">Run it locally</div>
+        <h2>One command. The complete path.</h2>
+        <p class="section-lead">The deterministic mock backend traverses the same operator runner, contracts, admission gate, stopping logic, and output validator as a real API model.</p>
+        <div class="actions"><a class="btn btn-primary" href="https://github.com/Cosinecos/EVAR">Open repository →</a></div>
+      </div>
+      <div class="terminal" aria-label="Quick start terminal commands">
+        <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <pre><span class="comment"># Install the lightweight core</span>
+<span class="cmd">pip install -e .</span>
+
+<span class="comment"># Validate all 300 cases</span>
+<span class="cmd">python scripts/validate_dataset.py .</span>
+
+<span class="comment"># Run final-paper EVAR offline</span>
+<span class="cmd">python scripts/run_evar.py \</span>
+  --config configs/mock.yaml \
+  --split Complex --limit 1 \
+  --output outputs/demo.jsonl
+
+<span class="comment"># Verify state boundaries and metrics</span>
+<span class="cmd">python -m unittest discover -s tests -v</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="dataset">
+    <div class="shell">
+      <div class="section-kicker">NarraCrime-300</div>
+      <h2>Long-form mysteries with structured evidence.</h2>
+      <p class="section-lead">Human-authored constraints and prompts guide AI-generated fictional blueprints and narratives, followed by structural validation and an independent audit protocol.</p>
+      <div class="dataset-grid">
+        <article class="split"><div class="split-top"><h3>Easy</h3><b>100 cases</b></div><dl><dt>Average words</dt><dd>863.54</dd><dt>Evidence cues</dt><dd>8.05</dd><dt>Suspects</dt><dd>3.49</dd></dl><div class="bar"><span style="width:61%"></span></div></article>
+        <article class="split"><div class="split-top"><h3>Medium</h3><b>100 cases</b></div><dl><dt>Average words</dt><dd>1065.22</dd><dt>Evidence cues</dt><dd>11.53</dd><dt>Suspects</dt><dd>4.51</dd></dl><div class="bar"><span style="width:75%"></span></div></article>
+        <article class="split"><div class="split-top"><h3>Complex</h3><b>100 cases</b></div><dl><dt>Average words</dt><dd>1413.40</dd><dt>Evidence cues</dt><dd>15.93</dd><dt>Suspects</dt><dd>5.95</dd></dl><div class="bar"><span style="width:100%"></span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="shell footer-row">
+      <div><strong>EVAR</strong> · Peilin Liu, Zhiquan Ji, Jinglong Ping · 2026</div>
+      <div class="footer-links"><a href="https://arxiv.org/abs/2608.29835">Paper</a><a href="https://github.com/Cosinecos/EVAR">Code</a><a href="../LICENSE_CODE_MIT.md">License</a></div>
+    </div>
+  </footer>
+</body>
+</html>

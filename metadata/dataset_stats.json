@@ -1,0 +1,54 @@
+{
+  "Easy": {
+    "num_cases": 100,
+    "avg_words": 863.54,
+    "min_words": 850,
+    "max_words": 884,
+    "avg_cues": 8.05,
+    "min_cues": 7,
+    "max_cues": 9,
+    "avg_suspects": 3.49,
+    "min_suspects": 3,
+    "max_suspects": 4,
+    "avg_misleading_trails": 1.54
+  },
+  "Medium": {
+    "num_cases": 100,
+    "avg_words": 1065.22,
+    "min_words": 1050,
+    "max_words": 1082,
+    "avg_cues": 11.53,
+    "min_cues": 10,
+    "max_cues": 13,
+    "avg_suspects": 4.51,
+    "min_suspects": 4,
+    "max_suspects": 5,
+    "avg_misleading_trails": 2.49
+  },
+  "Complex": {
+    "num_cases": 100,
+    "avg_words": 1413.4,
+    "min_words": 1400,
+    "max_words": 1431,
+    "avg_cues": 15.93,
+    "min_cues": 14,
+    "max_cues": 18,
+    "avg_suspects": 5.95,
+    "min_suspects": 5,
+    "max_suspects": 7,
+    "avg_misleading_trails": 4.03
+  },
+  "Total": {
+    "num_cases": 300,
+    "avg_words": 1114.05,
+    "min_words": 850,
+    "max_words": 1431,
+    "avg_cues": 11.84,
+    "min_cues": 7,
+    "max_cues": 18,
+    "avg_suspects": 4.65,
+    "min_suspects": 3,
+    "max_suspects": 7,
+    "avg_misleading_trails": 2.69
+  }
+}

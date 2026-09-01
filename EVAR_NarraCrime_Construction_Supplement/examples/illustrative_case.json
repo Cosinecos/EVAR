@@ -1,0 +1,53 @@
+{
+  "case_id": "ILLUSTRATIVE_E_001",
+  "difficulty": "Easy",
+  "illustrative_only": true,
+  "goal": "Identify which suspect is best supported by the distributed evidence.",
+  "narrative": "Mira Vale invited three colleagues to the fictional Bellweather Archive for an evening inventory. Rowan entered through the east hall carrying a blue folder and signed the desk log at eight. Tessa remained in the reading room, where the wall clock had stopped at seven forty. Jules said he worked alone beside the west shelves. At eight ten, Mira placed a sealed brass key inside a red ledger and returned the ledger to cabinet four. Rowan then left the east hall after a delivery call recorded at eight fifteen. A cleaner crossed the reading room and spoke with Tessa at eight twenty. Jules later claimed that he had never approached cabinet four. At eight thirty, a motion sensor registered movement beside cabinet four while the west-shelf camera was temporarily covered by a grey coat. The building log showed that Jules had checked out that same grey coat earlier in the evening. At eight forty, Mira found the red ledger open and the brass key missing. Tessa helped search the reading room while Rowan returned from the delivery entrance. A torn corner from the west-shelf inventory list was found beneath cabinet four. The remaining portion of that list was inside Jules's notebook. Jules said the papers must have been mixed accidentally. However, dust on the cabinet latch matched the silver powder used only in the west-shelf restoration tray. Jules had used that tray shortly before the sensor activation. The archive staff recovered the key from a hollow cardboard tube on the west shelves. Rowan's blue folder contained only signed delivery receipts. Tessa's conversation with the cleaner continued throughout the motion-sensor interval. The desk log, delivery record, cleaner's statement, coat record, torn inventory page, restoration powder, and hiding place were preserved for review.",
+  "suspects": ["Rowan", "Tessa", "Jules"],
+  "event_timeline": [
+    {"event_id": "EV1", "order": 1, "description": "Mira stores the brass key in the red ledger."},
+    {"event_id": "EV2", "order": 2, "description": "Rowan leaves for a recorded delivery call."},
+    {"event_id": "EV3", "order": 3, "description": "Tessa speaks with the cleaner in the reading room."},
+    {"event_id": "EV4", "order": 4, "description": "Movement occurs at cabinet four while the west camera is covered."},
+    {"event_id": "EV5", "order": 5, "description": "The key is discovered missing and later recovered on the west shelves."}
+  ],
+  "gold_verdict": {
+    "suspect": "Jules",
+    "proposition": "The combined physical and temporal evidence best supports Jules as the person who removed and concealed the key."
+  },
+  "gold_intent": ["Jules intended to obtain and conceal the archive key."],
+  "gold_action_schema": [
+    "Jules covered the west-shelf camera with his coat.",
+    "Jules approached cabinet four during the uncovered interval.",
+    "Jules removed the key and concealed it in a tube on the west shelves."
+  ],
+  "supporting_evidence": [
+    {"cue_id": "C1", "proposition": "The cabinet sensor activated while Rowan was at the delivery entrance.", "event_ids": ["EV2", "EV4"]},
+    {"cue_id": "C2", "proposition": "Tessa was speaking with the cleaner during the sensor interval.", "event_ids": ["EV3", "EV4"]},
+    {"cue_id": "C3", "proposition": "The camera was covered by a grey coat checked out by Jules.", "event_ids": ["EV4"]},
+    {"cue_id": "C4", "proposition": "A torn west-shelf inventory page was found below cabinet four.", "event_ids": ["EV4", "EV5"]},
+    {"cue_id": "C5", "proposition": "The matching remainder of the page was in Jules's notebook.", "event_ids": ["EV5"]},
+    {"cue_id": "C6", "proposition": "Powder on the latch came from a tray recently used by Jules.", "event_ids": ["EV4", "EV5"]},
+    {"cue_id": "C7", "proposition": "The key was hidden on the west shelves where Jules said he worked.", "event_ids": ["EV5"]}
+  ],
+  "distractor_cues": [
+    "Rowan carried a blue folder.",
+    "The reading-room clock had stopped.",
+    "Tessa helped search after the key disappeared."
+  ],
+  "cross_event_dependencies": [
+    {"dependency_id": "D1", "source_cue_ids": ["C1", "C2"], "conclusion": "Rowan and Tessa had independently supported locations during the sensor interval."},
+    {"dependency_id": "D2", "source_cue_ids": ["C3", "C4", "C5", "C6", "C7"], "conclusion": "Multiple independent traces connect Jules to the cabinet and hiding location."}
+  ],
+  "evidence_to_sentence_mapping": {
+    "C1": [4, 7],
+    "C2": [5, 15],
+    "C3": [7, 8],
+    "C4": [10],
+    "C5": [11],
+    "C6": [13, 14],
+    "C7": [15]
+  }
+}
+

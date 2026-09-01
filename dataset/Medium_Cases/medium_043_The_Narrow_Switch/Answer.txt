@@ -1,0 +1,18 @@
+Culprit:
+Hugo Sterling
+
+Culprit Role:
+projection operator
+
+Final Verdict:
+Hugo Sterling was responsible for the disappearance of a show-control access card.
+
+Motive:
+Hugo Sterling wanted to alter show logs that revealed unauthorized after-hours access.
+
+Action Schema:
+Hugo Sterling used the short disturbance indicated by the timing clue, exploited role-specific access, removed a show-control access card, hid it in a hollow star-projector filter case, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the dome lights dimmed six minutes before schedule. The physical evidence points away from a casual visitor because investigators found plastic dust beside the filter drawer and a lens cloth with plastic dust. The hiding method required inside knowledge because only the projection operator knew the filter case had a hollow separator. The access pattern is consistent with Hugo Sterling because the projection operator controlled the early dimming sequence. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Hugo Sterling is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

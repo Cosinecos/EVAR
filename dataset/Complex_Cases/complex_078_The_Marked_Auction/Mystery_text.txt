@@ -1,0 +1,61 @@
+The Marked Auction
+
+The incident took place in a ceramic studio before an exhibition. Powdered clay coated the floor and softened every footprint. During the event, the formula card was taken from the kiln room. The missing item, a glaze formula card, had been checked before the room became crowded, and no one was allowed to remove it openly. Staff first described the problem as confusion caused by the crowd, but the scene contained details that made accidental loss unlikely.
+
+The suspect list was crowded, with 7 plausible people: Elena Rowe the senior potter, Ronan Hart the apprentice, Ari Rowe the kiln technician, Celine Baird the apprentice, Sofia Bell the kiln technician, Gavin Cross the apprentice, Bennett Fenn the studio owner. Several clues pointed in tempting but incomplete directions, so the solution required rejecting early hypotheses and integrating evidence scattered across the narrative.
+
+Elena Rowe, the senior potter, described their movements with unusual precision. They admitted being near the controlled area, but framed it as a routine duty. Ronan Hart, the apprentice, was noticed by two witnesses and seemed nervous, yet the timing of that behavior did not match the final disappearance. Ari Rowe, the kiln technician, had a personal irritation that sounded like motive, but it did not account for the physical trace. Celine Baird, the apprentice, had a personal irritation that sounded like motive, but it did not account for the physical trace. Sofia Bell, the kiln technician, was noticed by two witnesses and seemed nervous, yet the timing of that behavior did not match the final disappearance. Gavin Cross, the apprentice, was noticed by two witnesses and seemed nervous, yet the timing of that behavior did not match the final disappearance. Bennett Fenn, the studio owner, had a visible reason to draw suspicion, but their suspicious action was easier to see than to connect with the mechanism.
+
+The first material clue was blue glaze on the emergency latch. It was not located on the normal visitor path; it appeared close to a staff-side area where a casual visitor would have had little reason to stand. The second material clue was a kiln glove with blue glaze dust. It should not have been involved after the final check unless someone used it during the disturbance. The third constraint was temporal: the kiln temperature log showed a manual pause. This narrowed the possible window and ruled out explanations that required a long, unobserved search.
+
+Before the evidence was sorted, Ronan Hart seemed to explain the disappearance. They were connected with a visiting artist asking about the glaze, and several witnesses remembered their mood before the disappearance. However, the timeline weakened that theory: the troubling behavior happened before a glaze formula card was last confirmed present. That made the behavior suspicious but not causally sufficient.
+
+Suspicion then shifted to Ari Rowe, who was associated with an apprentice dropping a tray near the kiln. This detail created a plausible story of opportunity, but it did not explain blue glaze on the emergency latch or the use of a clay reclaim bucket beneath the wedging table. A visible opportunity was not enough unless it also matched the hidden mechanism.
+
+The hiding method was the strongest clue. The responsible person did not need to carry a glaze formula card out through the main exit. The item could instead be placed in a clay reclaim bucket beneath the wedging table, a location ordinary enough to survive the first search. This mattered because only the senior potter knew the emergency latch stuck open if pressed from below. Someone without that knowledge might have acted impulsively, but would not naturally choose that container.
+
+The access pattern pointed in the same direction: the senior potter entered the kiln room during the pause to check firing samples. The motive also matched that role. The disappearance would help someone who wanted to copy a signature glaze before the exhibition. Other suspects had embarrassment, anger, or opportunity, but they failed to satisfy the complete chain of timing, access, physical trace, container knowledge, and motive.
+
+The first search also mattered. It was quick, public, and focused on bags and pockets. A container that looked like ordinary equipment would pass such a search, which explains why the item was hidden rather than carried away immediately.
+
+The investigators separated motive, opportunity, and mechanism. Several people had one of these. Only the correct answer had all three, and the mechanism was the hardest part to fake.
+
+The most tempting early answer depended on personality and conflict. The final answer depended on access and mechanism. That distinction is why the obvious suspect remained possible for several paragraphs but ultimately failed.
+
+The evidence therefore had to be read relationally. the kiln temperature log showed a manual pause established when the act could occur; blue glaze on the emergency latch and a kiln glove with blue glaze dust established how the act left residue; and only the senior potter knew the emergency latch stuck open if pressed from below explained why the hiding place was chosen.
+
+A fourth possibility involved Sofia Bell, who had a reason to resent the victim of the incident. That resentment explained possible motive but not specialized knowledge of the container. Without that knowledge, the first search should have exposed the item.
+
+By the end of the inquiry, the question was no longer who had a broad chance to be nearby. Many people had that. The question was who matched the complete evidence chain: access during the short window, knowledge of the hidden container, connection to the physical trace, and a motive that required delayed discovery.
+
+Question: Who was responsible for the disappearance of a glaze formula card, and what evidence supports the conclusion?
+
+The investigators treated each statement as a constraint rather than as a confession. A claim was useful only if it explained when the act happened, how the object moved, and why the first search failed.
+
+The order of observations was also important. A suspicious act before the final verification could not by itself explain a disappearance afterward, even if it made a person look guilty.
+
+The physical trace was small, but it linked the scene to a particular mechanism. Without that mechanism, the case would reduce to guesswork among people with ordinary access.
+
+The hidden container changed the logic of the case. The responsible person needed confidence that the object would remain unseen during a quick search and could be recovered later.
+
+The motive had to fit delay. A person who simply wanted the object immediately would have taken a different risk, while the actual plan depended on the object staying nearby but unnoticed.
+
+The investigators treated each statement as a constraint rather than as a confession. A claim was useful only if it explained when the act happened, how the object moved, and why the first search failed.
+
+The order of observations was also important. A suspicious act before the final verification could not by itself explain a disappearance afterward, even if it made a person look guilty.
+
+The physical trace was small, but it linked the scene to a particular mechanism. Without that mechanism, the case would reduce to guesswork among people with ordinary access.
+
+The hidden container changed the logic of the case. The responsible person needed confidence that the object would remain unseen during a quick search and could be recovered later.
+
+The motive had to fit delay. A person who simply wanted the object immediately would have taken a different risk, while the actual plan depended on the object staying nearby but unnoticed.
+
+The investigators treated each statement as a constraint rather than as a confession. A claim was useful only if it explained when the act happened, how the object moved, and why the first search failed.
+
+The order of observations was also important. A suspicious act before the final verification could not by itself explain a disappearance afterward, even if it made a person look guilty.
+
+The physical trace was small, but it linked the scene to a particular mechanism. Without that mechanism, the case would reduce to guesswork among people with ordinary access.
+
+The hidden container changed the logic of the case. The responsible person needed confidence that the object would remain unseen during a quick search and could be recovered later.
+
+The motive had to fit delay. A person who simply wanted the object immediately would have taken a different risk, while the actual plan depended on the object staying nearby but unnoticed.

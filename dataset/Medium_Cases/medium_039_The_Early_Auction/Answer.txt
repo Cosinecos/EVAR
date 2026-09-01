@@ -1,0 +1,18 @@
+Culprit:
+Mara Baird
+
+Culprit Role:
+station clerk
+
+Final Verdict:
+Mara Baird was responsible for the disappearance of a conductor's incident ledger.
+
+Motive:
+Mara Baird wanted to erase evidence of falsified delay records.
+
+Action Schema:
+Mara Baird used the short disturbance indicated by the timing clue, exploited role-specific access, removed a conductor's incident ledger, hid it in a newspaper bundle tied for the morning train, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the platform clock was advanced by five minutes. The physical evidence points away from a casual visitor because investigators found blue paper fibers on the parcel counter and a ticket punch with torn blue paper stuck inside. The hiding method required inside knowledge because only the station clerk could alter the platform clock and reseal the parcel counter. The access pattern is consistent with Mara Baird because the station clerk handled both the clock key and the ledger shelf after closing. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Mara Baird is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

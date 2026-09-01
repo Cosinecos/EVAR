@@ -1,0 +1,97 @@
+{
+  "case_id": "complex_009",
+  "split": "Complex",
+  "title": "The Missing Prototype",
+  "domain": "law school moot court",
+  "crime_type": "tamper",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Maya Hayes",
+  "culprit_role": "moot court coordinator",
+  "suspects": [
+    {
+      "name": "Vera Rook",
+      "role": "faculty judge"
+    },
+    {
+      "name": "Felix Locke",
+      "role": "timekeeper"
+    },
+    {
+      "name": "Anya Vale",
+      "role": "timekeeper"
+    },
+    {
+      "name": "Gavin Lark",
+      "role": "timekeeper"
+    },
+    {
+      "name": "Maya Hayes",
+      "role": "moot court coordinator"
+    }
+  ],
+  "verdict": "Maya Hayes was responsible for the disappearance of a sealed packet of judge notes.",
+  "intent": [
+    "Maya Hayes wanted to help a favored team anticipate the judges' concerns.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the moot court coordinator requested the reset and kept the cabinet key.",
+    "Remove a sealed packet of judge notes from its checked location.",
+    "Hide the item in a hollow binder spine in the clerk's cabinet.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a sealed packet of judge notes disappeared from a law school moot court classroom after practice.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the hallway camera skipped during a scheduled network reset.",
+    "The physical trace was softened glue at the packet corner.",
+    "The relevant tool or mechanism was a kettle that had steamed the packet flap.",
+    "The item could be concealed in a hollow binder spine in the clerk's cabinet.",
+    "The hiding place required insider knowledge because only the moot court coordinator knew the binder spine opened from the bottom.",
+    "The access pattern mattered because the moot court coordinator requested the reset and kept the cabinet key.",
+    "The motive was to help a favored team anticipate the judges' concerns.",
+    "Vera Rook's suspicious behavior happened before the final verification of the object.",
+    "Felix Locke's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Maya Hayes's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container.",
+    "The final reasoning requires combining timing, access, trace, container knowledge, and motive."
+  ],
+  "distractor_cues": [
+    "a student arguing about the practice score",
+    "a coach carrying a briefcase",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 18,
+    "num_misleading_trails": 3,
+    "word_count": 1400,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the hallway camera skipped during a scheduled network reset",
+    "access_constraint": "the moot court coordinator requested the reset and kept the cabinet key",
+    "physical_trace": "softened glue at the packet corner",
+    "tool_or_mechanism": "a kettle that had steamed the packet flap",
+    "hidden_container": "a hollow binder spine in the clerk's cabinet",
+    "role_privilege": "only the moot court coordinator knew the binder spine opened from the bottom",
+    "motive": "help a favored team anticipate the judges' concerns"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

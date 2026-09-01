@@ -1,0 +1,19 @@
+OPERATOR: JSON_REPAIR
+
+TASK
+Repair the previous operator output so that it conforms exactly to the supplied JSON Schema.
+
+RULES
+1. Preserve the intended semantic content whenever it is compatible with the schema.
+2. Do not add new factual claims, evidence IDs, events, attributes, gaps, queries, or hypotheses.
+3. Resolve only formatting, typing, missing-required-field, invalid-enum, or additional-property errors.
+4. Return exactly one JSON object with no prose or code fences.
+
+SCHEMA
+{{SCHEMA_JSON}}
+
+VALIDATION ERRORS
+{{VALIDATION_ERRORS}}
+
+PREVIOUS OUTPUT
+{{PREVIOUS_OUTPUT}}

@@ -1,0 +1,33 @@
+llm:
+  backend: mock
+
+evar:
+  b_max: 4
+  tau_fast: 1.0
+  tau_step: 1.0
+  tau_suf: 0.82
+  alpha_gap: 1.0
+  alpha_issue: 0.5
+  alpha_sev: 0.25
+  max_tokens: 512
+  temperature: 0.0
+  top_p: 1.0
+  max_format_retries: 0
+  max_gaps_per_iteration: 4
+  max_hypotheses_per_gap: 3
+  probability_tolerance: 1.0e-6
+  seed: 42
+
+baselines:
+  temperature: 0.0
+  top_p: 1.0
+  stochastic_temperature: 0.7
+  self_consistency_samples: 5
+  got_branches: 4
+  seed: 42
+
+evaluation:
+  # Offline integrity mode only. Paper reproduction uses MPNet + GPT-5.5.
+  semantic_backend: lexical
+  lexical_threshold: 0.45
+  judge_backend: mock

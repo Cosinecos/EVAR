@@ -1,0 +1,98 @@
+{
+  "case_id": "complex_066",
+  "split": "Complex",
+  "title": "The Clockwork Counter",
+  "domain": "newspaper archive",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Ezra Morrow",
+  "culprit_role": "night editor",
+  "suspects": [
+    {
+      "name": "Mira Gray",
+      "role": "cleaning contractor"
+    },
+    {
+      "name": "Ezra Morrow",
+      "role": "night editor"
+    },
+    {
+      "name": "Owen Hart",
+      "role": "photo editor"
+    },
+    {
+      "name": "Jonah Marsh",
+      "role": "copy chief"
+    },
+    {
+      "name": "Sofia Cross",
+      "role": "photo editor"
+    },
+    {
+      "name": "Priya Hayes",
+      "role": "cleaning contractor"
+    }
+  ],
+  "verdict": "Ezra Morrow was responsible for the disappearance of a reel of microfilm.",
+  "intent": [
+    "Ezra Morrow wanted to hide an old correction notice before a lawsuit review.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the night editor approved the discard cart after the reel was last scanned.",
+    "Remove a reel of microfilm from its checked location.",
+    "Hide the item in a cardboard tube marked as discarded posters.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a reel of microfilm disappeared from a newspaper archive basement during digitization.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the emergency light blinked twice before the flicker.",
+    "The physical trace was silver film dust on the discard cart.",
+    "The relevant tool or mechanism was a film splicer with new tape.",
+    "The item could be concealed in a cardboard tube marked as discarded posters.",
+    "The hiding place required insider knowledge because only the night editor knew the emergency circuit timing.",
+    "The access pattern mattered because the night editor approved the discard cart after the reel was last scanned.",
+    "The motive was to hide an old correction notice before a lawsuit review.",
+    "Mira Gray's suspicious behavior happened before the final verification of the object.",
+    "Owen Hart's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Ezra Morrow's role connects specialized access with the hiding method."
+  ],
+  "distractor_cues": [
+    "a retired reporter searching old stories",
+    "a technician opening the breaker panel",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 6,
+    "num_required_cues": 15,
+    "num_misleading_trails": 3,
+    "word_count": 1402,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the emergency light blinked twice before the flicker",
+    "access_constraint": "the night editor approved the discard cart after the reel was last scanned",
+    "physical_trace": "silver film dust on the discard cart",
+    "tool_or_mechanism": "a film splicer with new tape",
+    "hidden_container": "a cardboard tube marked as discarded posters",
+    "role_privilege": "only the night editor knew the emergency circuit timing",
+    "motive": "hide an old correction notice before a lawsuit review"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

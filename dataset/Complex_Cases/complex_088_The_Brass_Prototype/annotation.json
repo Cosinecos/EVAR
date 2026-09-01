@@ -1,0 +1,100 @@
+{
+  "case_id": "complex_088",
+  "split": "Complex",
+  "title": "The Brass Prototype",
+  "domain": "university mailroom",
+  "crime_type": "tamper",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Simon Briar",
+  "culprit_role": "mailroom supervisor",
+  "suspects": [
+    {
+      "name": "Sofia Vale",
+      "role": "student assistant"
+    },
+    {
+      "name": "Mateo Pierce",
+      "role": "department secretary"
+    },
+    {
+      "name": "Serena Pike",
+      "role": "scholarship applicant"
+    },
+    {
+      "name": "Carmen North",
+      "role": "delivery driver"
+    },
+    {
+      "name": "Tessa Lane",
+      "role": "delivery driver"
+    },
+    {
+      "name": "Simon Briar",
+      "role": "mailroom supervisor"
+    }
+  ],
+  "verdict": "Simon Briar was responsible for the disappearance of a scholarship decision envelope.",
+  "intent": [
+    "Simon Briar wanted to delay a decision that would reveal favoritism in the award process.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the mailroom supervisor controlled the scanner reboot and the scholarship slot.",
+    "Remove a scholarship decision envelope from its checked location.",
+    "Hide the item in a hollow sorting-bin label holder.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a scholarship decision envelope disappeared from a university mailroom during scholarship notification week.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the package scanner rebooted during the afternoon sort.",
+    "The physical trace was paper dust below the scholarship mail slot.",
+    "The relevant tool or mechanism was a letter opener with glue on its tip.",
+    "The item could be concealed in a hollow sorting-bin label holder.",
+    "The hiding place required insider knowledge because only the mailroom supervisor knew the sorting-bin label holder slid open.",
+    "The access pattern mattered because the mailroom supervisor controlled the scanner reboot and the scholarship slot.",
+    "The motive was to delay a decision that would reveal favoritism in the award process.",
+    "Sofia Vale's suspicious behavior happened before the final verification of the object.",
+    "Mateo Pierce's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Simon Briar's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container."
+  ],
+  "distractor_cues": [
+    "an applicant repeatedly asking about the envelope",
+    "a driver rushing through the sorting area",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 6,
+    "num_required_cues": 17,
+    "num_misleading_trails": 5,
+    "word_count": 1411,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the package scanner rebooted during the afternoon sort",
+    "access_constraint": "the mailroom supervisor controlled the scanner reboot and the scholarship slot",
+    "physical_trace": "paper dust below the scholarship mail slot",
+    "tool_or_mechanism": "a letter opener with glue on its tip",
+    "hidden_container": "a hollow sorting-bin label holder",
+    "role_privilege": "only the mailroom supervisor knew the sorting-bin label holder slid open",
+    "motive": "delay a decision that would reveal favoritism in the award process"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

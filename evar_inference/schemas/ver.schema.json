@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "hypothesis_id",
+    "label",
+    "supporting_unit_ids",
+    "contradicting_unit_ids",
+    "explanation"
+  ],
+  "properties": {
+    "hypothesis_id": {
+      "type": "string",
+      "pattern": "^H[0-9]{3}$"
+    },
+    "label": {
+      "enum": [
+        "Support",
+        "Unknown",
+        "Contradict"
+      ]
+    },
+    "supporting_unit_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^U[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "contradicting_unit_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^U[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "label": {
+            "const": "Support"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "supporting_unit_ids": {
+            "minItems": 1
+          },
+          "contradicting_unit_ids": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "label": {
+            "const": "Unknown"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "supporting_unit_ids": {
+            "maxItems": 0
+          },
+          "contradicting_unit_ids": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "label": {
+            "const": "Contradict"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "supporting_unit_ids": {
+            "maxItems": 0
+          },
+          "contradicting_unit_ids": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

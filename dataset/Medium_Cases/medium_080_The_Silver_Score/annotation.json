@@ -1,0 +1,90 @@
+{
+  "case_id": "medium_080",
+  "split": "Medium",
+  "title": "The Silver Score",
+  "domain": "public library rare room",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Caleb Wren",
+  "culprit_role": "rare-room librarian",
+  "suspects": [
+    {
+      "name": "Owen Bell",
+      "role": "student aide"
+    },
+    {
+      "name": "Ari Lark",
+      "role": "student aide"
+    },
+    {
+      "name": "Caleb Wren",
+      "role": "rare-room librarian"
+    },
+    {
+      "name": "Willa Hale",
+      "role": "library patron"
+    },
+    {
+      "name": "Ruth Greer",
+      "role": "student aide"
+    }
+  ],
+  "verdict": "Caleb Wren was responsible for the disappearance of a first-edition map plate.",
+  "intent": [
+    "Caleb Wren wanted to sell the map plate to cover an undisclosed debt.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the rare-room librarian controlled the tour bell and handled the atlas last.",
+    "Remove a first-edition map plate from its checked location.",
+    "Hide the item in a conservation folder labeled as tissue scraps.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a first-edition map plate disappeared from a public library rare-book room during a school tour.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the tour bell rang two minutes early.",
+    "The physical trace was fresh paper lint on the atlas cradle.",
+    "The relevant tool or mechanism was a bone folder with paper dust along one side.",
+    "The item could be concealed in a conservation folder labeled as tissue scraps.",
+    "The hiding place required insider knowledge because only the rare-room librarian knew the atlas cradle had a loose back rail.",
+    "The access pattern mattered because the rare-room librarian controlled the tour bell and handled the atlas last.",
+    "The motive was to sell the map plate to cover an undisclosed debt.",
+    "Owen Bell's suspicious behavior happened before the final verification of the object.",
+    "Ari Lark's apparent opportunity did not explain the specific hidden container."
+  ],
+  "distractor_cues": [
+    "a patron asking many questions about old maps",
+    "a student aide left alone near the desk",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 11,
+    "num_misleading_trails": 3,
+    "word_count": 1059,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the tour bell rang two minutes early",
+    "access_constraint": "the rare-room librarian controlled the tour bell and handled the atlas last",
+    "physical_trace": "fresh paper lint on the atlas cradle",
+    "tool_or_mechanism": "a bone folder with paper dust along one side",
+    "hidden_container": "a conservation folder labeled as tissue scraps",
+    "role_privilege": "only the rare-room librarian knew the atlas cradle had a loose back rail",
+    "motive": "sell the map plate to cover an undisclosed debt"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

@@ -1,0 +1,18 @@
+Culprit:
+Ada Fenn
+
+Culprit Role:
+night editor
+
+Final Verdict:
+Ada Fenn was responsible for the disappearance of a reel of microfilm.
+
+Motive:
+Ada Fenn wanted to hide an old correction notice before a lawsuit review.
+
+Action Schema:
+Ada Fenn used the short disturbance indicated by the timing clue, exploited role-specific access, removed a reel of microfilm, hid it in a cardboard tube marked as discarded posters, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the emergency light blinked twice before the flicker. The physical evidence points away from a casual visitor because investigators found silver film dust on the discard cart and a film splicer with new tape. The hiding method required inside knowledge because only the night editor knew the emergency circuit timing. The access pattern is consistent with Ada Fenn because the night editor approved the discard cart after the reel was last scanned. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Ada Fenn is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

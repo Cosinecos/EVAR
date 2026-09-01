@@ -1,0 +1,105 @@
+{
+  "case_id": "complex_084",
+  "split": "Complex",
+  "title": "The Locked Drawer",
+  "domain": "music conservatory",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Dorian Pike",
+  "culprit_role": "accompanist",
+  "suspects": [
+    {
+      "name": "Serena Wren",
+      "role": "instrument repairer"
+    },
+    {
+      "name": "Livia Locke",
+      "role": "rival soloist"
+    },
+    {
+      "name": "Dorian Pike",
+      "role": "accompanist"
+    },
+    {
+      "name": "Lucian Sterling",
+      "role": "rival soloist"
+    },
+    {
+      "name": "Leo Voss",
+      "role": "page turner"
+    },
+    {
+      "name": "Ada Greer",
+      "role": "hall monitor"
+    },
+    {
+      "name": "Simon Vale",
+      "role": "rival soloist"
+    }
+  ],
+  "verdict": "Dorian Pike was responsible for the disappearance of a violinist's marked score.",
+  "intent": [
+    "Dorian Pike wanted to sabotage a rival's audition while appearing helpful.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the accompanist sat at the piano immediately after the score was last seen.",
+    "Remove a violinist's marked score from its checked location.",
+    "Hide the item in a mute case hidden inside the piano bench.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a violinist's marked score disappeared from a music conservatory practice hall before final auditions.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the rehearsal-room light was turned off remotely for half a minute.",
+    "The physical trace was red pencil dust on the piano bench latch.",
+    "The relevant tool or mechanism was a pencil sharpener full of unusual red shavings.",
+    "The item could be concealed in a mute case hidden inside the piano bench.",
+    "The hiding place required insider knowledge because only the accompanist used the remote switch that cut the rehearsal-room light.",
+    "The access pattern mattered because the accompanist sat at the piano immediately after the score was last seen.",
+    "The motive was to sabotage a rival's audition while appearing helpful.",
+    "Serena Wren's suspicious behavior happened before the final verification of the object.",
+    "Livia Locke's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Dorian Pike's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint.",
+    "A bulky or nervous behavior cue is a distractor unless it explains the container.",
+    "The final reasoning requires combining timing, access, trace, container knowledge, and motive."
+  ],
+  "distractor_cues": [
+    "a rival soloist complaining about the chosen tempo",
+    "a repairer carrying a large instrument case",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 7,
+    "num_required_cues": 18,
+    "num_misleading_trails": 4,
+    "word_count": 1407,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the rehearsal-room light was turned off remotely for half a minute",
+    "access_constraint": "the accompanist sat at the piano immediately after the score was last seen",
+    "physical_trace": "red pencil dust on the piano bench latch",
+    "tool_or_mechanism": "a pencil sharpener full of unusual red shavings",
+    "hidden_container": "a mute case hidden inside the piano bench",
+    "role_privilege": "only the accompanist used the remote switch that cut the rehearsal-room light",
+    "motive": "sabotage a rival's audition while appearing helpful"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

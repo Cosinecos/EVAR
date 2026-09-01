@@ -1,0 +1,86 @@
+{
+  "case_id": "medium_088",
+  "split": "Medium",
+  "title": "The Locked Badge",
+  "domain": "farmers market office",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Leo Wren",
+  "culprit_role": "market treasurer",
+  "suspects": [
+    {
+      "name": "Hugo Lane",
+      "role": "market director"
+    },
+    {
+      "name": "Priya Nash",
+      "role": "food-truck owner"
+    },
+    {
+      "name": "Leo Wren",
+      "role": "market treasurer"
+    },
+    {
+      "name": "Bianca Shaw",
+      "role": "market director"
+    }
+  ],
+  "verdict": "Leo Wren was responsible for the disappearance of a cash receipt book.",
+  "intent": [
+    "Leo Wren wanted to hide missing stall-fee payments.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the market treasurer moved the receipt book during the vendor count.",
+    "Remove a cash receipt book from its checked location.",
+    "Hide the item in a hollow scale-weight box.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a cash receipt book disappeared from a farmers market office during vendor registration.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the stall-bell rang during an unscheduled vendor count.",
+    "The physical trace was green ink on the inside of the cash drawer.",
+    "The relevant tool or mechanism was a rubber stamp with green ink on the handle.",
+    "The item could be concealed in a hollow scale-weight box.",
+    "The hiding place required insider knowledge because only the market treasurer knew the scale-weight box had been emptied for repairs.",
+    "The access pattern mattered because the market treasurer moved the receipt book during the vendor count.",
+    "The motive was to hide missing stall-fee payments.",
+    "Hugo Lane's suspicious behavior happened before the final verification of the object.",
+    "Priya Nash's apparent opportunity did not explain the specific hidden container."
+  ],
+  "distractor_cues": [
+    "a vendor angry about being assigned a poor stall",
+    "a food-truck owner carrying cash bags",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 11,
+    "num_misleading_trails": 2,
+    "word_count": 1052,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the stall-bell rang during an unscheduled vendor count",
+    "access_constraint": "the market treasurer moved the receipt book during the vendor count",
+    "physical_trace": "green ink on the inside of the cash drawer",
+    "tool_or_mechanism": "a rubber stamp with green ink on the handle",
+    "hidden_container": "a hollow scale-weight box",
+    "role_privilege": "only the market treasurer knew the scale-weight box had been emptied for repairs",
+    "motive": "hide missing stall-fee payments"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "case_id": "complex_010",
+  "split": "Complex",
+  "title": "The Crimson Ledger",
+  "domain": "university radio station",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Nora Frost",
+  "culprit_role": "audio producer",
+  "suspects": [
+    {
+      "name": "Carmen Quill",
+      "role": "student host"
+    },
+    {
+      "name": "Nora Frost",
+      "role": "audio producer"
+    },
+    {
+      "name": "Tobias Reed",
+      "role": "student host"
+    },
+    {
+      "name": "Ivy Baird",
+      "role": "debate guest"
+    },
+    {
+      "name": "Freya Rook",
+      "role": "debate guest"
+    }
+  ],
+  "verdict": "Nora Frost was responsible for the disappearance of a memory card containing interview audio.",
+  "intent": [
+    "Nora Frost wanted to remove audio proving that a quote had been edited unfairly.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the audio producer controlled the test tone and handled the recorder.",
+    "Remove a memory card containing interview audio from its checked location.",
+    "Hide the item in a foam slot inside a microphone case.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a memory card containing interview audio disappeared from a university radio station before a live debate.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the studio went silent during a scheduled thirty-second test tone.",
+    "The physical trace was black label backing beneath the recorder shelf.",
+    "The relevant tool or mechanism was a label cutter with black adhesive stuck to it.",
+    "The item could be concealed in a foam slot inside a microphone case.",
+    "The hiding place required insider knowledge because only the audio producer knew the microphone case had an unused foam slot.",
+    "The access pattern mattered because the audio producer controlled the test tone and handled the recorder.",
+    "The motive was to remove audio proving that a quote had been edited unfairly.",
+    "Carmen Quill's suspicious behavior happened before the final verification of the object.",
+    "Tobias Reed's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Nora Frost's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint."
+  ],
+  "distractor_cues": [
+    "a debate guest angry about the interview",
+    "a volunteer packing microphone stands",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 16,
+    "num_misleading_trails": 5,
+    "word_count": 1416,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the studio went silent during a scheduled thirty-second test tone",
+    "access_constraint": "the audio producer controlled the test tone and handled the recorder",
+    "physical_trace": "black label backing beneath the recorder shelf",
+    "tool_or_mechanism": "a label cutter with black adhesive stuck to it",
+    "hidden_container": "a foam slot inside a microphone case",
+    "role_privilege": "only the audio producer knew the microphone case had an unused foam slot",
+    "motive": "remove audio proving that a quote had been edited unfairly"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

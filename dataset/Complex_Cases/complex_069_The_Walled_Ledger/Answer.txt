@@ -1,0 +1,18 @@
+Culprit:
+June Shaw
+
+Culprit Role:
+archive coordinator
+
+Final Verdict:
+June Shaw was responsible for the disappearance of a sealed donor letter.
+
+Motive:
+June Shaw wanted to hide a forged citation record before the donor family compared the documents.
+
+Action Schema:
+June Shaw used the short disturbance indicated by the timing clue, exploited role-specific access, removed a sealed donor letter, hid it in a hollow catalog box stored behind the reference desk, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the reading-room clock stopped for exactly twelve minutes during the donor speech. The physical evidence points away from a casual visitor because investigators found a clean rectangular dust outline on the third shelf and a white cotton glove with blue ink on the thumb. The hiding method required inside knowledge because only the archive coordinator knew that several catalog boxes had hollow conservation inserts. The access pattern is consistent with June Shaw because the archive coordinator carried the only key that opened the back side of the display case. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. June Shaw is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

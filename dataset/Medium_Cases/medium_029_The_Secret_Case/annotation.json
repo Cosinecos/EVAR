@@ -1,0 +1,89 @@
+{
+  "case_id": "medium_029",
+  "split": "Medium",
+  "title": "The Secret Case",
+  "domain": "marine research pier",
+  "crime_type": "switch",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Adrian Stone",
+  "culprit_role": "sample technician",
+  "suspects": [
+    {
+      "name": "Theo Briar",
+      "role": "data recorder"
+    },
+    {
+      "name": "Callum Greer",
+      "role": "marine biologist"
+    },
+    {
+      "name": "Carmen Vale",
+      "role": "data recorder"
+    },
+    {
+      "name": "Adrian Stone",
+      "role": "sample technician"
+    },
+    {
+      "name": "Serena Dove",
+      "role": "data recorder"
+    }
+  ],
+  "verdict": "Adrian Stone was responsible for the disappearance of a sealed vial of deep-water sample.",
+  "intent": [
+    "Adrian Stone wanted to hide contamination caused by mishandling the sample earlier.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the sample technician logged the final freezer check after everyone returned.",
+    "Remove a sealed vial of deep-water sample from its checked location.",
+    "Hide the item in a calibration cooler under the salinity bench.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a sealed vial of deep-water sample disappeared from a marine research pier after a water-sampling cruise.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the freezer alarm was silenced for forty seconds.",
+    "The physical trace was a trail of cold condensation below the salinity bench.",
+    "The relevant tool or mechanism was a pipette case with salt crust near the hinge.",
+    "The item could be concealed in a calibration cooler under the salinity bench.",
+    "The hiding place required insider knowledge because only the sample technician knew the cooler had a separate dry compartment.",
+    "The access pattern mattered because the sample technician logged the final freezer check after everyone returned.",
+    "The motive was to hide contamination caused by mishandling the sample earlier.",
+    "Theo Briar's suspicious behavior happened before the final verification of the object."
+  ],
+  "distractor_cues": [
+    "a sponsor pressing for early results",
+    "a diver carrying wet gear",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 10,
+    "num_misleading_trails": 3,
+    "word_count": 1078,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the freezer alarm was silenced for forty seconds",
+    "access_constraint": "the sample technician logged the final freezer check after everyone returned",
+    "physical_trace": "a trail of cold condensation below the salinity bench",
+    "tool_or_mechanism": "a pipette case with salt crust near the hinge",
+    "hidden_container": "a calibration cooler under the salinity bench",
+    "role_privilege": "only the sample technician knew the cooler had a separate dry compartment",
+    "motive": "hide contamination caused by mishandling the sample earlier"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

@@ -1,0 +1,18 @@
+Culprit:
+Kieran North
+
+Culprit Role:
+aquarist
+
+Final Verdict:
+Kieran North was responsible for the disappearance of a pearl donated for a conservation display.
+
+Motive:
+Kieran North wanted to fund a private relocation by selling the real pearl.
+
+Action Schema:
+Kieran North used the short disturbance indicated by the timing clue, exploited role-specific access, removed a pearl donated for a conservation display, hid it in a filter cartridge behind the reef tank, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the filtration alarm was muted for four minutes. The physical evidence points away from a casual visitor because investigators found saltwater droplets on the staff stairwell and a tank scraper with adhesive residue. The hiding method required inside knowledge because only the aquarist knew how to mute the filtration alarm locally. The access pattern is consistent with Kieran North because the aquarist stayed late to adjust the reef tank after the final display check. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Kieran North is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

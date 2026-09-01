@@ -1,0 +1,23 @@
+OPERATOR: GAP
+
+Identify unresolved premises that currently block a sufficiently grounded answer.
+
+INPUT
+- case_id
+- goal
+- locked evidence_store
+- validation_challenge_history
+- admitted_hypotheses
+
+RULES
+1. A gap is a specific missing premise, not a generic request to reason more.
+2. Only the locked store and admitted hypotheses are answer-supporting content.
+3. Challenge history is for audit and duplicate avoidance, never evidence.
+4. If sufficient, return `sufficient=true` and an empty gap list.
+5. Use G001, G002, ... within the current call.
+
+OUTPUT
+Return one JSON object conforming to `schemas/gap.schema.json`.
+
+INPUT OBJECT
+{{INPUT_JSON}}

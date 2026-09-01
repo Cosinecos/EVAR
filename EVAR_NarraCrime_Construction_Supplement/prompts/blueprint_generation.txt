@@ -1,0 +1,33 @@
+SYSTEM
+You construct fictional benchmark instances for evidence-grounded narrative reasoning. Never use real people, identifiable personal information, real criminal cases, or external factual knowledge. Produce only valid JSON matching the supplied schema.
+
+USER
+Create one fictional case blueprint with the following configuration:
+
+- Difficulty: {{difficulty}}
+- Target narrative length: {{min_words}}-{{max_words}} words
+- Number of suspects: {{min_suspects}}-{{max_suspects}}
+- Number of supporting evidence cues: {{min_cues}}-{{max_cues}}
+- Number of cross-event dependencies: {{min_dependencies}}-{{max_dependencies}}
+
+The JSON must contain:
+
+1. A fictional suspect set with unique identifiers.
+2. A temporally coherent event timeline.
+3. Exactly one best-supported gold verdict naming one suspect.
+4. Gold intent propositions explaining motive without relying on external knowledge.
+5. Gold action-schema propositions describing the decisive action sequence.
+6. Supporting evidence cues, each linked to one or more events.
+7. Plausible distractor cues that do not independently entail the verdict.
+8. Directed cross-event dependencies showing which pieces of evidence must be combined.
+
+Constraints:
+
+- Every gold proposition must be supported by at least one evidence cue.
+- No single distractor may independently support the gold verdict.
+- The final narrative must be solvable from the supplied evidence alone.
+- Do not place the answer directly in an evidence cue.
+- Do not introduce supernatural, legally sensitive, or real-world identifying content.
+- Use neutral fictional names and locations.
+- Return JSON only. Do not add Markdown or explanation.
+

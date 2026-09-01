@@ -1,0 +1,78 @@
+{
+  "case_id": "easy_024",
+  "split": "Easy",
+  "title": "The Dusty Envelope",
+  "domain": "historical society attic",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Mabel Marsh",
+  "culprit_role": "inventory chair",
+  "suspects": [
+    {
+      "name": "Mateo Gray",
+      "role": "building custodian"
+    },
+    {
+      "name": "Sofia Briar",
+      "role": "volunteer docent"
+    },
+    {
+      "name": "Mabel Marsh",
+      "role": "inventory chair"
+    }
+  ],
+  "verdict": "Mabel Marsh was responsible for the disappearance of a Civil War diary.",
+  "intent": [
+    "Mabel Marsh wanted to hide a diary passage that contradicted a family legend.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the inventory chair reassigned volunteers during the flicker.",
+    "Remove a Civil War diary from its checked location.",
+    "Hide the item in a false-bottom document chest.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a Civil War diary disappeared from a historical society attic during an inventory day.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the attic lights flickered when the inventory team changed rooms.",
+    "The physical trace was brown paper dust near the false-bottom chest.",
+    "The relevant tool or mechanism was a brass crate opener with old paper dust.",
+    "The item could be concealed in a false-bottom document chest.",
+    "The hiding place required insider knowledge because only the inventory chair knew the document chest had a false bottom."
+  ],
+  "distractor_cues": [
+    "a collector asking to buy artifacts",
+    "an intern carrying crates",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 3,
+    "num_required_cues": 7,
+    "num_misleading_trails": 2,
+    "word_count": 876,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the attic lights flickered when the inventory team changed rooms",
+    "access_constraint": "the inventory chair reassigned volunteers during the flicker",
+    "physical_trace": "brown paper dust near the false-bottom chest",
+    "tool_or_mechanism": "a brass crate opener with old paper dust",
+    "hidden_container": "a false-bottom document chest",
+    "role_privilege": "only the inventory chair knew the document chest had a false bottom",
+    "motive": "hide a diary passage that contradicted a family legend"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

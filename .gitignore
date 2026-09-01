@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and generated outputs
+logs/
+outputs/
+runs/
+PostRun_KB/
+*.log
+
+# API keys / local configs
+config.yaml
+config.json
+.env.*
+!.env.example

@@ -1,0 +1,95 @@
+{
+  "case_id": "complex_068",
+  "split": "Complex",
+  "title": "The Quiet Bell",
+  "domain": "campus newspaper office",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Nico Bell",
+  "culprit_role": "managing editor",
+  "suspects": [
+    {
+      "name": "Elena North",
+      "role": "web editor"
+    },
+    {
+      "name": "Bennett North",
+      "role": "web editor"
+    },
+    {
+      "name": "Anya Marsh",
+      "role": "student reporter"
+    },
+    {
+      "name": "Mateo Briar",
+      "role": "campaign volunteer"
+    },
+    {
+      "name": "Nico Bell",
+      "role": "managing editor"
+    }
+  ],
+  "verdict": "Nico Bell was responsible for the disappearance of an anonymous source note.",
+  "intent": [
+    "Nico Bell wanted to prevent publication of a correction that would damage a favored candidate.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the managing editor handled the drawer key after the printer jam.",
+    "Remove an anonymous source note from its checked location.",
+    "Hide the item in a hollow ruler tube beside the layout desk.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "an anonymous source note disappeared from a campus newspaper office on election night.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the office printer jammed during the candidate-call rush.",
+    "The physical trace was thin paper strips under the layout desk.",
+    "The relevant tool or mechanism was a layout knife with paper fibers on the blade.",
+    "The item could be concealed in a hollow ruler tube beside the layout desk.",
+    "The hiding place required insider knowledge because only the managing editor knew the drawer could be opened by lifting the back rail.",
+    "The access pattern mattered because the managing editor handled the drawer key after the printer jam.",
+    "The motive was to prevent publication of a correction that would damage a favored candidate.",
+    "Elena North's suspicious behavior happened before the final verification of the object.",
+    "Bennett North's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Nico Bell's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint."
+  ],
+  "distractor_cues": [
+    "a campaign volunteer hovering near the office",
+    "a reporter angry about edits",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 16,
+    "num_misleading_trails": 5,
+    "word_count": 1404,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the office printer jammed during the candidate-call rush",
+    "access_constraint": "the managing editor handled the drawer key after the printer jam",
+    "physical_trace": "thin paper strips under the layout desk",
+    "tool_or_mechanism": "a layout knife with paper fibers on the blade",
+    "hidden_container": "a hollow ruler tube beside the layout desk",
+    "role_privilege": "only the managing editor knew the drawer could be opened by lifting the back rail",
+    "motive": "prevent publication of a correction that would damage a favored candidate"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

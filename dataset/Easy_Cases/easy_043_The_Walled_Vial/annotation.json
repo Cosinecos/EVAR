@@ -1,0 +1,84 @@
+{
+  "case_id": "easy_043",
+  "split": "Easy",
+  "title": "The Walled Vial",
+  "domain": "campus newspaper office",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Mateo Ames",
+  "culprit_role": "managing editor",
+  "suspects": [
+    {
+      "name": "Mateo Ames",
+      "role": "managing editor"
+    },
+    {
+      "name": "Reed Vale",
+      "role": "student reporter"
+    },
+    {
+      "name": "Yara Hart",
+      "role": "student reporter"
+    },
+    {
+      "name": "Ari Baird",
+      "role": "photographer"
+    }
+  ],
+  "verdict": "Mateo Ames was responsible for the disappearance of an anonymous source note.",
+  "intent": [
+    "Mateo Ames wanted to prevent publication of a correction that would damage a favored candidate.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the managing editor handled the drawer key after the printer jam.",
+    "Remove an anonymous source note from its checked location.",
+    "Hide the item in a hollow ruler tube beside the layout desk.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "an anonymous source note disappeared from a campus newspaper office on election night.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the office printer jammed during the candidate-call rush.",
+    "The physical trace was thin paper strips under the layout desk.",
+    "The relevant tool or mechanism was a layout knife with paper fibers on the blade.",
+    "The item could be concealed in a hollow ruler tube beside the layout desk.",
+    "The hiding place required insider knowledge because only the managing editor knew the drawer could be opened by lifting the back rail.",
+    "The access pattern mattered because the managing editor handled the drawer key after the printer jam.",
+    "The motive was to prevent publication of a correction that would damage a favored candidate."
+  ],
+  "distractor_cues": [
+    "a campaign volunteer hovering near the office",
+    "a reporter angry about edits",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 4,
+    "num_required_cues": 9,
+    "num_misleading_trails": 1,
+    "word_count": 853,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the office printer jammed during the candidate-call rush",
+    "access_constraint": "the managing editor handled the drawer key after the printer jam",
+    "physical_trace": "thin paper strips under the layout desk",
+    "tool_or_mechanism": "a layout knife with paper fibers on the blade",
+    "hidden_container": "a hollow ruler tube beside the layout desk",
+    "role_privilege": "only the managing editor knew the drawer could be opened by lifting the back rail",
+    "motive": "prevent publication of a correction that would damage a favored candidate"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

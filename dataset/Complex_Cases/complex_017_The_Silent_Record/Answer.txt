@@ -1,0 +1,18 @@
+Culprit:
+Dahlia Fenn
+
+Culprit Role:
+inventory chair
+
+Final Verdict:
+Dahlia Fenn was responsible for the disappearance of a Civil War diary.
+
+Motive:
+Dahlia Fenn wanted to hide a diary passage that contradicted a family legend.
+
+Action Schema:
+Dahlia Fenn used the short disturbance indicated by the timing clue, exploited role-specific access, removed a Civil War diary, hid it in a false-bottom document chest, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the attic lights flickered when the inventory team changed rooms. The physical evidence points away from a casual visitor because investigators found brown paper dust near the false-bottom chest and a brass crate opener with old paper dust. The hiding method required inside knowledge because only the inventory chair knew the document chest had a false bottom. The access pattern is consistent with Dahlia Fenn because the inventory chair reassigned volunteers during the flicker. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Dahlia Fenn is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

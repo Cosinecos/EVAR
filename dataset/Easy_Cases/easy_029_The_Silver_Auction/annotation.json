@@ -1,0 +1,80 @@
+{
+  "case_id": "easy_029",
+  "split": "Easy",
+  "title": "The Silver Auction",
+  "domain": "hospital charity office",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Nora Bell",
+  "culprit_role": "fundraising coordinator",
+  "suspects": [
+    {
+      "name": "Ada Lark",
+      "role": "gala florist"
+    },
+    {
+      "name": "Nora Bell",
+      "role": "fundraising coordinator"
+    },
+    {
+      "name": "Rowan Briar",
+      "role": "photographer"
+    }
+  ],
+  "verdict": "Nora Bell was responsible for the disappearance of a donor pledge card.",
+  "intent": [
+    "Nora Bell wanted to conceal that the largest pledge had been promised to the wrong campaign.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the fundraising coordinator handled the folder after the printer jam.",
+    "Remove a donor pledge card from its checked location.",
+    "Hide the item in a floral sample book with a slit behind the cover.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a donor pledge card disappeared from a hospital charity office before a fundraising gala.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the printer jammed during the donor announcement rehearsal.",
+    "The physical trace was paper fibers under the sample-book clasp.",
+    "The relevant tool or mechanism was a silver letter opener with adhesive on its edge.",
+    "The item could be concealed in a floral sample book with a slit behind the cover.",
+    "The hiding place required insider knowledge because only the fundraising coordinator knew the sample book had been used to hide spare pledge cards.",
+    "The access pattern mattered because the fundraising coordinator handled the folder after the printer jam.",
+    "The motive was to conceal that the largest pledge had been promised to the wrong campaign."
+  ],
+  "distractor_cues": [
+    "an accountant upset about budget errors",
+    "a photographer moving folders for staging",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 3,
+    "num_required_cues": 9,
+    "num_misleading_trails": 1,
+    "word_count": 851,
+    "has_misleading_cues": false,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "low"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the printer jammed during the donor announcement rehearsal",
+    "access_constraint": "the fundraising coordinator handled the folder after the printer jam",
+    "physical_trace": "paper fibers under the sample-book clasp",
+    "tool_or_mechanism": "a silver letter opener with adhesive on its edge",
+    "hidden_container": "a floral sample book with a slit behind the cover",
+    "role_privilege": "only the fundraising coordinator knew the sample book had been used to hide spare pledge cards",
+    "motive": "conceal that the largest pledge had been promised to the wrong campaign"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

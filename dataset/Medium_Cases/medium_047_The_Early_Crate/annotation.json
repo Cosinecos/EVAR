@@ -1,0 +1,90 @@
+{
+  "case_id": "medium_047",
+  "split": "Medium",
+  "title": "The Early Crate",
+  "domain": "newspaper archive",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Nina Page",
+  "culprit_role": "night editor",
+  "suspects": [
+    {
+      "name": "Elias Vale",
+      "role": "cleaning contractor"
+    },
+    {
+      "name": "Nina Page",
+      "role": "night editor"
+    },
+    {
+      "name": "Mabel Blake",
+      "role": "systems technician"
+    },
+    {
+      "name": "Anya Page",
+      "role": "archive intern"
+    },
+    {
+      "name": "Bennett Ames",
+      "role": "copy chief"
+    }
+  ],
+  "verdict": "Nina Page was responsible for the disappearance of a reel of microfilm.",
+  "intent": [
+    "Nina Page wanted to hide an old correction notice before a lawsuit review.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the night editor approved the discard cart after the reel was last scanned.",
+    "Remove a reel of microfilm from its checked location.",
+    "Hide the item in a cardboard tube marked as discarded posters.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a reel of microfilm disappeared from a newspaper archive basement during digitization.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the emergency light blinked twice before the flicker.",
+    "The physical trace was silver film dust on the discard cart.",
+    "The relevant tool or mechanism was a film splicer with new tape.",
+    "The item could be concealed in a cardboard tube marked as discarded posters.",
+    "The hiding place required insider knowledge because only the night editor knew the emergency circuit timing.",
+    "The access pattern mattered because the night editor approved the discard cart after the reel was last scanned.",
+    "The motive was to hide an old correction notice before a lawsuit review.",
+    "Elias Vale's suspicious behavior happened before the final verification of the object.",
+    "Mabel Blake's apparent opportunity did not explain the specific hidden container."
+  ],
+  "distractor_cues": [
+    "a retired reporter searching old stories",
+    "a technician opening the breaker panel",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 5,
+    "num_required_cues": 11,
+    "num_misleading_trails": 2,
+    "word_count": 1056,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "moderate"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the emergency light blinked twice before the flicker",
+    "access_constraint": "the night editor approved the discard cart after the reel was last scanned",
+    "physical_trace": "silver film dust on the discard cart",
+    "tool_or_mechanism": "a film splicer with new tape",
+    "hidden_container": "a cardboard tube marked as discarded posters",
+    "role_privilege": "only the night editor knew the emergency circuit timing",
+    "motive": "hide an old correction notice before a lawsuit review"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

@@ -1,0 +1,18 @@
+Culprit:
+Mabel Page
+
+Culprit Role:
+sample technician
+
+Final Verdict:
+Mabel Page was responsible for the disappearance of a sealed vial of deep-water sample.
+
+Motive:
+Mabel Page wanted to hide contamination caused by mishandling the sample earlier.
+
+Action Schema:
+Mabel Page used the short disturbance indicated by the timing clue, exploited role-specific access, removed a sealed vial of deep-water sample, hid it in a calibration cooler under the salinity bench, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the freezer alarm was silenced for forty seconds. The physical evidence points away from a casual visitor because investigators found a trail of cold condensation below the salinity bench and a pipette case with salt crust near the hinge. The hiding method required inside knowledge because only the sample technician knew the cooler had a separate dry compartment. The access pattern is consistent with Mabel Page because the sample technician logged the final freezer check after everyone returned. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Mabel Page is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

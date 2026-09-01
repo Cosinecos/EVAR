@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "narracrime-evar"
+version = "1.0.0"
+description = "EVAR: Evidence-Validated Hypothesis Admission for Budget-Aware Narrative Reasoning on NarraCrime-300"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT for code; CC BY 4.0 for dataset"}
+authors = [
+  {name = "Peilin Liu"},
+  {name = "Zhiquan Ji"},
+  {name = "Jinglong Ping"}
+]
+dependencies = [
+  "PyYAML>=6.0.1"
+]
+
+[project.optional-dependencies]
+eval = ["sentence-transformers>=3.0,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+narracrime-validate = "narracrime_evar.cli:validate_main"
+narracrime-run = "narracrime_evar.cli:run_main"
+narracrime-eval = "narracrime_evar.cli:evaluate_main"

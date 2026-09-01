@@ -1,0 +1,20 @@
+OPERATOR: TAG
+
+Assign one localized consistency tag to every evidence unit by comparing it with the remaining units.
+
+LABELS
+- OK: source-grounded and not locally contradicted
+- Uncertain: incomplete, ambiguous, or dependent on an unresolved premise
+- Conflict: directly inconsistent with at least one supplied unit
+
+RULES
+1. Severity is 0, 1, 2, or 3.
+2. OK requires severity 0 and no conflicts.
+3. Conflict requires positive severity and at least one conflicting unit ID.
+4. Cover every supplied unit exactly once; do not solve the final task.
+
+OUTPUT
+Return one JSON object conforming to `schemas/tag.schema.json`.
+
+INPUT OBJECT
+{{INPUT_JSON}}

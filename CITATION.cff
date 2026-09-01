@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "EVAR: Evidence-Validated Hypothesis Admission for Budget-Aware Narrative Reasoning"
+message: "If you use EVAR or NarraCrime-300, please cite this repository and the corresponding paper."
+type: software
+authors:
+  - family-names: Liu
+    given-names: Peilin
+  - family-names: Ji
+    given-names: Zhiquan
+  - family-names: Ping
+    given-names: Jinglong
+year: 2026
+license: MIT
+repository-code: "https://github.com/Cosinecos/EVAR"
+url: "https://arxiv.org/abs/2608.29835"
+version: 1.0.0

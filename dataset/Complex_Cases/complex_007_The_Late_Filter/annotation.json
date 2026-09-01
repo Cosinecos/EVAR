@@ -1,0 +1,99 @@
+{
+  "case_id": "complex_007",
+  "split": "Complex",
+  "title": "The Late Filter",
+  "domain": "vineyard tasting room",
+  "crime_type": "removal",
+  "input_file": "Mystery_text.txt",
+  "answer_file": "Answer.txt",
+  "cue_file": "predefined_cues.txt",
+  "culprit": "Sofia Finch",
+  "culprit_role": "cellar manager",
+  "suspects": [
+    {
+      "name": "Ruth Lark",
+      "role": "barrel technician"
+    },
+    {
+      "name": "Quinn Morrow",
+      "role": "events coordinator"
+    },
+    {
+      "name": "Callum Finch",
+      "role": "barrel technician"
+    },
+    {
+      "name": "Sofia Finch",
+      "role": "cellar manager"
+    },
+    {
+      "name": "Ari Shaw",
+      "role": "investor assistant"
+    },
+    {
+      "name": "Layla Blake",
+      "role": "delivery driver"
+    }
+  ],
+  "verdict": "Sofia Finch was responsible for the disappearance of a cellar inventory ledger.",
+  "intent": [
+    "Sofia Finch wanted to hide missing reserve bottles before the investors arrived.",
+    "The culprit needed delayed discovery so the object could pass the first search and be recovered later."
+  ],
+  "action_schema": [
+    "Exploit a short timed disturbance.",
+    "Use role-specific access: the cellar manager went below to reset the alarm after the last cabinet check.",
+    "Remove a cellar inventory ledger from its checked location.",
+    "Hide the item in an empty magnum bottle case.",
+    "Allow incomplete suspicion to fall on distractor suspects."
+  ],
+  "evidence_cues": [
+    "a cellar inventory ledger disappeared from a vineyard tasting room before an investor visit.",
+    "The object was confirmed present before the relevant disturbance.",
+    "The disappearance occurred within a narrow time window because the cellar humidity alarm was reset twice.",
+    "The physical trace was purple wax flakes near the locked cabinet.",
+    "The relevant tool or mechanism was a corkscrew with ledger paper caught in the hinge.",
+    "The item could be concealed in an empty magnum bottle case.",
+    "The hiding place required insider knowledge because only the cellar manager knew the cabinet hinge stuck unless lifted from below.",
+    "The access pattern mattered because the cellar manager went below to reset the alarm after the last cabinet check.",
+    "The motive was to hide missing reserve bottles before the investors arrived.",
+    "Ruth Lark's suspicious behavior happened before the final verification of the object.",
+    "Quinn Morrow's apparent opportunity did not explain the specific hidden container.",
+    "The item was not carried openly through the main exit.",
+    "The responsible person needed delayed discovery rather than immediate escape.",
+    "The physical trace and the timing clue point to a controlled action rather than random confusion.",
+    "Sofia Finch's role connects specialized access with the hiding method.",
+    "The visible early suspect fails at least one timing or mechanism constraint."
+  ],
+  "distractor_cues": [
+    "a delivery driver with access to bottle cases",
+    "a host upset about a promotion",
+    "A visible conflict is suspicious but insufficient without timing and mechanism.",
+    "A bulky object or nervous behavior is insufficient unless it explains the hidden container."
+  ],
+  "difficulty_factors": {
+    "num_suspects": 6,
+    "num_required_cues": 16,
+    "num_misleading_trails": 4,
+    "word_count": 1403,
+    "has_misleading_cues": true,
+    "requires_cross_sentence_reasoning": true,
+    "implicit_premise_level": "high"
+  },
+  "construction_blueprint": {
+    "timing_constraint": "the cellar humidity alarm was reset twice",
+    "access_constraint": "the cellar manager went below to reset the alarm after the last cabinet check",
+    "physical_trace": "purple wax flakes near the locked cabinet",
+    "tool_or_mechanism": "a corkscrew with ledger paper caught in the hinge",
+    "hidden_container": "an empty magnum bottle case",
+    "role_privilege": "only the cellar manager knew the cabinet hinge stuck unless lifted from below",
+    "motive": "hide missing reserve bottles before the investors arrived"
+  },
+  "quality_controls": {
+    "structural_validation": true,
+    "single_gold_culprit": true,
+    "role_privilege_chain": true,
+    "gold_answer_included": true,
+    "gold_evidence_cues_included": true
+  }
+}

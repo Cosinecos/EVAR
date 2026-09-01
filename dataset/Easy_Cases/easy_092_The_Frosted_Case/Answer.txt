@@ -1,0 +1,18 @@
+Culprit:
+Tobias Ward
+
+Culprit Role:
+seed curator
+
+Final Verdict:
+Tobias Ward was responsible for the disappearance of a vial of heritage tomato seeds.
+
+Motive:
+Tobias Ward wanted to sell the seeds before patent review restricted distribution.
+
+Action Schema:
+Tobias Ward used the short disturbance indicated by the timing clue, exploited role-specific access, removed a vial of heritage tomato seeds, hid it in a mislabeled sample sleeve in the return tray, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the cold-room door stayed open for thirty-one seconds. The physical evidence points away from a casual visitor because investigators found frost crystals on the wrong shelf label and a freezer glove with torn lining. The hiding method required inside knowledge because only the seed curator knew the label printer was misaligned that week. The access pattern is consistent with Tobias Ward because the seed curator signed off on the cold-room entry after the count. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Tobias Ward is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "textual_answer",
+    "predicted_culprit_id",
+    "verdict_probabilities",
+    "intent_propositions",
+    "action_schema_propositions",
+    "evidence_propositions",
+    "claims",
+    "insufficient_evidence"
+  ],
+  "properties": {
+    "textual_answer": {"type": "string", "minLength": 1},
+    "predicted_culprit_id": {"type": "string", "minLength": 1},
+    "verdict_probabilities": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0}
+    },
+    "intent_propositions": {"type": "array", "items": {"type": "string"}},
+    "action_schema_propositions": {"type": "array", "items": {"type": "string"}},
+    "evidence_propositions": {"type": "array", "items": {"type": "string"}},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "unit_ids", "hypothesis_ids"],
+        "properties": {
+          "claim": {"type": "string", "minLength": 1},
+          "unit_ids": {"type": "array", "items": {"type": "string", "pattern": "^U[0-9]{3}$"}, "uniqueItems": true},
+          "hypothesis_ids": {"type": "array", "items": {"type": "string", "pattern": "^H[0-9]{3}$"}, "uniqueItems": true}
+        },
+        "additionalProperties": false
+      }
+    },
+    "insufficient_evidence": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

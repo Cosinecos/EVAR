@@ -1,0 +1,54 @@
+# OpenAI-compatible endpoint example. Fill in .env before running.
+llm:
+  backend: openai_compatible
+  model: deepseek-v3.2
+  base_url: ${EVAR_BASE_URL}
+  api_key: ${EVAR_API_KEY}
+  timeout: 180
+  max_retries: 3
+  json_mode: json_object
+  token_parameter: max_tokens
+
+evar:
+  # Algorithm 1 / Eqs. 8-10 and 20. Scalar values not specified in the paper
+  # are explicit implementation choices and may be overridden per run.
+  b_max: 4
+  tau_fast: 1.0
+  tau_step: 1.0
+  tau_suf: 0.82
+  alpha_gap: 1.0
+  alpha_issue: 0.5
+  alpha_sev: 0.25
+  max_tokens: 512
+  temperature: 0.0
+  top_p: 1.0
+  max_format_retries: 2
+  max_gaps_per_iteration: 4
+  max_hypotheses_per_gap: 3
+  probability_tolerance: 1.0e-6
+  seed: 42
+
+baselines:
+  temperature: 0.0
+  top_p: 1.0
+  stochastic_temperature: 0.7
+  self_consistency_samples: 5
+  got_branches: 4
+  seed: 42
+
+evaluation:
+  semantic_backend: mpnet
+  encoder: sentence-transformers/all-mpnet-base-v2
+  semantic_threshold: 0.8
+  judge_backend: llm
+  judge_max_tokens: 512
+  max_format_retries: 2
+  judge_llm:
+    backend: openai_compatible
+    model: gpt-5.5
+    base_url: ${EVAR_JUDGE_BASE_URL}
+    api_key: ${EVAR_JUDGE_API_KEY}
+    timeout: 180
+    max_retries: 3
+    json_mode: json_object
+    token_parameter: max_completion_tokens

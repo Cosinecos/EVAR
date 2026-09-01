@@ -1,0 +1,15 @@
+OPERATOR: SUF
+
+Assess whether the current answer-supporting state is sufficient to answer the goal reliably.
+
+RULES
+1. Judge evidential sufficiency using only the locked store and admitted hypotheses.
+2. Validation challenges cannot be used as evidence.
+3. `sufficient=true` only if no material missing premise could change the answer.
+4. `score` is an evidential-sufficiency value in [0,1].
+
+OUTPUT
+Return one JSON object conforming to `schemas/suf.schema.json`.
+
+INPUT OBJECT
+{{INPUT_JSON}}

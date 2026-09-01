@@ -1,0 +1,3 @@
+case_id,reviewer,verdict_uniqueness,intent_support,action_support,evidence_alignment,temporal_consistency,distractor_validity,no_added_facts,no_answer_leakage,difficulty_compliance,fictionality_privacy,overall_decision,evidence_cue_ids,notes
+ILLUSTRATIVE_E_001,A,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,C1|C2|C3|C4|C5|C6|C7,Illustrative review only
+ILLUSTRATIVE_E_001,B,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,C1|C2|C3|C4|C5|C6|C7,Illustrative review only

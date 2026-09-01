@@ -1,0 +1,22 @@
+OPERATOR: CHAL
+
+Construct exactly three hypothesis-conditioned validation challenges.
+
+INPUT
+- case_id
+- goal
+- hypothesis
+- locked evidence_store
+
+OUTPUT FIELDS
+- direct_support: request units that directly support the candidate
+- counterevidence: request units that directly conflict with the candidate
+- prerequisite: request an indispensable premise that must be supported
+
+The challenges are verification instructions, not evidence or premises. Do not answer them.
+
+OUTPUT
+Return one JSON object conforming to `schemas/chal.schema.json`.
+
+INPUT OBJECT
+{{INPUT_JSON}}

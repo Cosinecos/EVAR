@@ -1,0 +1,18 @@
+Culprit:
+Adrian Page
+
+Culprit Role:
+records supervisor
+
+Final Verdict:
+Adrian Page was responsible for the disappearance of a stamped zoning appeal form.
+
+Motive:
+Adrian Page wanted to delay an appeal that would expose a zoning error.
+
+Action Schema:
+Adrian Page used the short disturbance indicated by the timing clue, exploited role-specific access, removed a stamped zoning appeal form, hid it in a hollow stamp-pad tray, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the public-address microphone squealed during a file transfer. The physical evidence points away from a casual visitor because investigators found red ink smears on the inside of the file drawer and a date stamp with red ink on its lower edge. The hiding method required inside knowledge because only the records supervisor knew the old stamp-pad tray had a removable base. The access pattern is consistent with Adrian Page because the records supervisor moved the file during the microphone interruption. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Adrian Page is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

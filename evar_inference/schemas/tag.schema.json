@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["tagged_units"],
+  "properties": {
+    "tagged_units": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "status", "severity", "note", "conflicting_unit_ids"],
+        "properties": {
+          "unit_id": {"type": "string", "pattern": "^U[0-9]{3}$"},
+          "status": {"enum": ["OK", "Uncertain", "Conflict"]},
+          "severity": {"type": "integer", "minimum": 0, "maximum": 3},
+          "note": {"type": "string"},
+          "conflicting_unit_ids": {
+            "type": "array",
+            "items": {"type": "string", "pattern": "^U[0-9]{3}$"},
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

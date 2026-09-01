@@ -1,0 +1,18 @@
+Culprit:
+Adele Marsh
+
+Culprit Role:
+audio producer
+
+Final Verdict:
+Adele Marsh was responsible for the disappearance of a memory card containing interview audio.
+
+Motive:
+Adele Marsh wanted to remove audio proving that a quote had been edited unfairly.
+
+Action Schema:
+Adele Marsh used the short disturbance indicated by the timing clue, exploited role-specific access, removed a memory card containing interview audio, hid it in a foam slot inside a microphone case, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the studio went silent during a scheduled thirty-second test tone. The physical evidence points away from a casual visitor because investigators found black label backing beneath the recorder shelf and a label cutter with black adhesive stuck to it. The hiding method required inside knowledge because only the audio producer knew the microphone case had an unused foam slot. The access pattern is consistent with Adele Marsh because the audio producer controlled the test tone and handled the recorder. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Adele Marsh is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

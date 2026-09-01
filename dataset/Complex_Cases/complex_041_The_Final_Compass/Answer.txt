@@ -1,0 +1,18 @@
+Culprit:
+Adele Ward
+
+Culprit Role:
+moot court coordinator
+
+Final Verdict:
+Adele Ward was responsible for the disappearance of a sealed packet of judge notes.
+
+Motive:
+Adele Ward wanted to help a favored team anticipate the judges' concerns.
+
+Action Schema:
+Adele Ward used the short disturbance indicated by the timing clue, exploited role-specific access, removed a sealed packet of judge notes, hid it in a hollow binder spine in the clerk's cabinet, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the hallway camera skipped during a scheduled network reset. The physical evidence points away from a casual visitor because investigators found softened glue at the packet corner and a kettle that had steamed the packet flap. The hiding method required inside knowledge because only the moot court coordinator knew the binder spine opened from the bottom. The access pattern is consistent with Adele Ward because the moot court coordinator requested the reset and kept the cabinet key. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Adele Ward is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+

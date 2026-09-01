@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["hypothesis_id", "direct_support", "counterevidence", "prerequisite"],
+  "properties": {
+    "hypothesis_id": {"type": "string", "pattern": "^H[0-9]{3}$"},
+    "direct_support": {"type": "string", "minLength": 1},
+    "counterevidence": {"type": "string", "minLength": 1},
+    "prerequisite": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

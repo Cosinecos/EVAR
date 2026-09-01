@@ -1,0 +1,18 @@
+Culprit:
+Celine Ames
+
+Culprit Role:
+mailroom supervisor
+
+Final Verdict:
+Celine Ames was responsible for the disappearance of a scholarship decision envelope.
+
+Motive:
+Celine Ames wanted to delay a decision that would reveal favoritism in the award process.
+
+Action Schema:
+Celine Ames used the short disturbance indicated by the timing clue, exploited role-specific access, removed a scholarship decision envelope, hid it in a hollow sorting-bin label holder, and planned to retrieve it later after the first search passed.
+
+Reasoning:
+The answer follows from a closed evidence chain. The timing clue shows that the disappearance occurred in the narrow window marked by the fact that the package scanner rebooted during the afternoon sort. The physical evidence points away from a casual visitor because investigators found paper dust below the scholarship mail slot and a letter opener with glue on its tip. The hiding method required inside knowledge because only the mailroom supervisor knew the sorting-bin label holder slid open. The access pattern is consistent with Celine Ames because the mailroom supervisor controlled the scanner reboot and the scholarship slot. Other suspects had partial motives or suspicious behavior, but their actions either occurred before the final verification or did not explain the specific hiding method. Celine Ames is the only suspect whose role and motive fit the full chain: opportunity during the disturbance, knowledge of the container, connection to the physical trace, and a reason to delay discovery.
+
