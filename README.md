@@ -5,208 +5,179 @@
 
   [![Paper](https://img.shields.io/badge/EMNLP_2026-Main-0d9488?style=flat-square)](https://arxiv.org/abs/2608.29835)
   [![Dataset](https://img.shields.io/badge/NarraCrime-300-2563eb?style=flat-square)](dataset/)
-  [![Python](https://img.shields.io/badge/Python-3.10%2B-334155?style=flat-square&logo=python)](pyproject.toml)
-  [![Tests](https://img.shields.io/badge/offline_tests-11_passing-16a34a?style=flat-square)](tests/)
   [![Code license](https://img.shields.io/badge/code-MIT-475569?style=flat-square)](LICENSE_CODE_MIT.md)
   [![Data license](https://img.shields.io/badge/data-CC_BY_4.0-d97706?style=flat-square)](LICENSE_DATASET_CC_BY_4.0.md)
 
-  **Final-paper reference implementation of evidence-validated hypothesis admission for budget-aware narrative reasoning.**
+  **Evidence-Validated Hypothesis Admission for budget-aware narrative reasoning.**
 
-  [Quick start](#quick-start) · [Algorithm](#paper-aligned-algorithm) · [Evaluation](#paper-evaluation) · [Dataset](#narracrime-300) · [Project page](docs/index.html)
+  [Overview](#overview) · [Method](#method-overview) · [Dataset](#narracrime-300) · [Evaluation](#evaluation) · [Citation](#citation)
 </div>
 
 ---
 
-## Why EVAR?
+## Overview
 
-Long narratives encourage a subtle failure: an early, plausible hypothesis enters the reasoning state before it has enough evidence, then later steps reuse it as if it were a fact. EVAR places a hard admission boundary between **candidate generation** and **state update**.
+Long-form narrative reasoning requires a model to connect evidence distributed across many paragraphs, distinguish facts from interpretations, and revise intermediate conclusions when new information becomes relevant. A common failure occurs when an early but plausible hypothesis is accepted before it has sufficient support. Once that hypothesis enters the reasoning context, later steps may repeatedly reuse it as though it were an established fact, producing a coherent but weakly grounded conclusion.
 
-| Verifier label | State transition | Available to final answer? |
-|---|---|:---:|
-| `Support` | Admit into \(\mathcal H^+\) with source-unit links | Yes |
-| `Unknown` | Quarantine for audit | No |
-| `Contradict` | Discard with contradicting-unit links | No |
+EVAR addresses this problem by separating **hypothesis generation** from **hypothesis admission**. The model may freely propose explanations, but a proposal cannot become part of the trusted reasoning state until it has been checked against the source narrative. This creates an explicit boundary between what the model is considering and what the available evidence supports.
 
-The final answer operator receives only the immutable evidence store \(\mathcal B\) and admitted hypotheses \(\mathcal H^+\). Validation challenges, quarantined candidates, and discarded candidates are deliberately absent from its input.
+EVAR also uses a complexity-aware reasoning budget. Relatively direct cases can proceed to an answer with limited refinement, while cases containing unresolved gaps, conflicts, or difficult evidence chains receive additional rounds of hypothesis generation and verification.
 
-## Quick start
+## Method overview
 
-The offline path uses the same ATOM → TAG → GAP → HYP → CHAL → VER → SUF → ANS control flow as a real model run. It does not use the gold culprit or gold rationale.
+EVAR organizes narrative reasoning around two main states:
 
-```bash
-git clone https://github.com/Cosinecos/EVAR.git
-cd EVAR
+- an immutable evidence store, denoted by \(\mathcal B\), containing source-linked claims extracted from the narrative;
+- an admitted hypothesis set, denoted by \(\mathcal H^+\), containing only hypotheses that have passed evidence validation.
 
-python -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
-pip install -e .
-
-python scripts/validate_dataset.py .
-python scripts/run_evar.py \
-  --config configs/mock.yaml \
-  --split Complex \
-  --limit 1 \
-  --output outputs/demo/evar.jsonl
-
-python -m unittest discover -s tests -v
-```
-
-Expected integrity checks:
-
-```text
-VALIDATION PASSED
-Total cases: 300
-Easy: 100 cases
-Medium: 100 cases
-Complex: 100 cases
-...
-Ran 11 tests ... OK
-```
-
-The mock backend verifies repository integrity only; it is not used for paper results.
-
-## Paper-aligned algorithm
+Candidate, quarantined, and contradicted hypotheses are kept outside the state used to produce the final answer.
 
 ```mermaid
 flowchart TD
-    A["Narrative + goal"] --> B["ATOM + TAG: locked store B"]
-    B --> C["GAP: initial gaps Z0"]
-    C --> D{"Budget K"}
-    D -->|"K = 0"| E["Fast answer from B"]
-    D -->|"K > 0"| F["HYP: candidates per gap"]
-    F --> G["CHAL: support / counter / prerequisite"]
-    G --> H{"VER against B"}
-    H -->|Support| I["Admit to H+"]
-    H -->|Unknown| J["Quarantine"]
-    H -->|Contradict| Kd["Discard"]
-    I --> L["SUF + stop check"]
-    J --> L
-    Kd --> L
-    L -->|Continue| F
-    L -->|Stop| M["Answer from B + H+"]
+    A["Narrative and reasoning goal"] --> B["Build source-linked evidence store"]
+    B --> C["Identify gaps and estimate difficulty"]
+    C --> D["Generate candidate hypotheses"]
+    D --> E["Challenge each candidate with evidence tests"]
+    E --> F{"Evidence verifier"}
+    F -->|Support| G["Admit to trusted state"]
+    F -->|Unknown| H["Quarantine"]
+    F -->|Contradict| I["Discard"]
+    G --> J["Check sufficiency and remaining gaps"]
+    H --> J
+    I --> J
+    J -->|Continue within budget| D
+    J -->|Stop| K["Synthesize from trusted evidence only"]
 ```
 
-The implementation follows the final equations and Algorithm 1:
+### 1. Source-linked evidence store
 
-- source-linked atomic claims with observable `(entities, time, polarity)` metadata;
-- localized `OK / Uncertain / Conflict` tags with severity `0..3`;
-- complexity \(\Gamma=\alpha_1|Z_0|+\alpha_2\sum I[status_j\ne OK]+\alpha_3\sum sev_j\);
-- budget \(K=\min(B_{max},\max(0,\lceil(\Gamma-\tau_{fast})/\tau_{step}\rceil))\);
-- direct HYP generation from each gap — there is **no obsolete Query stage**;
-- three hypothesis-conditioned CHAL checks before VER;
-- `Z0` is computed once and reused at `t=0`; GAP is recomputed only for `t>0`;
-- stopping on no blocking gap, sufficiency threshold, or budget exhaustion;
-- complete normalized candidate-ID probability output for NarraCrime.
+The narrative is first decomposed into smaller evidence units. Each unit preserves a link to its source span and records observable information such as the involved entities, temporal relations, and polarity. Local consistency analysis marks whether a unit is clear, uncertain, or potentially conflicting.
 
-Every operator output is parsed, contract-validated, and failed closed after configurable JSON-repair attempts. Each run stores an auditable operator trace and the locked-store SHA-256 fingerprint.
+This store is treated as the evidential authority throughout reasoning. Later hypotheses do not rewrite the source evidence. Keeping the evidence store fixed helps prevent a model-generated interpretation from silently becoming a new fact.
 
-## Run a real backbone
+### 2. Gap analysis and budget routing
 
-Copy the environment template and set an OpenAI-compatible endpoint:
+EVAR identifies information gaps that prevent a reliable answer. Examples include an unresolved timeline, missing access conditions, an unexplained physical trace, or competing explanations for the same event.
 
-```bash
-cp .env.example .env
-```
+The number and severity of these gaps are combined into an instance-level complexity estimate. This estimate determines a bounded refinement budget. The purpose is to allocate verification effort according to the case rather than applying the same number of reasoning steps to every narrative.
 
-```dotenv
-EVAR_API_KEY=...
-EVAR_BASE_URL=https://your-provider.example/v1
-```
+### 3. Candidate hypothesis generation
 
-Then run the paper-style DeepSeek-V3.2 configuration:
+For each unresolved gap, the model proposes one or more candidate explanations. At this stage, a candidate is only a possibility. It is not yet available to the final answer and does not enter the trusted reasoning state.
 
-```bash
-python scripts/run_evar.py \
-  --config configs/deepseek_v3_2.yaml \
-  --split Complex \
-  --limit 100 \
-  --output outputs/deepseek_v3_2/complex.jsonl
-```
+This distinction allows the system to explore alternatives without treating all generated content as equally reliable.
 
-The main decoding configuration is `temperature=0`, `top_p=1.0`, and `max_output_tokens=512`. Provider model names and snapshots can change, so every evaluation writes a run manifest and raw predictions.
+### 4. Hypothesis-conditioned challenges
 
-## Paper evaluation
+Each candidate is converted into explicit evidence checks. EVAR considers three complementary questions:
 
-The evaluator implements the final six NarraCrime measures — no obsolete VA metric remains.
+1. What evidence directly supports the hypothesis?
+2. What evidence contradicts it or supports an alternative?
+3. Which indispensable prerequisite must be true for the hypothesis to hold?
 
-| Metric | Implementation |
-|---|---|
-| `RVS` | Principal-culprit probability mass + `0.5 ×` accomplice mass; no LLM judge |
-| `IR` | Intent proposition recall |
-| `ASR` | Action-schema proposition recall |
-| `EC` | Supporting-evidence proposition recall |
-| `UCR ↓` | Fraction of atomic claims labeled `Unknown` or `Contradict` |
-| `CR ↓` | Fraction labeled `Contradict`; therefore `CR ≤ UCR` |
+The challenge stage specifies what should be tested. A challenge is not itself evidence and cannot authorize a state update.
 
-Paper mode uses `sentence-transformers/all-mpnet-base-v2`, cosine threshold `0.8`, descending greedy **one-to-one** matching, and micro-averaging. GPT-5.5 performs predicted-proposition extraction, final-answer atomic decomposition, and evidence-status labeling from fixed prompts. The method identity is not given to the judge, and verdict probabilities are excluded from IR/ASR/EC/UCR/CR.
+### 5. Evidence-validated admission
 
-```bash
-pip install -e ".[eval]"
+The verifier compares each candidate with the locked evidence store and assigns one of three labels:
 
-python scripts/evaluate.py \
-  --config configs/deepseek_v3_2.yaml \
-  --split Complex \
-  --limit 100 \
-  --methods Direct CoT Self-Refine SC CRITIC S2R-style SELF-DISC. GoT EVAR \
-  --output-dir outputs/paper_complex
-```
+| Verifier label | State transition | Available to the final answer? |
+|---|---|:---:|
+| `Support` | Admit into \(\mathcal H^+\) with supporting source links | Yes |
+| `Unknown` | Quarantine because the available evidence is insufficient | No |
+| `Contradict` | Discard and record the conflicting evidence | No |
 
-The executable baseline implementations include single-pass prompting, self-refinement, self-consistency (`k=5`), CRITIC, prompt-only S²R-style self-verification, SELF-DISCOVER-style structure selection, and Graph-of-Thought branches.
+Only `Support` produces an admission. `Unknown` is not treated as weak support, and a plausible hypothesis cannot enter the trusted state merely because no contradiction was found.
 
-For the paper's three-run protocol:
+### 6. Iterative refinement and stopping
 
-```bash
-python scripts/run_three_seeds.py \
-  --config configs/deepseek_v3_2.yaml \
-  --split Complex --limit 100 \
-  --methods GoT EVAR \
-  --output-dir outputs/three_seed_complex
-```
+After a verification round, EVAR reassesses the remaining reasoning gaps and the sufficiency of the admitted evidence. It continues while material gaps remain and the allocated budget permits another round.
 
-This runs seeds `42`, `44`, and `46`, preserves each resolved configuration, and reports mean plus sample standard deviation.
+Reasoning stops when the evidence is sufficient, no blocking gap remains, or the budget is exhausted. This stopping rule balances answer quality with inference cost and prevents unconstrained self-refinement.
+
+### 7. Constrained final synthesis
+
+The final answer is generated only from \(\mathcal B\) and \(\mathcal H^+\). Quarantined hypotheses, contradicted candidates, and the model's internal challenges are excluded from the final synthesis context.
+
+This boundary is the central design principle of EVAR: generation proposes possible explanations, verification controls state admission, and the final answer is restricted to evidence that remains traceable to the narrative.
 
 ## NarraCrime-300
 
-The linked repository dataset is included unchanged and loaded directly from disk.
+NarraCrime-300 is a synthetic benchmark for evidence-grounded reasoning over fixed, non-interactive detective narratives. It contains 300 cases divided equally across three difficulty levels.
 
-| Split | Cases | Avg. words | Avg. cues | Avg. suspects |
-|---|---:|---:|---:|---:|
-| Easy | 100 | 863.54 | 8.05 | 3.49 |
-| Medium | 100 | 1065.22 | 11.53 | 4.51 |
-| Complex | 100 | 1413.40 | 15.93 | 5.95 |
-| **Total** | **300** | **1114.05** | **11.84** | **4.65** |
+Each case contains:
 
-Each case contains `Mystery_text.txt`, `Answer.txt`, `predefined_cues.txt`, and `annotation.json`.
+- `Mystery_text.txt`: the narrative presented to the model;
+- `Answer.txt`: the reference verdict and explanation;
+- `predefined_cues.txt`: the supporting evidence cues;
+- `annotation.json`: structured labels for the culprit, intent, action schema, evidence, distractors, and construction blueprint.
 
-### Construction, briefly
+Difficulty is controlled through factors such as story length, suspect count, evidence-chain length, distractor count, and the amount of cross-event or implicit-premise reasoning required to reach the conclusion.
 
-Human authors specified difficulty ranges, evidence-chain requirements, schema constraints, and generation prompts. An AI model first produced a structured fictional case blueprint and then realized it as a long-form narrative without exposing the answer. Automated validation checked structure, references, mappings, split targets, and single-culprit consistency; the protocol also provides independent human-audit sheets. See [construction protocol](docs/construction_protocol.md) and [construction supplement](EVAR_NarraCrime_Construction_Supplement/README.md).
+## Dataset construction
 
-## Repository map
+NarraCrime was produced through a structured, AI-assisted construction process. The protocol defines the task format, difficulty ranges, annotation dimensions, evidence-chain requirements, and generation constraints. A language model was used to produce fictional case blueprints and convert them into narrative form.
+
+The construction workflow includes:
+
+1. selecting a difficulty profile and case setting;
+2. defining the culprit, intent, opportunity, and action sequence;
+3. designing a solvable chain of supporting evidence;
+4. adding plausible distractors that do not invalidate the intended solution;
+5. realizing the blueprint as a self-contained narrative;
+6. producing structured annotations and reference answers;
+7. checking file completeness, schema consistency, candidate references, evidence counts, and difficulty targets.
+
+The construction supplement includes reference prompts, schemas, examples, and review utilities. These materials explain the construction approach. They do not provide deterministic regeneration of the released cases, and blank review templates should not be interpreted as proof that every case has undergone an independently recorded human audit.
+
+See the [construction protocol](docs/construction_protocol.md), [datasheet](docs/datasheet.md), [quality-control notes](docs/quality_control.md), and [construction supplement](EVAR_NarraCrime_Construction_Supplement/README.md).
+
+## Relationship to SABA
+
+NarraCrime builds on the non-interactive detective-reasoning setting explored in [SABA](https://arxiv.org/abs/2604.20413). Its task and evaluation design were informed by SABA's dimensions of suspect identification, motive recovery, modus-operandi reconstruction, and clue coverage.
+
+NarraCrime extends this general setting through a larger synthetic collection, three controlled difficulty levels, structured annotations, explicit distractor labels, and recorded construction blueprints. This repository does not claim that the general detective-puzzle task or all evaluation dimensions originated with EVAR.
+
+The relationship between the content measures is as follows:
+
+| SABA dimension | NarraCrime/EVAR dimension | Relationship |
+|---|---|---|
+| Suspect identification | Role-Aware Verdict Score (`RVS`) | Extends verdict evaluation with probability mass and role weighting |
+| Motive Recall | Intent Recall (`IR`) | Adapts motive recovery to annotated intent propositions |
+| Modus Operandi Recall | Action Schema Recall (`ASR`) | Adapts action recovery to structured action-schema propositions |
+| Clue Coverage Rate | Evidence Coverage (`EC`) | Adapts clue coverage to annotated evidence propositions |
+
+EVAR additionally reports Unsupported Claim Rate (`UCR`) and Contradiction Rate (`CR`) to assess the reliability of claims remaining in the final answer.
+
+## Evaluation
+
+The evaluation covers the correctness of the verdict, recovery of reference content, evidence grounding, and unsupported or contradictory claims.
+
+| Metric | Purpose |
+|---|---|
+| `RVS` | Measures probability mass assigned to the principal culprit and gives partial weight to annotated accomplices |
+| `IR` | Measures recovery of annotated intent propositions |
+| `ASR` | Measures recovery of annotated action-schema propositions |
+| `EC` | Measures coverage of annotated supporting evidence |
+| `UCR ↓` | Measures the proportion of final-answer claims that are unsupported or contradicted |
+| `CR ↓` | Measures the proportion of final-answer claims that directly contradict the evidence |
+
+IR, ASR, and EC compare predicted propositions with the corresponding reference propositions. RVS evaluates the model's distribution over candidate roles. UCR and CR examine the evidential status of atomic claims in the final response. Together, these measures distinguish arriving at the correct verdict from providing a complete and evidence-supported explanation.
+
+## Repository contents
 
 ```text
 EVAR/
-├── assets/                     # GitHub hero artwork
-├── configs/                    # mock and paper-style model/evaluator configs
-├── dataset/                    # NarraCrime-300
-├── docs/                       # project page + reproducibility notes
-├── metadata/                   # case index, annotations, recomputed statistics
-├── src/narracrime_evar/
-│   ├── evar.py                 # final Algorithm 1 control flow
-│   ├── models.py               # immutable evidence/state objects
-│   ├── contracts.py            # strict operator/output contracts
-│   ├── prompts.py              # ATOM/TAG/GAP/HYP/CHAL/VER/SUF/ANS prompts
-│   ├── runner.py               # validation, repair, call accounting, traces
-│   ├── llm.py                  # mock + OpenAI-compatible backends
-│   ├── baselines.py            # executable comparison methods
-│   └── metrics.py              # RVS/IR/ASR/EC/UCR/CR
-├── scripts/                    # validation, inference, evaluation entry points
-└── tests/                      # offline control-flow and metric tests
+├── dataset/                                  # NarraCrime-300 cases
+├── metadata/                                 # index, annotations, and statistics
+├── EVAR_NarraCrime_Construction_Supplement/  # construction and review materials
+├── docs/                                     # dataset and project documentation
+├── paper_assets/                             # dataset description and statistics table
+├── quality_control/                          # manual-review template
+├── assets/                                   # repository artwork
+├── CITATION.cff
+└── requirements.txt
 ```
-
-Implementation choices not numerically fixed in the paper — routing coefficients and thresholds, operator fan-out caps, batching, and malformed-output policy — are exposed in YAML and documented in [reproducibility notes](docs/reproducibility.md), rather than hidden in code.
-
-The release's completed offline checks are recorded in the [validation report](docs/validation_report.md).
 
 ## Citation
 
@@ -219,4 +190,19 @@ The release's completed offline checks are recorded in the [validation report](d
 }
 ```
 
-Code is released under the [MIT License](LICENSE_CODE_MIT.md); the dataset is released under [CC BY 4.0](LICENSE_DATASET_CC_BY_4.0.md).
+The relationship described above refers to:
+
+```bibtex
+@article{fan2026saba,
+  title   = {Self-Awareness before Action: Mitigating Logical Inertia via Proactive Cognitive Awareness},
+  author  = {Fan, Fulong and Liu, Peilin and Liu, Fengzhe and Yang, Shuyan and Yan, Gang},
+  journal = {arXiv preprint arXiv:2604.20413},
+  year    = {2026}
+}
+```
+
+## License
+
+NarraCrime-300 and its dataset-specific metadata are released under [CC BY 4.0](LICENSE_DATASET_CC_BY_4.0.md). Repository documentation and supporting software materials are covered by the terms stated in [LICENSE](LICENSE).
+
+> **Coming soon:** The complete EVAR implementation and detailed reproduction instructions are currently being organized and will be released in this repository.
