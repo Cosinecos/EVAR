@@ -179,28 +179,6 @@ EVAR/
 └── requirements.txt
 ```
 
-## Citation
-
-```bibtex
-@article{liu2026evar,
-  title   = {EVAR: Evidence-Validated Hypothesis Admission for Budget-Aware Narrative Reasoning},
-  author  = {Liu, Peilin and Ji, Zhiquan and Ping, Jinglong},
-  journal = {arXiv preprint arXiv:2608.29835},
-  year    = {2026}
-}
-```
-
-The relationship described above refers to:
-
-```bibtex
-@article{fan2026saba,
-  title   = {Self-Awareness before Action: Mitigating Logical Inertia via Proactive Cognitive Awareness},
-  author  = {Fan, Fulong and Liu, Peilin and Liu, Fengzhe and Yang, Shuyan and Yan, Gang},
-  journal = {arXiv preprint arXiv:2604.20413},
-  year    = {2026}
-}
-```
-
 ## License
 
 NarraCrime-300 and its dataset-specific metadata are released under [CC BY 4.0](LICENSE_DATASET_CC_BY_4.0.md). Repository documentation and supporting software materials are covered by the terms stated in [LICENSE](LICENSE).
