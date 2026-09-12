@@ -3,7 +3,6 @@
 
   <br />
 
-  [![Paper](https://img.shields.io/badge/EMNLP_2026-Main-0d9488?style=flat-square)](https://arxiv.org/abs/2608.29835)
   [![Dataset](https://img.shields.io/badge/NarraCrime-300-2563eb?style=flat-square)](dataset/)
   [![Data license](https://img.shields.io/badge/data-CC_BY_4.0-d97706?style=flat-square)](LICENSE_DATASET_CC_BY_4.0.md)
 
@@ -31,22 +30,7 @@ EVAR organizes narrative reasoning around two main states:
 
 Candidate, quarantined, and contradicted hypotheses are kept outside the state used to produce the final answer.
 
-```mermaid
-flowchart TD
-    A["Narrative and reasoning goal"] --> B["Build source-linked evidence store"]
-    B --> C["Identify gaps and estimate difficulty"]
-    C --> D["Generate candidate hypotheses"]
-    D --> E["Challenge each candidate with evidence tests"]
-    E --> F{"Evidence verifier"}
-    F -->|Support| G["Admit to trusted state"]
-    F -->|Unknown| H["Quarantine"]
-    F -->|Contradict| I["Discard"]
-    G --> J["Check sufficiency and remaining gaps"]
-    H --> J
-    I --> J
-    J -->|Continue within budget| D
-    J -->|Stop| K["Synthesize from trusted evidence only"]
-```
+
 
 ### 1. Source-linked evidence store
 
@@ -188,16 +172,7 @@ EVAR/
 }
 ```
 
-The relationship described above refers to:
 
-```bibtex
-@article{fan2026saba,
-  title   = {Self-Awareness before Action: Mitigating Logical Inertia via Proactive Cognitive Awareness},
-  author  = {Fan, Fulong and Liu, Peilin and Liu, Fengzhe and Yang, Shuyan and Yan, Gang},
-  journal = {arXiv preprint arXiv:2604.20413},
-  year    = {2026}
-}
-```
 
 ## License
 
