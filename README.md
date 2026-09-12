@@ -105,6 +105,13 @@ This boundary is the central design principle of EVAR: generation proposes possi
 
 NarraCrime-300 is a synthetic benchmark for evidence-grounded reasoning over fixed, non-interactive detective narratives. It contains 300 cases divided equally across three difficulty levels.
 
+| Split | Cases | Average words | Average evidence cues | Average suspects |
+|---|---:|---:|---:|---:|
+| Easy | 100 | 863.54 | 8.05 | 3.49 |
+| Medium | 100 | 1065.22 | 11.53 | 4.51 |
+| Complex | 100 | 1413.40 | 15.93 | 5.95 |
+| **Total** | **300** | **1114.05** | **11.84** | **4.65** |
+
 Each case contains:
 
 - `Mystery_text.txt`: the narrative presented to the model;
@@ -177,6 +184,28 @@ EVAR/
 ├── assets/                                   # repository artwork
 ├── CITATION.cff
 └── requirements.txt
+```
+
+## Citation
+
+```bibtex
+@article{liu2026evar,
+  title   = {EVAR: Evidence-Validated Hypothesis Admission for Budget-Aware Narrative Reasoning},
+  author  = {Liu, Peilin and Ji, Zhiquan and Ping, Jinglong},
+  journal = {arXiv preprint arXiv:2608.29835},
+  year    = {2026}
+}
+```
+
+The relationship described above refers to:
+
+```bibtex
+@article{fan2026saba,
+  title   = {Self-Awareness before Action: Mitigating Logical Inertia via Proactive Cognitive Awareness},
+  author  = {Fan, Fulong and Liu, Peilin and Liu, Fengzhe and Yang, Shuyan and Yan, Gang},
+  journal = {arXiv preprint arXiv:2604.20413},
+  year    = {2026}
+}
 ```
 
 ## License
