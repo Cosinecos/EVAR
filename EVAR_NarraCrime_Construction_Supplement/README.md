@@ -1,26 +1,33 @@
 # NarraCrime Construction Supplement
 
-This directory supplements the existing EVAR repository. It documents only the construction, validation, and author-audit protocol for NarraCrime; it intentionally does not repeat the paper overview, EVAR implementation, experimental commands, dataset statistics, or citation information already provided in the repository-level README.
+This directory documents the structured, AI-assisted construction and review approach used for NarraCrime. The task and evaluation design builds on the non-interactive detective-reasoning setting explored in [SABA](https://arxiv.org/abs/2604.20413).
 
 ## Contents
 
-- `config/difficulty.json`: difficulty-specific construction targets
-- `prompts/`: blueprint-generation and narrative-realization prompts
-- `schemas/case_schema.json`: released-record schema
-- `scripts/validate_dataset.py`: structural, reference, mapping, and difficulty checks
-- `scripts/prepare_review_sheet.py`: creates two independent review rows per case
-- `scripts/compute_agreement.py`: raw agreement, Cohen's kappa, and evidence-cue F1
-- `reviews/review_template.csv`: review-sheet format
-- `examples/illustrative_case.json`: schema-complete illustrative record, not benchmark data
-- `examples/completed_review_example.csv`: completed illustrative review pair for testing the agreement script
+- `config/difficulty.json`: reference difficulty targets;
+- `prompts/`: blueprint-generation and narrative-realization prompts;
+- `schemas/case_schema.json`: illustrative construction-record schema;
+- `scripts/validate_dataset.py`: validator for records matching the illustrative schema;
+- `scripts/prepare_review_sheet.py`: creates two review rows per input case;
+- `scripts/compute_agreement.py`: computes agreement from completed review sheets;
+- `reviews/review_template.csv`: blank review-sheet format;
+- `examples/illustrative_case.json`: schema-complete illustrative record;
+- `examples/completed_review_example.csv`: illustrative completed review pair for testing the agreement script.
 
-## Reproduce the checks
+## Scope
 
-The scripts require Python 3.9+ and use only the standard library.
+These materials document the construction protocol and provide reusable examples and utilities. They are not an exact generator for the 300 released narratives: provider snapshots, random seeds, and full generation logs are not included.
+
+The illustrative schema in this directory differs from the format of the released `dataset/*/*/annotation.json` files. Therefore, `scripts/validate_dataset.py` validates the illustrative construction-record format and should not be run directly against the released annotations without conversion.
+
+The review templates and completed example demonstrate the audit format. They do not show that every released case has undergone two completed independent human reviews.
+
+## Example commands
+
+The scripts use Python 3.9+ and the standard library.
 
 ```bash
 python scripts/validate_dataset.py examples/illustrative_case.json
-python scripts/validate_dataset.py path/to/easy.jsonl --jsonl
-python scripts/prepare_review_sheet.py path/to/easy.jsonl path/to/medium.jsonl path/to/complex.jsonl --output reviews/independent_reviews.csv
+python scripts/prepare_review_sheet.py easy.jsonl medium.jsonl complex.jsonl --output reviews/independent_reviews.csv
 python scripts/compute_agreement.py reviews/independent_reviews.csv
 ```
