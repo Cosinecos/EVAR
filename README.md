@@ -5,7 +5,6 @@
 
   [![Paper](https://img.shields.io/badge/EMNLP_2026-Main-0d9488?style=flat-square)](https://arxiv.org/abs/2608.29835)
   [![Dataset](https://img.shields.io/badge/NarraCrime-300-2563eb?style=flat-square)](dataset/)
-  [![Code license](https://img.shields.io/badge/code-MIT-475569?style=flat-square)](LICENSE_CODE_MIT.md)
   [![Data license](https://img.shields.io/badge/data-CC_BY_4.0-d97706?style=flat-square)](LICENSE_DATASET_CC_BY_4.0.md)
 
   **Evidence-Validated Hypothesis Admission for budget-aware narrative reasoning.**
@@ -141,20 +140,13 @@ See the [construction protocol](docs/construction_protocol.md), [datasheet](docs
 
 ## Relationship to SABA
 
-NarraCrime builds on the non-interactive detective-reasoning setting explored in [SABA](https://arxiv.org/abs/2604.20413). Its task and evaluation design were informed by SABA's dimensions of suspect identification, motive recovery, modus-operandi reconstruction, and clue coverage.
+NarraCrime follows the broad non-interactive detective-reasoning setting explored in [SABA](https://arxiv.org/abs/2604.20413), but it is designed for a different purpose and extends the setting substantially.
 
-NarraCrime extends this general setting through a larger synthetic collection, three controlled difficulty levels, structured annotations, explicit distractor labels, and recorded construction blueprints. This repository does not claim that the general detective-puzzle task or all evaluation dimensions originated with EVAR.
+SABA primarily investigates whether a model can recognize potential reasoning failures before committing to an action, with detective-style narratives serving as one evaluation setting. NarraCrime, by contrast, is constructed as a dedicated benchmark for **evidence-grounded long-form reasoning**. It contains 300 synthetic cases organized into three controlled difficulty levels and provides structured annotations for culprit roles, intent, action schemas, supporting evidence, distractors, and construction blueprints.
 
-The relationship between the content measures is as follows:
+The evaluation design also differs in emphasis. NarraCrime and EVAR do not only ask whether a model reaches the correct suspect or recovers the expected reasoning content; they additionally examine how the final conclusion is supported by the narrative evidence. Role-Aware Verdict Score (`RVS`) evaluates the model's probability distribution over candidate roles, while Intent Recall (`IR`), Action Schema Recall (`ASR`), and Evidence Coverage (`EC`) operate on structured proposition-level annotations. Unsupported Claim Rate (`UCR`) and Contradiction Rate (`CR`) further measure whether claims in the final answer are unsupported by, or inconsistent with, the source narrative.
 
-| SABA dimension | NarraCrime/EVAR dimension | Relationship |
-|---|---|---|
-| Suspect identification | Role-Aware Verdict Score (`RVS`) | Extends verdict evaluation with probability mass and role weighting |
-| Motive Recall | Intent Recall (`IR`) | Adapts motive recovery to annotated intent propositions |
-| Modus Operandi Recall | Action Schema Recall (`ASR`) | Adapts action recovery to structured action-schema propositions |
-| Clue Coverage Rate | Evidence Coverage (`EC`) | Adapts clue coverage to annotated evidence propositions |
-
-EVAR additionally reports Unsupported Claim Rate (`UCR`) and Contradiction Rate (`CR`) to assess the reliability of claims remaining in the final answer.
+NarraCrime therefore shares the general detective-reasoning setting with SABA while differing in **dataset scale, controlled difficulty design, annotation granularity, explicit distractor modeling, verdict formulation, and direct evaluation of evidence-grounding reliability**. The benchmark is intended to support a more fine-grained analysis of long-form reasoning under evidence constraints rather than simply reproduce the earlier task formulation.
 
 ## Evaluation
 
@@ -182,8 +174,7 @@ EVAR/
 ├── paper_assets/                             # dataset description and statistics table
 ├── quality_control/                          # manual-review template
 ├── assets/                                   # repository artwork
-├── CITATION.cff
-└── requirements.txt
+└── CITATION.cff
 ```
 
 ## Citation
@@ -210,6 +201,6 @@ The relationship described above refers to:
 
 ## License
 
-NarraCrime-300 and its dataset-specific metadata are released under [CC BY 4.0](LICENSE_DATASET_CC_BY_4.0.md). Repository documentation and supporting software materials are covered by the terms stated in [LICENSE](LICENSE).
+NarraCrime-300 and its dataset-specific metadata are released under [CC BY 4.0](LICENSE_DATASET_CC_BY_4.0.md). See [LICENSE](LICENSE) for licensing information covering the remaining repository materials.
 
 > **Coming soon:** The complete EVAR implementation and detailed reproduction instructions are currently being organized and will be released in this repository.
