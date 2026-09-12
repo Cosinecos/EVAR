@@ -1,16 +1,41 @@
 # Release Notes
 
-## Dataset-focused repository update
+## Dataset-focused repository release
 
-The repository has been reorganized around the NarraCrime-300 dataset and its documentation.
+The current repository has been organized around **NarraCrime-300**, its metadata, construction documentation, and paper-facing materials.
 
-- Retained all 300 released cases, reference answers, evidence cues, and structured annotations.
-- Retained dataset indexes, aggregate statistics, construction materials, and review templates.
-- Added an explicit explanation of the relationship to SABA's detective-reasoning task and evaluation dimensions.
-- Clarified that IR, ASR, and EC adapt related evaluation dimensions used in SABA.
-- Removed the previous EVAR method, inference, baseline, and evaluation implementation while it is being reorganized.
-- Removed commands, badges, and validation claims that depended on the removed implementation.
+### Included in the current release
 
-## Earlier repository version
+- All 300 NarraCrime cases across Easy, Medium, and Complex splits.
+- Reference answers and predefined evidence cues.
+- Per-case structured annotations.
+- Dataset indexes and aggregate descriptive statistics.
+- Construction prompts, schemas, examples, and review materials.
+- Dataset documentation, quality-control notes, and paper-facing assets.
+- An explicit description of the relationship between NarraCrime/EVAR evaluation dimensions and the earlier SABA detective-reasoning setting.
 
-An earlier version contained an executable EVAR pipeline, evaluation code, configurations, prompts, and offline tests. Those materials remain part of the Git history but are not included in the current working tree. Validation statements associated with that version should be interpreted as historical records rather than instructions for the current release.
+### Method-code status
+
+The complete EVAR method implementation is **not included in the current repository release**.
+
+The current release therefore does not provide or claim:
+
+- a runnable EVAR inference pipeline;
+- baseline execution scripts;
+- paper evaluation scripts;
+- offline mock execution;
+- unit-test results for the method implementation;
+- one-command reproduction of the paper experiments.
+
+The repository README and project page describe the EVAR method conceptually, while the public files currently focus on the released dataset and its documentation.
+
+> **Coming soon:** The complete EVAR implementation, evaluation pipeline, configurations, and detailed reproduction instructions will be released in this repository.
+
+## Notes on documentation
+
+Current documentation is intended to distinguish clearly between:
+
+1. **materials available now** — NarraCrime-300, metadata, annotations, construction materials, and documentation; and
+2. **materials planned for a later release** — the complete EVAR implementation and full paper-reproduction workflow.
+
+Any historical references to runnable scripts, mock backends, method unit tests, or complete local reproduction should not be interpreted as functionality provided by the current release.
