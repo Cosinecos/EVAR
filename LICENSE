@@ -1,4 +1,9 @@
-This repository contains both dataset/documentation assets and software.
+This repository uses separate licenses for dataset content and software materials.
 
-- NarraCrime records and dataset-specific metadata under `dataset/` and `metadata/`, together with construction/audit materials under `EVAR_NarraCrime_Construction_Supplement/`, `quality_control/`, and `paper_assets/`, are released under CC BY 4.0. See `LICENSE_DATASET_CC_BY_4.0.md`.
-- Software and project materials under `src/`, `scripts/`, `tests/`, `configs/`, `examples/`, `evar_inference/`, `assets/`, and `docs/`, plus the root packaging and documentation files, are released under the MIT License. See `LICENSE_CODE_MIT.md`.
+- NarraCrime narratives, annotations, and dataset metadata under `dataset/` and
+  `metadata/` are released under the Creative Commons Attribution 4.0
+  International License (CC BY 4.0). See `LICENSE_DATASET_CC_BY_4.0.md`.
+- Software utilities and project documentation that remain in this repository
+  are released under the MIT License. See `LICENSE_CODE_MIT.md`.
+
+Where a file contains an explicit license notice, that notice takes precedence.
